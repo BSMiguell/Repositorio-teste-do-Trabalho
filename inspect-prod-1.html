@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop--Product</title>
+    <!-- ===== Boxicons CSS ===== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- ===== Components CSS ===== -->
+    <link rel="stylesheet" href="assets/components/Reset.css" />
+
+    <!-- ===== Style CSS ===== -->
+    <link rel="stylesheet" href="assets/css/Header.css" />
+    <link rel="stylesheet" href="assets/css/product.css" />
+    <link rel="stylesheet" href="assets/css/inspect-prod.css" />
+
+    <!-- ===== Script CSS ===== -->
+    <script src="assets/components/Nav.js" defer></script>
+
+    <script src="assets/js/inspect-prod.js" defer></script>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <a class="logo"><img src="assets/img/logo_teste.png" /></a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <nav>
+        <ul class="navbar">
+          <li><a href="#">Teste</a></li>
+          <li><a href="#">Teste</a></li>
+          <li><a href="#">Teste</a></li>
+          <li><a href="#">Products</a></li>
+          <li><i class="bx bx-shopping-bag" id="cart-icon"></i></li>
+        </ul>
+        <!-- CART -->
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+          <!-- CONTENT -->
+
+          <div class="cart-content">
+            <!-- TEST BOX -->
+          </div>
+
+          <!-- TOTAL -->
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
+          <!-- BUY BUTTON -->
+          <button type="button" class="btn-buy">Buy Now</button>
+          <!-- CART CLOSE -->
+          <i class="bx bx-x" id="cart-close"></i>
+        </div>
+      </nav>
+    </header>
+
+    <section id="prodetails" class="section-p1">
+      <div class="single-pro-image">
+        <img
+          src="assets/img/teste/product-vol-21.jpg"
+          width="100%"
+          id="MainImg"
+          alt=""
+        />
+        <div class="small-img-group">
+          <div class="small-img-col tab__active" data-target="#img-1">
+            <img
+              src="assets/img/teste/product-vol-21.jpg"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+
+          <div class="small-img-col" data-target="#img-2">
+            <img
+              src="assets/img/teste/product-vol-21-1.jpg"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+
+          <div class="small-img-col" data-target="#img-3">
+            <img
+              src="assets/img/teste/product-vol-21-2.jpg"
+              width="100%"
+              class="small-img"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="single-pro-details">
+        <div class="tabs__item tab__active">
+          <h4>Whey</h4>
+          <h3 class="product-title">
+            WAXY WHEY - 2KG - BODYBUILDERS SABOR CHOCOLATE
+          </h3>
+          <span>Entrega GRÁTIS: 23 - 24 de Maio</span>
+          <h2 class="product-price">R$86,90</h2>
+          <select>
+            <option>Forma de pagamento</option>
+            <option>Pix</option>
+            <option>Cartão</option>
+            <option>Paypal</option>
+          </select>
+
+          <button class="normal">Add To Cart</button>
+          <h4>Product Details</h4>
+          <span>Marca: BODY BUILDERS</span>
+          <span>Sabor: Chocolate</span>
+          <span>Tipo de dieta: Sem glúten</span>
+          <span>Fonte de proteína: Whey</span>
+          <span>Contagem de unidades: 1.00 Quilogramas</span>
+
+          <h3>Sobre este item</h3>
+          <span
+            >Rápida absorção, Ajuda na Manutenção e no Ganho de Massa Magra
+            Adicione 50g em 350ml de água gelada e agite por 20 segundos.
+            Consuma imediamente após o preparo. Contém glútem</span
+          >
+
+          <span>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+          </span>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
