@@ -31,6 +31,7 @@
   backdrop-filter: blur(10px);
   background-color: hsla(0, 0%, 10%, 0.3);
   border: 2px solid #fff;
+  border-radius: 1rem;
   padding: 20px;
 }
 .tab__active[data-content] {
