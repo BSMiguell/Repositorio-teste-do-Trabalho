@@ -1,0 +1,256 @@
+.container-action {
+  max-width: 1068px;
+  margin: auto;
+  width: 100%;
+}
+
+.page-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../img/academia.png);
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 14px;
+}
+
+.page-header h2,
+.page-header p {
+  color: #fff;
+}
+
+section {
+  padding: 4rem 0 3rem;
+}
+
+#cart-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--second-color);
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  /* right: 0; */
+  right: -100%;
+  width: 360px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: -2px solid 4px hsl(0, 0%, 30%);
+  border: 2px solid hsl(0, 80%, 61%);
+  transition: 1.5s;
+}
+
+.cart.active-2 {
+  right: 0;
+  transition: 0.5s;
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  color: hsl(0, 0%, 20%);
+}
+
+.cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cart-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 1px;
+}
+
+.detail-box {
+  display: grid;
+  row-gap: 0.5rem;
+}
+
+.cart-product-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.cart-price {
+  font-weight: 500;
+}
+
+.cart-quantity {
+  border: 1px solid hsl(0, 0%, 0%);
+  outline-color: hsl(0, 80%, 61%);
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cart-remove {
+  font-size: 24px;
+  color: hsl(0, 80%, 61%);
+  cursor: pointer;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid hsl(0, 0%, 80%);
+}
+
+.total-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.total-price {
+  margin-left: 0.5rem;
+}
+
+.btn-buy {
+  display: flex;
+  padding: 12px 20px;
+  margin: 1.5rem auto 0 auto;
+  background-color: hsl(0, 0%, 20%);
+  border: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-buy:hover {
+  background-color: hsl(0, 0%, 75%);
+  color: hsl(0, 0%, 20%);
+}
+
+#cart-close {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  left: 0;
+  font-size: 2rem;
+  color: hsl(0, 0%, 20%);
+  cursor: pointer;
+}
+
+.shop {
+  margin-top: 1.5rem;
+}
+
+.section-title {
+  font-style: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.shop-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 1.5rem;
+}
+
+.product-box {
+  position: relative;
+  padding: 13px 15px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+}
+
+.product-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.star {
+  color: hsl(60, 100%, 50%);
+}
+
+.product-price {
+  font-weight: 500;
+}
+
+.add-cart {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  background-color: var(--second-color);
+  color: hsl(0, 6%, 3%);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.add-cart:hover {
+  background-color: hsl(34, 94%, 77%);
+}
+
+#pagination {
+  text-align: center;
+}
+
+#pagination .active-pagination {
+  background-color: #ff0000;
+  border: 3px solid hsl(0, 0%, 80%);
+}
+
+#pagination a {
+  text-decoration: none;
+  background-color: hsl(0, 100%, 58%);
+  padding: 10px 15px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  section {
+    padding: 3rem 0 2rem;
+  }
+  .shop {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .cart {
+    width: 320px;
+  }
+}
+
+@media (max-width: 360px) {
+  .shop {
+    margin-top: 1rem;
+  }
+  .cart {
+    width: 280px;
+  }
+}
