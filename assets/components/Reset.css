@@ -104,6 +104,9 @@ p {
 section {
   padding-top: 100px;
 }
+section {
+  padding: 4rem 0 3rem;
+}
 
 .container {
   max-width: 1320px;
@@ -119,6 +122,18 @@ section {
   max-width: 1755px;
   margin-inline: auto;
   padding-inline: 0.75rem;
+}
+
+.container-action {
+  max-width: 1068px;
+  margin: auto;
+  width: 100%;
+}
+
+.container-shop {
+  max-width: 1600px;
+  margin: auto;
+  width: 100%;
 }
 
 .section {
