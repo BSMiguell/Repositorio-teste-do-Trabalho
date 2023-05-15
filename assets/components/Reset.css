@@ -32,6 +32,7 @@
   --border-color: hsl(129, 36%, 85%);
   --border-color-alt: hsl(113, 15%, 90%);
   --bg-color: hsl(236, 80%, 4%);
+  --neon-color: hsl(0, 100%, 50%);
 
   /*========== Font and typography ==========*/
   /* .5rem = 8px | 1rem = 16px ... */
