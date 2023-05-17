@@ -57,8 +57,6 @@
   --transition: cubic-bezier(0, 0, 0.05, 1);
 }
 
-input,
-textarea,
 body {
   color: var(--text-color);
   font-family: var(--body-font);
@@ -86,13 +84,7 @@ a {
 img {
   max-width: 100%;
 }
-button,
-textarea,
-input {
-  background-color: transparent;
-  border: none;
-  outline: none;
-}
+
 table {
   width: 100%;
   border-collapse: collapse;

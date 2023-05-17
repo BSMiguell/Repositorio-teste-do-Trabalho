@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+  font-family: "Varela Round", sans-serif;
+}
+
+body {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background: #fff;
+}
+
+a,
+label {
+  font-size: 1rem;
+}
+
+a:hover {
+  color: #08558b;
+}
+
+.login,
+.cadastro {
+  background-color: #fff;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 30px;
+  margin-top: 10vh;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #323232;
+}
+
+label,
+input {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  border-bottom: 2px solid #323232;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+input:focus {
+  border-bottom: 2px solid #08558b;
+}
+
+#forgot-pass {
+  display: block;
+}
+
+input[type="submit"] {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  margin-top: 30px;
+  color: #fff;
+  background-color: #08558b;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #1b223c;
+  transition: 0.5s;
+}
+
+#social,
+#social p {
+  margin-bottom: 20px;
+}
+
+#social img {
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  line-height: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#registra p {
+  margin-bottom: 10px;
+  color: #000;
+}

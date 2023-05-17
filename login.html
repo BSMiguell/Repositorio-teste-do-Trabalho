@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- ===== Boxicons CSS ===== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- ===== Components CSS ===== -->
+    <link rel="stylesheet" href="assets/components/Reset.css" />
+
+    <!-- ===== Style CSS ===== -->
+    <link rel="stylesheet" href="assets/css/Header.css" />
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+
+    <!-- ===== Script CSS ===== -->
+    <script src="assets/components/Nav.js" defer></script>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <a href="index.html" class="logo"
+        ><img src="assets/img/logo__footer.jpg"
+      /></a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <nav>
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Teste</a></li>
+          <li><a href="#">Teste</a></li>
+          <li><a href="produtos.html">Products</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== LOGIN ===== -->
+    <section>
+      <div class="login">
+        <h1>Login</h1>
+        <form action="">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Digiite seu email"
+            autocomplete="off"
+          />
+
+          <label for="password">Senha</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Digite sua senha"
+          />
+
+          <a href="#" id="forgot-pass">Esqueceu a senha?</a>
+          <input type="submit" value="login" />
+
+          <div id="social">
+            <p>Ou entra pela suas redes socials</p>
+            <img
+              src="assets/img/Login/ico-feacebook.png"
+              alt="Icon do feacebbok"
+            />
+            <img
+              src="assets/img/Login/ico-feacebook.png"
+              alt="Icon do feacebbok"
+            />
+          </div>
+
+          <div id="registra">
+            <p class="link">
+              Ainda não tem contas?
+
+              <a href="registre.html">Registra</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
