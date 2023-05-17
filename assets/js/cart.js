@@ -1,109 +1,160 @@
-// Define uma variável global para armazenar o estado do alerta
-var isAlertVisible = false;
-fetch("json/produto.json")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (products) {
-    let placeholder = document.querySelector("#produtos");
-    let out = "";
-    let count = 0;
-    for (let product of products) {
-      out += `
-        <div class="pro">
-        <a href="${product.imagem.link}"><img src="${product.imagem.src}" alt="${product.titulo}"></a>
-          <div class="des">
-            <span class="marca">${product.editora}</span>
-            <span class="marca">${product.data_lancamento}</span>
-            <h3>${product.titulo}</h3>
-            <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            </div>  
-            <span>R$${product.preco}</span>
-          </div>
-          <a class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
-        </div>
-      `;
-      count++;
-      if (count % 4 == 0) {
-        out += `<div style="clear:both;"></div>`;
-      }
-    }
+const cartIcon = document.querySelector("#cart-icon");
+const cart = document.querySelector(".cart");
+const closeCart = document.querySelector("#cart-close");
 
-    placeholder.innerHTML = out;
+//=============== ABRIR E FECHAR O CART ===============
+cartIcon.addEventListener("click", () => {
+  cart.classList.add("active-2");
+});
 
-    // Seleciona todos os botões "Adicionar ao carrinho"
-    var addToCartButtons = document.querySelectorAll(".add-to-cart");
+closeCart.addEventListener("click", () => {
+  cart.classList.remove("active-2");
+});
 
-    // Adiciona um evento de clique a todos os botões
-    addToCartButtons.forEach(function (button) {
-      button.addEventListener("click", function () {
-        // Verifica se o alerta já está visível
-        if (!isAlertVisible) {
-          // Cria um elemento de div para o alerta
-          var alertBox = document.createElement("div");
-          alertBox.classList.add("my-alert");
+// ========================================
+if (document.readyState == "loading") {
+  document.addEventListener("DOMContentLoaded", start);
+} else {
+  start();
+}
 
-          // Adiciona uma mensagem ao alerta
-          var message = document.createTextNode(
-            "Produto adicionado ao carrinho!"
-          );
-          alertBox.appendChild(message);
+// ========================================
+function start() {
+  addEvents();
+}
 
-          // Adiciona o alerta à página
-          var container = document.querySelector(".pro-container");
-          container.appendChild(alertBox);
-
-          // Cria um novo elemento de div para o item adicionado ao carrinho
-          var cartItem = document.createElement("div");
-          cartItem.classList.add("cart-item");
-          cartItem.innerText =
-            this.previousElementSibling.previousElementSibling.textContent;
-
-          // Cria um botão de "remover" para o item
-          var removeButton = document.createElement("button");
-          removeButton.classList.add("remove-item");
-          removeButton.innerText = "Volume de Jusutsu Adionado X";
-
-          // Adiciona um evento de clique ao botão de "remover"
-          removeButton.addEventListener("click", function () {
-            // Remove o item do carrinho
-            cartItem.remove();
-          });
-
-          // Adiciona o botão de "remover" ao item do carrinho
-          cartItem.appendChild(removeButton);
-
-          // Adiciona o item ao carrinho
-          var cartItemsDiv = document.querySelector(".cart-items");
-          cartItemsDiv.appendChild(cartItem);
-
-          // Define a variável de estado do alerta como true
-          isAlertVisible = true;
-
-          // Define um tempo limite para o alerta
-          setTimeout(function () {
-            alertBox.remove();
-            isAlertVisible = false;
-          }, 3000);
-        }
-      });
-    });
+// ========================================
+function update() {
+  addEvents();
+  updateTotal();
+}
+// =============== REMOVER O ITEM DO CART ===============
+function addEvents() {
+  // REmove items from cart
+  let cartRemove_btns = document.querySelectorAll(".cart-remove");
+  console.log(cartRemove_btns);
+  cartRemove_btns.forEach((btn) => {
+    btn.addEventListener("click", handle_removeCartItem);
   });
 
-// Abre e fecha o carrinho
-const cartOpenIcon = document.querySelector(".cart__open");
-const cartRemoveIcon = document.querySelector(".cart__remove");
-const cartItems = document.querySelector(".cart-items");
+  // ALTERA A QUANTIDA DO ITEM
+  let cartQuantity_inputs = document.querySelectorAll(".cart-quantity");
+  cartQuantity_inputs.forEach((input) => {
+    input.addEventListener("change", handle_chageitemQuantity);
+  });
 
-cartOpenIcon.addEventListener("click", () => {
-  cartItems.style.display = "block";
-});
+  // ADICONAR O ITEM AO CART
+  let addCart_btns = document.querySelectorAll(".add-cart");
+  addCart_btns.forEach((btn) => {
+    btn.addEventListener("click", handle_addCartItem);
+  });
 
-cartRemoveIcon.addEventListener("click", () => {
-  cartItems.style.display = "none";
-});
+  // Comprar Pedido
+  const buy_bnt = document.querySelector(".btn-buy");
+  buy_bnt.addEventListener("click", handle_buyOrder);
+}
+// ========================================
+let itemsAdded = [];
+
+function handle_addCartItem() {
+  let product = this.parentElement;
+  let title = product.querySelector(".product-title").innerHTML;
+  let price = product.querySelector(".product-price").innerHTML;
+  let imgSrc = product.querySelector(".product-img").src;
+  console.log(title, price, imgSrc);
+
+  let newToAdd = {
+    title,
+    price,
+    imgSrc,
+  };
+
+  // item identificador já existe
+  if (itemsAdded.find((el) => el.title == newToAdd.title)) {
+    alert("Item já Adicionado");
+    return;
+  } else {
+    itemsAdded.push(newToAdd);
+  }
+
+  // Adicionar produto ao carrinho
+  let cartBoxElement = CartBoxComponent(title, price, imgSrc);
+  let newNode = document.createElement("div");
+  newNode.innerHTML = cartBoxElement;
+  const cartContent = cart.querySelector(".cart-content");
+  cartContent.appendChild(newNode);
+
+  update();
+}
+
+function handle_removeCartItem() {
+  this.parentElement.remove();
+  itemsAdded = itemsAdded.filter(
+    (el) =>
+      el.title !=
+      this.parentElement.querySelector(".cart-product-title").innerHTML
+  );
+
+  update();
+}
+
+function handle_chageitemQuantity() {
+  if (isNaN(this.value) || this.value < 1) {
+    this.value = 1;
+  }
+  this.value = Math.floor(this.value); // para mantê-lo inteiro
+
+  update();
+}
+
+function handle_buyOrder() {
+  if (itemsAdded.length <= 0) {
+    alert("Ainda não há pedido a ser feito!\nFaça um pedido primeiro.;9");
+    return;
+  }
+
+  const cartContent = cart.querySelector(".cart-content");
+  cartContent.innerHTML = "";
+  alert("Seu pedido foi feito com sucesso");
+  itemsAdded = [];
+
+  update();
+}
+
+// =============== SOMAR E TIRAR O PREÇO ===============
+function updateTotal() {
+  let cartBoxes = document.querySelectorAll(".cart-box");
+  const totalElement = cart.querySelector(".total-price");
+  let total = 0;
+  cartBoxes.forEach((cartBox) => {
+    let priceElement = cartBox.querySelector(".cart-price");
+    let price = parseFloat(priceElement.innerHTML.replace("$", ""));
+    let quantity = cartBox.querySelector(".cart-quantity").value;
+    total += price * quantity;
+  });
+
+  // mantém 2 dígitos após a vírgula
+  total = total.toFixed(2);
+  // ou
+  // total = Math.round(total * 100) / 100;
+
+  totalElement.innerHTML = "$" + total;
+}
+
+function CartBoxComponent(title, price, imgSrc) {
+  return `
+  <div class="cart-box">
+    <img
+      src=${imgSrc}
+      alt=""
+      class="cart-img"
+    />
+    <div  class="detail-box">
+      <div class="cart-product-title">${title}</div>
+      <div class="cart-price">${price}</div>
+      <input type="number" value="1" class="cart-quantity" />
+    </div>
+    <!-- REMOVE CART -->
+    <i class="bx bxs-trash-alt cart-remove"></i>
+  </div>`;
+}
