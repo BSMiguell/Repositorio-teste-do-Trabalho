@@ -1,96 +1,236 @@
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
-  font-family: "Varela Round", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background-size: 100%;
-  background-repeat: no-repeat;
+  height: 100vh;
+  background-color: #4070f4;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.container-login {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  column-gap: 30px;
+}
+.form {
+  position: absolute;
+  max-width: 430px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 6px;
   background: #fff;
 }
-
-a,
-label {
-  font-size: 1rem;
+.form.signup {
+  opacity: 0;
+  pointer-events: none;
 }
-
-a:hover {
-  color: #08558b;
+.forms.show-signup .form.signup {
+  opacity: 1;
+  pointer-events: auto;
 }
-
-.login,
-.cadastro {
-  background-color: #fff;
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px 30px;
-  margin-top: 10vh;
-  border-radius: 10px;
-  text-align: center;
-  border: 2px solid #323232;
+.forms.show-signup .form.login {
+  opacity: 0;
+  pointer-events: none;
 }
-
-label,
-input {
-  display: block;
-  width: 100%;
-  text-align: left;
-}
-
-label {
+.title__login {
+  font-size: 28px;
   font-weight: 600;
-}
-
-input {
-  border-bottom: 2px solid #323232;
-  padding: 10px;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  width: 90%;
-}
-
-input:focus {
-  border-bottom: 2px solid #08558b;
-}
-
-#forgot-pass {
-  display: block;
-}
-
-input[type="submit"] {
+  color: #232836;
   text-align: center;
-  text-transform: uppercase;
-  font-weight: 600;
-  border: none;
-  border-radius: 20px;
+}
+form {
   margin-top: 30px;
+}
+.form .field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+.field input,
+.field button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 6px;
+}
+.field input {
+  outline: none;
+  padding: 0 15px;
+  border: 1px solid#CACACA;
+}
+.field input:focus {
+  border-bottom-width: 2px;
+}
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #8b8b8b;
+  cursor: pointer;
+  padding: 5px;
+}
+.field button {
   color: #fff;
-  background-color: #08558b;
+  background-color: #0171d3;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
-  background-color: #1b223c;
-  transition: 0.5s;
+.field button:hover {
+  background-color: #016dcb;
 }
-
-#social,
-#social p {
-  margin-bottom: 20px;
+.form-link {
+  text-align: center;
+  margin-top: 10px;
 }
-
-#social img {
-  height: 40px;
-  width: 40px;
-  margin: 0 5px;
-  line-height: 40px;
+.form-link span,
+.form-link a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #232836;
+}
+.form a {
+  color: #0171d3;
+  text-decoration: none;
+}
+.form-content a:hover {
+  text-decoration: underline;
+}
+.line {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  margin: 36px 0;
+  background-color: #d4d4d4;
+}
+.line::before {
+  content: "Or";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  color: #8b8b8b;
+  padding: 0 15px;
+}
+.media-options a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a.facebook {
   color: #fff;
-  cursor: pointer;
+  background-color: #4267b2;
+}
+a.facebook .facebook-icon {
+  height: 28px;
+  width: 28px;
+  color: #0171d3;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.facebook-icon,
+img.google-img {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+img.google-img {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
+a.google {
+  border: 1px solid #cacaca;
+}
+a.google span {
+  font-weight: 500;
+  opacity: 0.6;
+  color: #232836;
 }
 
-#registra p {
-  margin-bottom: 10px;
-  color: #000;
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: cyan;
+  }
+}
+@media (max-width: 720px) {
+  nav {
+    position: relative;
+  }
+  .form.signup {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .form {
+    padding: 20px 10px;
+  }
 }

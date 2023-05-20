@@ -10,12 +10,22 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- ===== Components CSS ===== -->
     <link rel="stylesheet" href="assets/components/Reset.css" />
 
     <!-- ===== Style CSS ===== -->
     <link rel="stylesheet" href="assets/css/Header.css" />
     <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/Program.css" />
+    <link rel="stylesheet" href="assets/css/choose.css" />
+    <link rel="stylesheet" href="assets/css/about.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
 
     <!-- ===== Script CSS ===== -->
@@ -30,23 +40,303 @@
       <div class="bx bx-menu" id="menu-icon"></div>
       <nav>
         <ul class="navbar">
-          <li><a href="#">Home</a></li>
+          <li><a href="#" class="active">Home</a></li>
           <li><a href="#">Teste</a></li>
           <li><a href="#">Teste</a></li>
           <li><a href="produtos.html">Products</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li>
+            <a class="login-icon" href="login.html">
+              <i class="bx bxs-user"></i>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <!-- ===== HOME ===== -->
-    <section class="home">
-      <h3>Super-Promoção</h3>
-      <h2>Ofertas especiais essa semana</h2>
-      <h1>Em todos os produtos</h1>
-      <p>Economize mais com cupons e até 70% de desconto!</p>
-      <button>Compre agora</button>
-    </section>
+    <main class="main">
+      <!-- ===== HOME ===== -->
+      <section class="home">
+        <h3>Super-Promoção</h3>
+        <h2>Ofertas especiais essa semana</h2>
+        <h1>Em todos os produtos</h1>
+        <p>Economize mais com cupons e até 70% de desconto!</p>
+        <button class="button-flex">Compre agora</button>
+      </section>
+
+      <!-- ===== PROGRAM ===== -->
+      <section class="program section__program" id="program">
+        <div class="container">
+          <div class="section__data">
+            <h2 class="section__subtitle">Nosso programa</h2>
+            <div class="section__titles">
+              <h1 class="section__title-border">CONSTRUA O SEU</h1>
+              <h1 class="section__title">MELHOR CORPO</h1>
+            </div>
+          </div>
+
+          <div class="program__container grid">
+            <article class="program__card">
+              <div class="program__shape">
+                <img
+                  src="assets/img/program/program1.png"
+                  alt=""
+                  class="program__img"
+                />
+              </div>
+
+              <h3 class="program__title">Músculo flexível</h3>
+              <p class="program__description">
+                Criando tensão que temporariamente torna as fibras musculares
+                menores ou contraídas. Criando tensão que temporariamente torna
+                as fibras musculares menores ou contraídas.
+              </p>
+              <a href="#" class="program__button">
+                <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+
+            <article class="program__card">
+              <div class="program__shape">
+                <img
+                  src="assets/img/program/program2.png"
+                  alt=""
+                  class="program__img"
+                />
+              </div>
+
+              <h3 class="program__title">Exercício Cardio</h3>
+              <p class="program__description">
+                Exercite sua frequência cardíaca e mantenha-a por um período
+                prolongado de tempo. Exercite sua frequência cardíaca e
+                mantenha-a por um período prolongado de tempo.
+              </p>
+              <a href="#" class="program__button">
+                <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+
+            <article class="program__card">
+              <div class="program__shape">
+                <img
+                  src="assets/img/program/program3.png"
+                  alt=""
+                  class="program__img"
+                />
+              </div>
+
+              <h3 class="program__title">Yoga básico</h3>
+              <p class="program__description">
+                Diafragmática, esta é a técnica de respiração mais comum que
+                você encontrará na ioga.Diafragmática, esta é a técnica de
+                respiração mais comum que você encontrará na ioga.
+              </p>
+              <a href="#" class="program__button">
+                <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+
+            <article class="program__card">
+              <div class="program__shape">
+                <img
+                  src="assets/img/program/program4.png"
+                  alt=""
+                  class="program__img"
+                />
+              </div>
+
+              <h3 class="program__title">Levantamento de peso</h3>
+              <p class="program__description">
+                Tenta um levantamento único de peso máximo de uma barra
+                carregada com placas de peso.Tenta um levantamento único de peso
+                máximo de uma barra carregada com placas de peso.
+              </p>
+              <a href="#" class="program__button">
+                <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT ===== -->
+      <section class="about">
+        <div class="container">
+          <div class="section__data">
+            <h2 class="section__subtitle">Sobre nós</h2>
+            <div class="section__titles">
+              <h2 class="section__title-border">TREINE</h2>
+              <h3 class="section__title">CONNOSCO</h3>
+            </div>
+          </div>
+          <div class="about__flex">
+            <div class="about-image">
+              <img src="assets/img/about__1.png" />
+            </div>
+
+            <div class="about-content">
+              <h2>Warm embrace in a cup</h2>
+              <p>
+                Coffee, the beloved beverage enjoyed by millions worldwide, is
+                known for its bold flavor, rich aroma, and ability to provide a
+                comforting warmth in every sip. It's often considered an
+                essential morning pick-me-up, but can be enjoyed at any time of
+                day. Whether sipping alone or with company, coffee provides the
+                perfect accompaniment to conversation and socializing.
+              </p>
+              <a href="#" class="button button__flex pricing__button">
+                Purchase Now <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="about__flex">
+            <div class="about-image">
+              <img src="assets/img/about__2.png" />
+            </div>
+            <div class="about-content">
+              <h2>Warm embrace in a cup</h2>
+              <p>
+                Coffee, the beloved beverage enjoyed by millions worldwide, is
+                known for its bold flavor, rich aroma, and ability to provide a
+                comforting warmth in every sip. It's often considered an
+                essential morning pick-me-up, but can be enjoyed at any time of
+                day. Whether sipping alone or with company, coffee provides the
+                perfect accompaniment to conversation and socializing.
+              </p>
+              <a href="#" class="button button__flex pricing__button">
+                Purchase Now <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PRICING ===== -->
+      <section class="pricing section" id="pricing">
+        <div class="container">
+          <div class="section__data">
+            <h2 class="section__subtitle">Preços</h2>
+            <div class="section__titles">
+              <h2 class="section__title-border">NOSSO</h2>
+              <h3 class="section__title">PLANO ESPECIAL</h3>
+            </div>
+          </div>
+
+          <div class="pricing__container grid">
+            <article class="pricing__card">
+              <div class="pricing__header">
+                <div class="pricing__shape">
+                  <img
+                    src="assets/img/pricing/pricing1.png"
+                    alt=""
+                    class="pricing__img"
+                  />
+                </div>
+
+                <h2 class="pricing__title">BASIC PACKAGE</h2>
+                <h3 class="pricing__number">$200</h3>
+              </div>
+
+              <ul class="pricing__list">
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 5 Days In A Week
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Sweatshirt
+                </li>
+                <li class="pricing__item pricing__item-opacity">
+                  <i class="bx bx-check-circle"></i> 01 Bottle of Protein
+                </li>
+                <li class="pricing__item pricing__item-opacity">
+                  <i class="bx bx-check-circle"></i> Access to Videos
+                </li>
+                <li class="pricing__item pricing__item-opacity">
+                  <i class="bx bx-check-circle"></i> Muscle Stretching
+                </li>
+              </ul>
+
+              <a href="#" class="button button__flex pricing__button">
+                Purchase Now <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+
+            <article class="pricing__card pricing__card-active">
+              <div class="pricing__header">
+                <div class="pricing__shape">
+                  <img
+                    src="assets/img/pricing/pricing2.png"
+                    alt=""
+                    class="pricing__img"
+                  />
+                </div>
+
+                <h2 class="pricing__title">PREMIUM PACKAGE</h2>
+                <h3 class="pricing__number">$300</h3>
+              </div>
+
+              <ul class="pricing__list">
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 5 Days In A Week
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Sweatshirt
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Bottle of Protein
+                </li>
+                <li class="pricing__item pricing__item-opacity">
+                  <i class="bx bx-check-circle"></i> Access to Videos
+                </li>
+                <li class="pricing__item pricing__item-opacity">
+                  <i class="bx bx-check-circle"></i> Muscle Stretching
+                </li>
+              </ul>
+
+              <a href="#" class="button button__flex pricing__button">
+                Purchase Now <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+
+            <article class="pricing__card">
+              <div class="pricing__header">
+                <div class="pricing__shape">
+                  <img
+                    src="assets/img/pricing/pricing3.png"
+                    alt=""
+                    class="pricing__img"
+                  />
+                </div>
+
+                <h2 class="pricing__title">DIAMOND PACKAGE</h2>
+                <h3 class="pricing__number">$500</h3>
+              </div>
+
+              <ul class="pricing__list">
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 5 Days In A Week
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Sweatshirt
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Bottle of Protein
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> Access to Videos
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> Muscle Stretching
+                </li>
+              </ul>
+
+              <a href="#" class="button button__flex pricing__button">
+                Purchase Now <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- ===== FOOTER ===== -->
     <footer>

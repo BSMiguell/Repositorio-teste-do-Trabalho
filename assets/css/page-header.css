@@ -37,7 +37,12 @@
   padding: 14px;
 }
 
-.page-header h2,
+.page-header h2 {
+  font-size: var(--big-font-size);
+  color: var(--second-color);
+}
+
 .page-header p {
-  color: #fff;
+  font-size: var(--h3-font-size);
+  color: var(--main-color);
 }

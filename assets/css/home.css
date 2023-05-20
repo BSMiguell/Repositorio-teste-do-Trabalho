@@ -14,22 +14,26 @@
 }
 
 .home h3 {
-  font-size: 1.5rem;
+  font-size: var(--h3-font-size);
   padding-bottom: 15px;
   color: #e1f0ea;
 }
 
 .home h2 {
-  color: #bb5555;
-  font-size: 2rem;
+  color: var(--main-color);
+  font-size: var(--h2-font-size);
 }
 
 .home h1 {
-  color: #ff0000;
-  font-size: 3rem;
+  color: var(--first-color);
+  font-size: var(--bigger-font-size);
 }
 
-.home button {
+.home p {
+  color: var(--second-color);
+}
+
+.button-flex {
   border-radius: 10px;
   color: hsl(0, 0%, 0%);
   border: 0;
@@ -41,7 +45,7 @@
   margin-top: 20px;
 }
 
-.home button:hover {
+.button-flex:hover {
   color: #fff;
   background: var(--neon-color);
   box-shadow: 0 0 10px var(--neon-color), 0 0 40px var(--neon-color),

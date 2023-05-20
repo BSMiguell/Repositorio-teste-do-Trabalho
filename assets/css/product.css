@@ -2,6 +2,7 @@
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--second-color);
+  margin-left: 10px;
 }
 
 .cart {
@@ -16,7 +17,7 @@
   padding: 20px;
   background-color: hsl(0, 0%, 100%);
   box-shadow: -2px solid 4px hsl(0, 0%, 30%);
-  border: 2px solid hsl(0, 80%, 61%);
+  border: 2px solid var(--main-color);
   transition: 1.5s;
 }
 
@@ -64,7 +65,7 @@
 
 .cart-quantity {
   border: 1px solid hsl(0, 0%, 0%);
-  outline-color: hsl(0, 80%, 61%);
+  outline-color: var(--main-color);
   width: 2.4rem;
   text-align: center;
   font-size: 1rem;
@@ -72,7 +73,7 @@
 
 .cart-remove {
   font-size: 24px;
-  color: hsl(0, 80%, 61%);
+  color: var(--main-color);
   cursor: pointer;
 }
 

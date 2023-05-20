@@ -1,6 +1,6 @@
 footer {
   position: relative;
-  background: #140b5c;
+  background: #020109;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -161,7 +161,7 @@ footer .content .link-boxes .box {
 }
 footer .bottom-details {
   width: 100%;
-  background: #0f0844;
+  background: #060416;
 }
 footer .bottom-details .bottom_text {
   max-width: 1250px;
