@@ -12,7 +12,7 @@
 
 .pricing__card {
   row-gap: 2rem;
-  background-color: hsla(79, 6%, 64%, 0.07);
+  background-color: var(--bg-soft-color);
   padding: 2rem 2.5rem;
 }
 

@@ -1,8 +1,8 @@
 #cart-icon {
-  font-size: 1.5rem;
+  font-size: var(--h2-font-size);
   cursor: pointer;
   color: var(--second-color);
-  margin-left: 10px;
+  padding: 10px 25px;
 }
 
 .cart {
@@ -28,8 +28,8 @@
 
 .cart-title {
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: var(--h1-font-size);
+  font-weight: var(--weight-600);
   margin-top: 2rem;
   color: hsl(0, 0%, 20%);
 }
@@ -55,12 +55,12 @@
 }
 
 .cart-product-title {
-  font-size: 1rem;
+  font-size: var(--small-font-size);
   text-transform: uppercase;
 }
 
 .cart-price {
-  font-weight: 500;
+  font-weight: var(--weight-500);
 }
 
 .cart-quantity {
@@ -68,11 +68,11 @@
   outline-color: var(--main-color);
   width: 2.4rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: var(--h3-font-size);
 }
 
 .cart-remove {
-  font-size: 24px;
+  font-size: var(--h2-font-size);
   color: var(--main-color);
   cursor: pointer;
 }
@@ -85,8 +85,8 @@
 }
 
 .total-title {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: var(--normal-font-size);
+  font-weight: var(--weight-600);
 }
 
 .total-price {
@@ -100,7 +100,7 @@
   background-color: hsl(0, 0%, 20%);
   border: none;
   color: hsl(0, 0%, 100%);
-  font-size: 1rem;
+  font-size: var(--normal-font-size);
   font-weight: 500;
   cursor: pointer;
 }
@@ -115,7 +115,7 @@
   top: 1rem;
   right: 0.8rem;
   left: 0;
-  font-size: 2rem;
+  font-size: var(--h1-font-size);
   color: hsl(0, 0%, 20%);
   cursor: pointer;
 }
@@ -124,9 +124,11 @@
   margin-top: 1.5rem;
 }
 
+/* PRODUCT CONTAINER */
+
 .section-title {
-  font-style: 1.5rem;
-  font-weight: 600;
+  font-size: var(--h1-font-size);
+  font-weight: var(--weight-600);
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -153,8 +155,8 @@
 }
 
 .product-title {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: var(--small-font-size);
+  font-weight: var(--weight-600);
   text-transform: uppercase;
 }
 
@@ -163,7 +165,7 @@
 }
 
 .product-price {
-  font-weight: 500;
+  font-weight: var(--weight-500);
 }
 
 .add-cart {
@@ -180,6 +182,8 @@
 .add-cart:hover {
   background-color: hsl(34, 94%, 77%);
 }
+
+/* NAVIGATING THROUGH THE PAGES */
 
 #pagination {
   text-align: center;
