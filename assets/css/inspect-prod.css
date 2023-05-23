@@ -1,6 +1,7 @@
 #prodetails {
   display: flex;
   margin-top: 20px;
+  height: 100vh;
 }
 
 #prodetails .single-pro-image {
