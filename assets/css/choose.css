@@ -65,15 +65,15 @@
   background-color: var(--first-color);
   padding: 18px 32px;
   border: 2px solid var(--first-color-light);
-  color: var(--second-color);
+  color: var(--header-color);
   font-weight: var(--font-bold);
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .button:hover {
-  background-color: var(--second-color);
-  color: var(--main-color);
+  background-color: var(--body-color);
+  color: var(--header-color);
 }
 
 .button i {

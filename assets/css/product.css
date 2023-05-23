@@ -19,6 +19,7 @@
   box-shadow: -2px solid 4px hsl(0, 0%, 30%);
   border: 2px solid var(--main-color);
   transition: 1.5s;
+  z-index: 10002;
 }
 
 .cart.active-2 {
@@ -190,16 +191,16 @@
 }
 
 #pagination .active-pagination {
-  background-color: #ff0000;
-  border: 3px solid hsl(0, 0%, 80%);
+  background-color: var(--first-color);
+  border: 3px solid var(--body-color);
 }
 
 #pagination a {
   text-decoration: none;
-  background-color: hsl(0, 100%, 58%);
+  background-color: var(--first-color);
   padding: 10px 15px;
   border-radius: 4px;
-  color: #fff;
+  color: var(--header-color);
   font-weight: 600;
   cursor: pointer;
 }
@@ -219,15 +220,12 @@
 
 @media (max-width: 400px) {
   .cart {
-    width: 320px;
+    width: 100%;
   }
 }
 
 @media (max-width: 360px) {
   .shop {
     margin-top: 1rem;
-  }
-  .cart {
-    width: 280px;
   }
 }

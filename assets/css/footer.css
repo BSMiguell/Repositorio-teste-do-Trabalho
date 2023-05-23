@@ -45,7 +45,7 @@ footer .content .footer__top {
   border-radius: 50%;
   text-align: center;
   line-height: 40px;
-  color: var(--body-color);
+  color: var(--header-color);
   font-size: var(--normal-font-size);
   text-decoration: none;
   transition: all 0.4s ease;
@@ -56,35 +56,35 @@ footer .content .footer__top {
 }
 .footer__top .media-icons a:nth-child(1):hover {
   color: hsl(220, 46%, 48%);
-  background: var(--body-color);
+  background: var(--header-color);
 }
 .footer__top .media-icons a:nth-child(2) {
   background: hsl(203, 89%, 53%);
 }
 .footer__top .media-icons a:nth-child(2):hover {
   color: hsl(203, 89%, 53%);
-  background: var(--body-color);
+  background: var(--header-color);
 }
 .footer__top .media-icons a:nth-child(3) {
   background: hsl(340, 75%, 54%);
 }
 .footer__top .media-icons a:nth-child(3):hover {
   color: hsl(340, 75%, 54%);
-  background: var(--body-color);
+  background: var(--header-color);
 }
 .footer__top .media-icons a:nth-child(4) {
   background: hsl(201, 100%, 35%);
 }
 .footer__top .media-icons a:nth-child(4):hover {
   color: hsl(201, 100%, 35%);
-  background: var(--body-color);
+  background: var(--header-color);
 }
 .footer__top .media-icons a:nth-child(5) {
   background: var(--first-color);
 }
 .footer__top .media-icons a:nth-child(5):hover {
   color: var(--first-color);
-  background: var(--body-color);
+  background: var(--header-color);
 }
 footer .content .link-boxes {
   width: 100%;
@@ -161,7 +161,7 @@ footer .content .link-boxes .box {
 }
 footer .bottom-details {
   width: 100%;
-  background: var(--main-color);
+  background: var(--bg-soft-color);
 }
 footer .bottom-details .bottom_text {
   max-width: 1250px;

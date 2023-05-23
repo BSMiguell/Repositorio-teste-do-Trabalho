@@ -10,6 +10,16 @@
   scroll-behavior: smooth;
 }
 
+.white-mode {
+  --first-color: hsl(0, 100%, 50%);
+  --main-color: hsl(0, 80%, 61%);
+  --second-color: hsl(34, 100%, 72%);
+  --text-color: hsl(120, 3%, 7%);
+  --body-color: hsl(0, 0%, 0%);
+  --bg-color: hsl(0, 0%, 100%);
+  --bg-soft-color: hsla(79, 6%, 64%, 0.07);
+}
+
 /* ===== Colours ===== */
 :root {
   /*========== Colors ==========*/
@@ -19,9 +29,10 @@
   --second-color: hsl(34, 94%, 87%);
   --text-color: hsl(154, 13%, 32%);
   --body-color: hsl(0, 0%, 100%);
+  --header-color: hsl(0, 0%, 100%);
   --bg-color: hsl(236, 80%, 4%);
   --bg-soft-color: hsla(79, 6%, 64%, 0.07);
-  --neon-color: hsl(0, 100%, 50%);
+  --neon-color-Red: hsl(355, 100%, 50%);
 
   /*========== Font and typography ==========*/
   /* 1rem = 16px ... */
@@ -163,10 +174,10 @@ section {
 }
 
 .section__title:hover {
-  color: #fff;
-  background: var(--neon-color);
-  box-shadow: 0 0 10px var(--neon-color), 0 0 40px var(--neon-color),
-    0 0 80px var(--neon-color);
+  color: var(--header-color);
+  background: var(--neon-color-Red);
+  box-shadow: 0 0 10px var(--neon-color-Red), 0 0 40px var(--neon-color-Red),
+    0 0 80px var(--neon-color-Red);
   padding: 0px 25px;
   border-radius: 10px;
   cursor: pointer;

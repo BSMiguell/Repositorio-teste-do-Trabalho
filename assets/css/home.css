@@ -46,9 +46,9 @@
 
 .button-flex:hover {
   color: #fff;
-  background: var(--neon-color);
-  box-shadow: 0 0 10px var(--neon-color), 0 0 40px var(--neon-color),
-    0 0 80px var(--neon-color);
+  background: var(--neon-color-Red);
+  box-shadow: 0 0 10px var(--neon-color-Red), 0 0 40px var(--neon-color-Red),
+    0 0 80px var(--neon-color-Red);
 }
 
 @media (max-width: 799px) {
