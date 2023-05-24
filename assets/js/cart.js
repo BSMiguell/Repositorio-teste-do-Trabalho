@@ -2,7 +2,7 @@ const cartIcon = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
 const closeCart = document.querySelector("#cart-close");
 
-//=============== ABRIR E FECHAR O CART ===============
+//=============== ABRIR E FECHAR O CART ===============+
 cartIcon.addEventListener("click", () => {
   cart.classList.add("active-2");
 });
