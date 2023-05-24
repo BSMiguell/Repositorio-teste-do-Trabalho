@@ -58,8 +58,10 @@ a.active {
   align-items: center;
 }
 
-.login-icon i {
-  font-size: var(--h2-font-size);
+.icons-mode {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
 }
 
 #menu-icon {
@@ -68,11 +70,26 @@ a.active {
   z-index: 10001;
   cursor: pointer;
   display: none;
+  margin: 0 20px;
 }
 
-.theme-mode {
-  display: flex;
-  align-items: center;
+#cart-icon {
+  color: var(--second-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.login-icon i {
+  color: var(--second-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 20px;
+  border-radius: 0.5rem;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 .theme-icon {
@@ -111,7 +128,6 @@ header.sticky {
 @media (max-width: 830px) {
   #menu-icon {
     display: block;
-    margin-left: 60%;
   }
 
   .navbar {

@@ -24,13 +24,16 @@
     <link rel="stylesheet" href="assets/css/Header.css" />
     <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="stylesheet" href="assets/css/Program.css" />
-    <link rel="stylesheet" href="assets/css/choose.css" />
+    <link rel="stylesheet" href="assets/css/pricing.css" />
     <link rel="stylesheet" href="assets/css/about.css" />
+    <link rel="stylesheet" href="assets/css/choose.css" />
+    <link rel="stylesheet" href="assets/css/product.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
 
     <!-- ===== Script CSS ===== -->
     <script src="assets/components/Nav.js" defer></script>
     <script src="assets/components/dark-theme.js" defer></script>
+    <script src="assets/js/Cart.js" defer></script>
   </head>
   <body>
     <!-- ===== HEADER ===== -->
@@ -38,21 +41,42 @@
       <a href="index.html" class="logo"
         ><img src="assets/img/logo__footer.jpg"
       /></a>
-      <div class="bx bx-menu" id="menu-icon"></div>
+
       <nav>
         <ul class="navbar">
           <li><a href="#" class="active">Home</a></li>
           <li><a href="#">Teste</a></li>
           <li><a href="#">Teste</a></li>
           <li><a href="produtos-1.html">Products</a></li>
-          <li>
-            <a class="login-icon" href="login.html">
-              <i class="bx bxs-user"></i>
-            </a>
-          </li>
         </ul>
-        <div class="theme-mode">
+
+        <div class="icons-mode">
+          <div class="bx bx-menu" id="menu-icon"></div>
+          <i class="bx bx-shopping-bag" id="cart-icon"></i>
+          <a class="login-icon" href="login.html"
+            ><i class="bx bxs-user"></i
+          ></a>
           <img src="assets/img/theme/moon.png" class="theme-icon" alt="" />
+        </div>
+
+        <!-- CART -->
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+          <!-- CONTENT -->
+
+          <div class="cart-content">
+            <!-- TEST BOX -->
+          </div>
+
+          <!-- TOTAL -->
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
+          <!-- BUY BUTTON -->
+          <button type="button" class="btn-buy">Buy Now</button>
+          <!-- CART CLOSE -->
+          <i class="bx bx-x" id="cart-close"></i>
         </div>
       </nav>
     </header>
@@ -224,6 +248,60 @@
               <a href="#" class="button button__flex pricing__button">
                 Saber mais <i class="bx bx-right-arrow-alt"></i>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="choose section" id="choose">
+        <div class="choose__overflow">
+          <div class="choose__container container grid">
+            <div class="choose__content">
+              <div class="section__data">
+                <h2 class="section__subtitle">Melhores Motivo</h2>
+                <div class="section__titles">
+                  <h1 class="section__title-border">POR QUE</h1>
+                  <h1 class="section__title">ESCOLHER-NOS?</h1>
+                </div>
+              </div>
+
+              <p class="choose__description">
+                Escolha sua aula preferida e comece agora. Lembre-se que o único
+                treino ruim é aquele que você não fez.
+              </p>
+
+              <div class="choose__content-grid">
+                <div class="choose__images">
+                  <img
+                    src="assets/img/choose/choose-img.png"
+                    alt=""
+                    class="choose__img"
+                  />
+
+                  <div class="choose__triangle choose__triangle-1"></div>
+                  <div class="choose__triangle choose__triangle-2"></div>
+                  <div class="choose__triangle choose__triangle-3"></div>
+                </div>
+
+                <div class="choose__data">
+                  <div class="choose__group">
+                    <h3 class="choose__number">4</h3>
+                    <p class="choose__subtitle">Todos os membros</p>
+                  </div>
+                  <div class="choose__group">
+                    <h3 class="choose__number">4</h3>
+                    <p class="choose__subtitle">melhores treinadores</p>
+                  </div>
+                  <div class="choose__group">
+                    <h3 class="choose__number">25+</h3>
+                    <p class="choose__subtitle">Programas</p>
+                  </div>
+                  <div class="choose__group">
+                    <h3 class="choose__number">100+</h3>
+                    <p class="choose__subtitle">Prêmios</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

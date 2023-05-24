@@ -11,13 +11,12 @@
 }
 
 .white-mode {
-  --first-color: hsl(0, 100%, 50%);
-  --main-color: hsl(0, 80%, 61%);
   --second-color: hsl(34, 100%, 72%);
   --text-color: hsl(120, 3%, 7%);
   --body-color: hsl(0, 0%, 0%);
   --bg-color: hsl(0, 0%, 100%);
-  --bg-soft-color: hsla(79, 6%, 64%, 0.07);
+  --card-color: hsl(160, 36%, 82%);
+  --product-color: hsl(0, 0%, 0%);
 }
 
 /* ===== Colours ===== */
@@ -32,7 +31,10 @@
   --header-color: hsl(0, 0%, 100%);
   --bg-color: hsl(236, 80%, 4%);
   --bg-soft-color: hsla(79, 6%, 64%, 0.07);
+  --black-color: hsl(0, 0%, 0%);
   --neon-color-Red: hsl(355, 100%, 50%);
+  --card-color: hsl(154, 13%, 32%);
+  --product-color: hsl(235, 20%, 87%);
 
   /*========== Font and typography ==========*/
   /* 1rem = 16px ... */

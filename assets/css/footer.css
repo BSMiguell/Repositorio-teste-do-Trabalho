@@ -133,7 +133,7 @@ footer .content .link-boxes .box {
   height: 40px;
   width: calc(100% + 55px);
   outline: none;
-  border: 2px solid #afafb6;
+  border: 2px solid var(--header-color);
   background: var(--bg-soft-color);
   border-radius: 4px;
   padding: 0 15px;
@@ -146,7 +146,7 @@ footer .content .link-boxes .box {
   font-size: 16px;
 }
 .link-boxes .input-box input[type="button"] {
-  background: var(--body-color);
+  background: hsl(0, 0%, 91%);
   color: var(--second-colo);
   border: none;
   font-size: 18px;
@@ -159,6 +159,7 @@ footer .content .link-boxes .box {
 .input-box input[type="button"]:hover {
   opacity: 1;
 }
+
 footer .bottom-details {
   width: 100%;
   background: var(--bg-soft-color);
@@ -185,6 +186,7 @@ footer .bottom-details .bottom_text {
 .bottom-details .bottom_text a {
   margin-right: 10px;
 }
+
 @media (max-width: 900px) {
   footer .content .link-boxes {
     flex-wrap: wrap;

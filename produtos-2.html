@@ -22,6 +22,7 @@
     <!-- ===== Script CSS ===== -->
     <script src="assets/components/Nav.js" defer></script>
     <script src="assets/js/Cart.js" defer></script>
+    <script src="assets/components/dark-theme.js" defer></script>
   </head>
   <body>
     <!-- ===== HEADER ===== -->
@@ -29,20 +30,22 @@
       <a href="index.html" class="logo"
         ><img src="assets/img/logo__footer.jpg"
       /></a>
-      <div class="bx bx-menu" id="menu-icon"></div>
       <nav>
         <ul class="navbar">
           <li><a href="index.html">Home</a></li>
           <li><a href="#">Teste</a></li>
           <li><a href="#">Teste</a></li>
           <li><a href="produtos-1.html" class="active">Products</a></li>
-          <li><i class="bx bx-shopping-bag" id="cart-icon"></i></li>
-          <li>
-            <a class="login-icon" href="login.html">
-              <i class="bx bxs-user"></i>
-            </a>
-          </li>
         </ul>
+
+        <div class="icons-mode">
+          <div class="bx bx-menu" id="menu-icon"></div>
+          <i class="bx bx-shopping-bag" id="cart-icon"></i>
+          <a class="login-icon" href="login.html"
+            ><i class="bx bxs-user"></i
+          ></a>
+          <img src="assets/img/theme/moon.png" class="theme-icon" alt="" />
+        </div>
 
         <!-- CART -->
         <div class="cart">
