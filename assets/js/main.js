@@ -56,10 +56,10 @@ whiteMode.addEventListener("click", function () {
 /*=============== THE SCRIPT OF PRODUCTS PAGE ===============*/
 
 /*=============== CART ===============*/
-
 const cartIcon = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
 const closeCart = document.querySelector("#cart-close");
+const itemCountElement = document.querySelector(".item-count");
 
 //=============== ABRIR E FECHAR O CART ================
 cartIcon.addEventListener("click", () => {
@@ -87,22 +87,22 @@ function update() {
   addEvents();
   updateTotal();
 }
+
 // =============== REMOVER O ITEM DO CART ===============
 function addEvents() {
-  // REmove items from cart
+  // Remove items from cart
   let cartRemove_btns = document.querySelectorAll(".cart-remove");
-  console.log(cartRemove_btns);
   cartRemove_btns.forEach((btn) => {
     btn.addEventListener("click", handle_removeCartItem);
   });
 
-  // ALTERA A QUANTIDA DO ITEM
+  // Altera a quantidade do item
   let cartQuantity_inputs = document.querySelectorAll(".cart-quantity");
   cartQuantity_inputs.forEach((input) => {
     input.addEventListener("change", handle_chageitemQuantity);
   });
 
-  // ADICONAR O ITEM AO CART
+  // Adicionar o item ao cart
   let addCart_btns = document.querySelectorAll(".add-cart");
   addCart_btns.forEach((btn) => {
     btn.addEventListener("click", handle_addCartItem);
@@ -112,6 +112,7 @@ function addEvents() {
   const buy_bnt = document.querySelector(".btn-buy");
   buy_bnt.addEventListener("click", handle_buyOrder);
 }
+
 // ========================================
 let itemsAdded = [];
 
@@ -120,7 +121,6 @@ function handle_addCartItem() {
   let title = product.querySelector(".product-title").innerHTML;
   let price = product.querySelector(".product-price").innerHTML;
   let imgSrc = product.querySelector(".product-img").src;
-  console.log(title, price, imgSrc);
 
   let newToAdd = {
     title,
@@ -128,9 +128,9 @@ function handle_addCartItem() {
     imgSrc,
   };
 
-  // item identificador já existe
+  // Verifica se o item já foi adicionado
   if (itemsAdded.find((el) => el.title == newToAdd.title)) {
-    alert("Item já Adicionado");
+    alert("Item já adicionado");
     return;
   } else {
     itemsAdded.push(newToAdd);
@@ -144,6 +144,15 @@ function handle_addCartItem() {
   cartContent.appendChild(newNode);
 
   update();
+  updateItemCount(); // Atualiza o contador de itens
+
+  if (!cart.classList.contains("active-2")) {
+    // Abre o carrinho por 2 segundos somente se não estiver aberto
+    cart.classList.add("active-2");
+    setTimeout(() => {
+      cart.classList.remove("active-2");
+    }, 2000);
+  }
 }
 
 function handle_removeCartItem() {
@@ -155,20 +164,21 @@ function handle_removeCartItem() {
   );
 
   update();
+  updateItemCount(); // Atualiza o contador de itens
 }
 
 function handle_chageitemQuantity() {
   if (isNaN(this.value) || this.value < 1) {
     this.value = 1;
   }
-  this.value = Math.floor(this.value); // para mantê-lo inteiro
+  this.value = Math.floor(this.value);
 
   update();
 }
 
 function handle_buyOrder() {
   if (itemsAdded.length <= 0) {
-    alert("Ainda não há pedido a ser feito!\nFaça um pedido primeiro.;9");
+    alert("Ainda não há pedido a ser feito! Faça um pedido primeiro.");
     return;
   }
 
@@ -178,6 +188,7 @@ function handle_buyOrder() {
   itemsAdded = [];
 
   update();
+  updateItemCount(); // Atualiza o contador de itens
 }
 
 // =============== SOMAR E TIRAR O PREÇO ===============
@@ -192,10 +203,7 @@ function updateTotal() {
     total += price * quantity;
   });
 
-  // mantém 2 dígitos após a vírgula
   total = total.toFixed(2);
-  // ou
-  // total = Math.round(total * 100) / 100;
 
   totalElement.innerHTML = "$" + total;
 }
@@ -217,4 +225,9 @@ function CartBoxComponent(title, price, imgSrc) {
     <i class="bx bxs-trash-alt cart-remove"></i>
   </div>`;
 }
+
+function updateItemCount() {
+  itemCountElement.textContent = itemsAdded.length.toString();
+}
+
 /*=============== =============== ===============*/
