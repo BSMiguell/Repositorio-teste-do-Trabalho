@@ -10,25 +10,17 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <!-- ===== Components CSS ===== -->
-    <link rel="stylesheet" href="assets/components/Reset.css" />
-
     <!-- ===== Style CSS ===== -->
-    <link rel="stylesheet" href="assets/css/Header.css" />
-    <link rel="stylesheet" href="assets/css/product.css" />
-    <link rel="stylesheet" href="assets/css/page-header.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
     <!-- ===== Script CSS ===== -->
-    <script src="assets/components/Nav.js" defer></script>
-    <script src="assets/js/cart.js" defer></script>
-    <script src="assets/components/dark-theme.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
   </head>
   <body>
     <!-- ===== HEADER ===== -->
     <header>
       <a href="index.html" class="logo"
-        ><img src="assets/img/logo__footer.jpg"
+        ><img src="assets/img/header/header__logo.png"
       /></a>
 
       <nav>
@@ -70,368 +62,374 @@
       </nav>
     </header>
 
-    <section class="page-header-3 program section__program">
-      <div class="container">
+    <!-- ===== MAIN CONTENT OF THE WEBSITE ===== -->
+    <main class="main">
+      <!-- ===== BANNER PAGE ===== -->
+      <section class="page-header-3 program section__program">
+        <div class="container">
+          <div class="section__data">
+            <h2 class="section__subtitle">Nossos Produtos</h2>
+            <div class="section__titles">
+              <h2 class="section__title-border">Conehcar Nossos Planos</h2>
+              <h3 class="section__title">40% de Desconto#</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SHOP SCTION ===== -->
+      <section class="shop container">
         <div class="section__data">
-          <h2 class="section__subtitle">Nossos Produtos</h2>
           <div class="section__titles">
-            <h2 class="section__title-border">Conehcar Nossos Planos</h2>
-            <h3 class="section__title">40% de Desconto#</h3>
+            <h2 class="section__title-border">Produtos</h2>
+            <h3 class="section__title">Em Oferta#</h3>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ===== SHOP SCTION ===== -->
-    <section class="shop container">
-      <div class="section__data">
-        <div class="section__titles">
-          <h2 class="section__title-border">Produtos</h2>
-          <h3 class="section__title">Em Oferta#</h3>
-        </div>
-      </div>
-
-      <!-- CONTENT -->
-      <div class="shop-content">
-        <div class="product-box">
-          <img
-            src="assets/img/teste/product-vol-22(1).jpg"
-            alt=""
-            class="product-img"
-          />
-          <h2 class="product-title">
-            GALÃO PRETO 2 LITROS - GROWTH SUPPLEMENTS
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$20,70 </span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
-
-        <div class="product-box">
-          <a href="inspect-prod-1.html">
+        <!-- CONTENT -->
+        <div class="shop-content">
+          <article class="product-box">
             <img
-              src="assets/img/teste/product-vol-21.jpg"
+              src="assets/img/products/product-1.jpg"
               alt=""
               class="product-img"
-          /></a>
-          <h2 class="product-title">
-            Waxy Whey - 2kg - Bodybuilders Sabor Chocolate
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$86,90</span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
+            />
+            <h2 class="product-title">
+              GALÃO PRETO 2 LITROS - GROWTH SUPPLEMENTS
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$20,70 </span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
 
-        <div class="product-box">
-          <img
-            src="assets/img/teste/product-vol-20.jpg"
-            alt=""
-            class="product-img"
-          />
-          <h2 class="product-title">
-            Kettlebell Emborrachado 20kg – Peso Academia Exercit Esportes
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$338,00</span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
+          <article class="product-box">
+            <a href="inspect-prod-1.html">
+              <img
+                src="assets/img/products/product-2-1.jpg"
+                alt=""
+                class="product-img"
+            /></a>
+            <h2 class="product-title">
+              Waxy Whey - 2kg - Bodybuilders Sabor Chocolate
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$86,90</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
 
-        <div class="product-box">
-          <img
-            src="assets/img/teste/product-vol-19.jpg"
-            alt=""
-            class="product-img"
-          />
-          <h2 class="product-title">
-            POLIMET Anilha de Ferro Pintada, Unissex Adulto
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$39,10</span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
-
-        <div class="product-box">
-          <img
-            src="assets/img/teste/product-vol-22(1).jpg"
-            alt=""
-            class="product-img"
-          />
-          <h2 class="product-title">
-            GALÃO PRETO 2 LITROS - GROWTH SUPPLEMENTS
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$20,70 </span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
-
-        <div class="product-box">
-          <a href="#">
+          <article class="product-box">
             <img
-              src="assets/img/teste/product-vol-21.jpg"
+              src="assets/img/products/product-3.jpg"
               alt=""
               class="product-img"
-          /></a>
-          <h2 class="product-title">
-            Waxy Whey - 2kg - Bodybuilders Sabor Chocolate
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$86,90</span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
+            />
+            <h2 class="product-title">
+              Kettlebell Emborrachado 20kg – Peso Academia Exercit Esportes
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$338,00</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
 
-        <div class="product-box">
-          <img
-            src="assets/img/teste/product-vol-20.jpg"
-            alt=""
-            class="product-img"
-          />
-          <h2 class="product-title">
-            Kettlebell Emborrachado 20kg – Peso Academia Exercit Esportes
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$338,00</span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
-
-        <div class="product-box">
-          <img
-            src="assets/img/teste/product-vol-19.jpg"
-            alt=""
-            class="product-img"
-          />
-          <h2 class="product-title">
-            POLIMET Anilha de Ferro Pintada, Unissex Adulto
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$39,10</span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
-
-        <div class="product-box">
-          <img
-            src="assets/img/teste/product-vol-22(1).jpg"
-            alt=""
-            class="product-img"
-          />
-          <h2 class="product-title">
-            GALÃO PRETO 2 LITROS - GROWTH SUPPLEMENTS
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$20,70 </span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
-
-        <div class="product-box">
-          <a href="#">
+          <article class="product-box">
             <img
-              src="assets/img/teste/product-vol-21.jpg"
+              src="assets/img/products/product-4.jpg"
               alt=""
               class="product-img"
-          /></a>
-          <h2 class="product-title">
-            Waxy Whey - 2kg - Bodybuilders Sabor Chocolate
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$86,90</span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
+            />
+            <h2 class="product-title">
+              POLIMET Anilha de Ferro Pintada, Unissex Adulto
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$39,10</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
 
-        <div class="product-box">
-          <img
-            src="assets/img/teste/product-vol-20.jpg"
-            alt=""
-            class="product-img"
-          />
-          <h2 class="product-title">
-            Kettlebell Emborrachado 20kg – Peso Academia Exercit Esportes
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$338,00</span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
-
-        <div class="product-box">
-          <img
-            src="assets/img/teste/product-vol-19.jpg"
-            alt=""
-            class="product-img"
-          />
-          <h2 class="product-title">
-            POLIMET Anilha de Ferro Pintada, Unissex Adulto
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$39,10</span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
-
-        <div class="product-box">
-          <img
-            src="assets/img/teste/product-vol-22(1).jpg"
-            alt=""
-            class="product-img"
-          />
-          <h2 class="product-title">
-            GALÃO PRETO 2 LITROS - GROWTH SUPPLEMENTS
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$20,70 </span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
-
-        <div class="product-box">
-          <a href="#">
+          <article class="product-box">
             <img
-              src="assets/img/teste/product-vol-21.jpg"
+              src="assets/img/products/product-1.jpg"
               alt=""
               class="product-img"
-          /></a>
-          <h2 class="product-title">
-            Waxy Whey - 2kg - Bodybuilders Sabor Chocolate
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$86,90</span>
-          <i class="bx bx-shopping-bag add-cart"></i>
+            />
+            <h2 class="product-title">
+              GALÃO PRETO 2 LITROS - GROWTH SUPPLEMENTS
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$20,70 </span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box">
+            <a href="inspect-prod-1.html">
+              <img
+                src="assets/img/products/product-2-1.jpg"
+                alt=""
+                class="product-img"
+            /></a>
+            <h2 class="product-title">
+              Waxy Whey - 2kg - Bodybuilders Sabor Chocolate
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$86,90</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box">
+            <img
+              src="assets/img/products/product-3.jpg"
+              alt=""
+              class="product-img"
+            />
+            <h2 class="product-title">
+              Kettlebell Emborrachado 20kg – Peso Academia Exercit Esportes
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$338,00</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box">
+            <img
+              src="assets/img/products/product-4.jpg"
+              alt=""
+              class="product-img"
+            />
+            <h2 class="product-title">
+              POLIMET Anilha de Ferro Pintada, Unissex Adulto
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$39,10</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box">
+            <img
+              src="assets/img/products/product-1.jpg"
+              alt=""
+              class="product-img"
+            />
+            <h2 class="product-title">
+              GALÃO PRETO 2 LITROS - GROWTH SUPPLEMENTS
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$20,70 </span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box">
+            <a href="inspect-prod-1.html">
+              <img
+                src="assets/img/products/product-2-1.jpg"
+                alt=""
+                class="product-img"
+            /></a>
+            <h2 class="product-title">
+              Waxy Whey - 2kg - Bodybuilders Sabor Chocolate
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$86,90</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box">
+            <img
+              src="assets/img/products/product-3.jpg"
+              alt=""
+              class="product-img"
+            />
+            <h2 class="product-title">
+              Kettlebell Emborrachado 20kg – Peso Academia Exercit Esportes
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$338,00</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box">
+            <img
+              src="assets/img/products/product-4.jpg"
+              alt=""
+              class="product-img"
+            />
+            <h2 class="product-title">
+              POLIMET Anilha de Ferro Pintada, Unissex Adulto
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$39,10</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box">
+            <img
+              src="assets/img/products/product-1.jpg"
+              alt=""
+              class="product-img"
+            />
+            <h2 class="product-title">
+              GALÃO PRETO 2 LITROS - GROWTH SUPPLEMENTS
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$20,70 </span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box">
+            <a href="inspect-prod-1.html">
+              <img
+                src="assets/img/products/product-2-1.jpg"
+                alt=""
+                class="product-img"
+            /></a>
+            <h2 class="product-title">
+              Waxy Whey - 2kg - Bodybuilders Sabor Chocolate
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$86,90</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box">
+            <img
+              src="assets/img/products/product-3.jpg"
+              alt=""
+              class="product-img"
+            />
+            <h2 class="product-title">
+              Kettlebell Emborrachado 20kg – Peso Academia Exercit Esportes
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$338,00</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box">
+            <img
+              src="assets/img/products/product-4.jpg"
+              alt=""
+              class="product-img"
+            />
+            <h2 class="product-title">
+              POLIMET Anilha de Ferro Pintada, Unissex Adulto
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$39,10</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
         </div>
+      </section>
 
-        <div class="product-box">
-          <img
-            src="assets/img/teste/product-vol-20.jpg"
-            alt=""
-            class="product-img"
-          />
-          <h2 class="product-title">
-            Kettlebell Emborrachado 20kg – Peso Academia Exercit Esportes
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$338,00</span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
+      <!-- ===== PAGINATION ===== -->
+      <section id="pagination">
+        <a href="produtos-2.html"><i class="bx bx-left-arrow-alt"></i></a>
+        <a href="produtos-1.html">1</a>
+        <a href="produtos-2.html">2</a>
+        <a href="#" class="active-pagination">3</a>
+        <a href="produtos-1.html"><i class="bx bx-right-arrow-alt"></i></a>
+      </section>
+    </main>
 
-        <div class="product-box">
-          <img
-            src="assets/img/teste/product-vol-19.jpg"
-            alt=""
-            class="product-img"
-          />
-          <h2 class="product-title">
-            POLIMET Anilha de Ferro Pintada, Unissex Adulto
-          </h2>
-          <div class="star">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="product-price">$39,10</span>
-          <i class="bx bx-shopping-bag add-cart"></i>
-        </div>
-      </div>
-    </section>
-
-    <section id="pagination">
-      <a href="produtos-2.html"><i class="bx bx-left-arrow-alt"></i></a>
-      <a href="produtos-1.html">1</a>
-      <a href="produtos-2.html">2</a>
-      <a href="#" class="active-pagination">3</a>
-      <a href="produtos-1.html"><i class="bx bx-right-arrow-alt"></i></a>
-    </section>
-
+    <!-- ===== FOOTER ===== -->
     <footer>
       <div class="content">
         <div class="footer__top">
           <div class="logo-details">
-            <img src="assets/img/logo__footer.jpg" alt="" />
+            <img src="assets/img/header/header__logo.png" alt="" />
             <span class="logo_name">TESTE TESTE</span>
           </div>
           <div class="media-icons">

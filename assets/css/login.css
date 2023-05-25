@@ -1,29 +1,19 @@
-/* Google Fonts - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+/*=============== THE STYLE OF LOGIN PAGE ===============*/
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#body__login {
+  height: 100vh;
+  background-color: hsl(224, 89%, 60%);
   font-family: "Poppins", sans-serif;
 }
-
-body {
-  height: 100vh;
-  background-color: #4070f4;
-}
-
 input[type="checkbox"] {
   display: none;
 }
-
 .container-login {
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-
   column-gap: 30px;
 }
 .form {
@@ -32,7 +22,7 @@ input[type="checkbox"] {
   width: 100%;
   padding: 30px;
   border-radius: 6px;
-  background: #fff;
+  background: hsl(0, 0%, 100%);
 }
 .form.signup {
   opacity: 0;
@@ -48,8 +38,8 @@ input[type="checkbox"] {
 }
 .title__login {
   font-size: 28px;
-  font-weight: 600;
-  color: #232836;
+  font-weight: var(--weight-600);
+  color: hsl(224, 21%, 17%);
   text-align: center;
 }
 form {
@@ -74,7 +64,7 @@ form {
 .field input {
   outline: none;
   padding: 0 15px;
-  border: 1px solid#CACACA;
+  border: 1px solid hsl(0, 0%, 79%);
 }
 .field input:focus {
   border-bottom-width: 2px;
@@ -85,19 +75,18 @@ form {
   right: 10px;
   transform: translateY(-50%);
   font-size: 18px;
-  color: #8b8b8b;
+  color: hsl(0, 0%, 55%);
   cursor: pointer;
   padding: 5px;
 }
 .field button {
-  color: #fff;
-  background-color: #0171d3;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(208, 99%, 42%);
   transition: all 0.3s ease;
   cursor: pointer;
 }
-
 .field button:hover {
-  background-color: #016dcb;
+  background-color: hsl(208, 99%, 40%);
 }
 .form-link {
   text-align: center;
@@ -107,10 +96,10 @@ form {
 .form-link a {
   font-size: 14px;
   font-weight: 400;
-  color: #232836;
+  color: hsl(224, 21%, 17%);
 }
 .form a {
-  color: #0171d3;
+  color: hsl(208, 99%, 42%);
   text-decoration: none;
 }
 .form-content a:hover {
@@ -121,7 +110,7 @@ form {
   height: 1px;
   width: 100%;
   margin: 36px 0;
-  background-color: #d4d4d4;
+  background-color: hsl(0, 0%, 83%);
 }
 .line::before {
   content: "Or";
@@ -129,8 +118,8 @@ form {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
-  color: #8b8b8b;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 55%);
   padding: 0 15px;
 }
 .media-options a {
@@ -139,19 +128,19 @@ form {
   justify-content: center;
 }
 a.facebook {
-  color: #fff;
-  background-color: #4267b2;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(220, 46%, 48%);
 }
 a.facebook .facebook-icon {
   height: 28px;
   width: 28px;
-  color: #0171d3;
+  color: hsl(208, 99%, 42%);
   font-size: 20px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: hsl(0, 0%, 100%);
 }
 .facebook-icon,
 img.google-img {
@@ -166,14 +155,13 @@ img.google-img {
   object-fit: cover;
 }
 a.google {
-  border: 1px solid #cacaca;
+  border: 1px solid hsl(0, 0%, 79%);
 }
 a.google span {
   font-weight: 500;
   opacity: 0.6;
-  color: #232836;
+  color: hsl(224, 21%, 17%);
 }
-
 @media (max-width: 1000px) {
   nav {
     padding: 0 40px 0 50px;
@@ -217,7 +205,7 @@ a.google span {
   nav ul li a.active,
   nav ul li a:hover {
     background: none;
-    color: cyan;
+    color: hsl(180, 100%, 50%);
   }
 }
 @media (max-width: 720px) {
@@ -228,7 +216,6 @@ a.google span {
     margin-top: 0px;
   }
 }
-
 @media screen and (max-width: 400px) {
   .form {
     padding: 20px 10px;

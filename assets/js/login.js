@@ -1,3 +1,7 @@
+/*=============== THE SCRIPT OF LOGIN PAGE ===============*/
+
+/*=============== LOGIN/REGISTER ===============*/
+
 const forms = document.querySelector(".forms"),
   pwShowHide = document.querySelectorAll(".eye-icon"),
   links = document.querySelectorAll(".link");

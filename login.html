@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fit Match</title>
 
-    <!-- Boxicons CSS -->
+    <!-- ===== Boxicons CSS ===== -->
     <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
-    <!-- CSS -->
+    <!-- ===== STYLE CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/login.css" />
 
-    <!-- SCRIPT -->
+    <!-- ===== SCRIPT ===== -->
+
     <script src="assets/js/login.js" defer></script>
   </head>
-  <body>
+  <body id="body__login">
+    <!-- ===== FOMR LOGIN/REGISTER ===== -->
     <section class="container-login forms">
+      <!-- Signup LOGIN -->
+
       <div class="form login">
         <div class="form-content">
           <h2 class="title__login">Login</h2>
@@ -37,7 +45,6 @@
             </div>
             <div class="form-link">
               <a href="#" class="forgot-pass">Esqueceu sua senha?</a>
-              <a href="index.html" class="forgot-pass">Voltar ao Home</a>
             </div>
             <div class="field button-field">
               <button>Login</button>
@@ -60,7 +67,7 @@
         <div class="media-options">
           <a href="#" class="field google">
             <img
-              src="../assets/img/Login/ico-Google.png"
+              src="{% static 'img/Login/ico-Google.png' %}"
               alt=""
               class="google-img"
             />
@@ -69,7 +76,8 @@
         </div>
       </div>
 
-      <!-- Signup Form -->
+      <!-- Signup FORM -->
+
       <div class="form signup">
         <div class="form-content">
           <h2 class="title__login">Signup</h2>
@@ -80,9 +88,9 @@
             <div class="field input-field">
               <input type="name" placeholder="Último nome" class="input" />
             </div>
-            <!-- <div class="field input-field">
+            <div class="field input-field">
               <input type="name" placeholder="Nome de Usuario" class="input" />
-            </div> -->
+            </div>
             <div class="field input-field">
               <input
                 id="numero_cad"
@@ -134,7 +142,7 @@
         <div class="media-options">
           <a href="#" class="field google">
             <img
-              src="../assets/img/Login/ico-Google.png"
+              src="{% static 'img/Login/ico-Google.png' %}"
               alt=""
               class="google-img"
             />
@@ -143,5 +151,10 @@
         </div>
       </div>
     </section>
+
+    <!-- ===== TAKE TO THE HOME ===== -->
+    <div class="top">
+      <a href="{% url 'home' %}"><i class="bx bx-home-alt-2"></i></a>
+    </div>
   </body>
 </html>
