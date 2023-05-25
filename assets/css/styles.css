@@ -230,14 +230,13 @@ a.active {
   background: var(--main-color);
   color: var(--white-color);
 }
-.login-icon {
-  display: flex;
-  align-items: center;
-}
+
 .icons-mode {
   display: flex;
   align-items: center;
 }
+
+/* ===== NAV ICON  ===== */
 #menu-icon {
   font-size: 36px;
   color: var(--nav-color);
@@ -246,6 +245,8 @@ a.active {
   display: none;
   margin: 0 20px;
 }
+
+/* ===== CART ICON ===== */
 #cart-icon {
   color: var(--nav-color);
   font-size: 1.5rem;
@@ -254,6 +255,8 @@ a.active {
   transition: all 0.4s ease;
   cursor: pointer;
 }
+
+/* ===== LOGIN ICON ===== */
 .login-icon i {
   color: var(--nav-color);
   font-size: 1.5rem;
@@ -263,10 +266,17 @@ a.active {
   transition: all 0.4s ease;
   cursor: pointer;
 }
+.login-icon {
+  display: flex;
+  align-items: center;
+}
+
+/* ===== THEME MOON/SUN ICON ===== */
 .theme-icon {
   width: 1.5rem;
   cursor: pointer;
 }
+
 header.sticky {
   padding: 10px 16%;
   background: var(--body-color);
