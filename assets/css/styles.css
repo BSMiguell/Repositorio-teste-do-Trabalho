@@ -75,7 +75,7 @@ html::-webkit-scrollbar-track {
   background: transparent;
 }
 html::-webkit-scrollbar-thumb {
-  background: var(--red-color);
+  background: hsl(0, 0%, 62%);
   border-radius: 5rem;
 }
 body {
@@ -1409,5 +1409,8 @@ footer .bottom-details .bottom_text {
   background: hsl(303, 100%, 50%);
 }
 .style-switcher .color-4 {
-  background: #ff7f00;
+  background: hsl(30, 100%, 50%);
+}
+.style-switcher .color-5 {
+  background: hsl(90, 80%, 56%);
 }
