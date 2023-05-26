@@ -42,6 +42,8 @@
   --card-color: hsl(154, 13%, 22%);
   --footer-color: hsla(79, 6%, 64%, 0.07);
   --rotate-color: #5ddeff, #3c67e3 43%, #4e00c2;
+  --choose-color-1: hsl(0, 100%, 37%);
+  --choose-color-2: hsl(0, 100%, 26%);
 
   /*========== Font and typography ==========*/
   /* 1rem = 16px ... */
@@ -60,6 +62,7 @@
   --weight-500: 500;
   --weight-600: 600;
   --weight-700: 700;
+  --weight-900: 900;
 
   /*========== Transition ==========*/
   --transition: cubic-bezier(0, 0, 0.05, 1);
@@ -370,7 +373,7 @@ header.sticky {
   font-size: var(--h1-font-size);
   font-weight: var(--weight-600);
   margin-top: 2rem;
-  color: var(--black-color);
+  color: var(--red-color);
 }
 .cart-box {
   display: grid;
@@ -412,11 +415,12 @@ header.sticky {
   display: flex;
   justify-content: flex-end;
   margin-top: 1.5rem;
-  border-top: 1px solid var(--black-color);
+  border-top: 1px solid var(--red-color);
 }
 .total-title {
   font-size: var(--normal-font-size);
   font-weight: var(--weight-600);
+  color: var(--red-color);
 }
 .total-price {
   margin-left: 0.5rem;
@@ -442,6 +446,8 @@ header.sticky {
   margin: 1.5rem auto 0 auto;
   font-size: var(--normal-font-size);
   font-weight: var(--weight-500);
+  background-color: var(--red-color);
+  color: var(--white-color);
   cursor: pointer;
 }
 .to-clean {
@@ -450,6 +456,8 @@ header.sticky {
   margin: 1.5rem auto 0 auto;
   font-size: var(--normal-font-size);
   font-weight: var(--weight-500);
+  background-color: var(--red-color);
+  color: var(--white-color);
   cursor: pointer;
 }
 .cart__count {
@@ -717,15 +725,15 @@ header.sticky {
 }
 .choose__triangle-1 {
   width: 305px;
-  background-color: var(--first-color);
+  background-color: var(--red-color);
 }
 .choose__triangle-2 {
   width: 205px;
-  background-color: hsl(0, 100%, 37%);
+  background-color: var(--choose-color-1);
 }
 .choose__triangle-3 {
   width: 105px;
-  background-color: hsl(0, 100%, 26%);
+  background-color: var(--choose-color-2);
 }
 .choose__img {
   width: 260px;
@@ -815,8 +823,8 @@ header.sticky {
   background-color: var(--red-color);
   padding: 18px 32px;
   border: 2px solid var(--first-color-light);
-  color: var(--header-color);
-  font-weight: var(--font-bold);
+  color: var(--white-color);
+  font-weight: var(--weight-900);
   cursor: pointer;
   transition: background 0.3s;
 }
