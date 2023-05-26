@@ -11,6 +11,11 @@
   transition: all 0.4s ease;
   scroll-behavior: smooth;
 }
+@property --rotate {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 132deg;
+}
 
 /* ===== Colours ===== */
 
@@ -911,6 +916,18 @@ header.sticky {
   border: 1px solid var(--body-color-2);
   border-radius: 25px;
 }
+.title-popular::before {
+  content: "#Popular";
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  background-color: hsl(34, 94%, 77%);
+  color: hsl(0, 6%, 3%);
+  font-size: 1rem;
+  font-weight: var(--weight-600);
+  padding: 4px 8px;
+  transform: rotate(45deg);
+}
 .product-img {
   width: 100%;
   aspect-ratio: 1/1;
@@ -943,6 +960,58 @@ header.sticky {
 }
 .add-cart:hover {
   background-color: hsl(34, 94%, 77%);
+}
+
+/* AN ANIMATION FOR THE MOST POPULAR PRODUCT */
+.product__popular::before {
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddeff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+}
+.product-box::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  border-radius: 25px; /* Ajuste o valor do raio de borda conforme necessário */
+  margin: 0;
+  transform: scale(
+    1
+  ); /* Alterado de 0.8 para 1 para manter o tamanho original */
+  filter: blur(calc(var(--card-height) / 6));
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 2.5s linear infinite;
+}
+.product-box::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  border-radius: 8px;
+  margin: auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 2.5s linear infinite;
+}
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
 }
 
 /* NAVIGATING THROUGH THE PAGES */
