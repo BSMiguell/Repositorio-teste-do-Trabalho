@@ -60,14 +60,6 @@ function setActiveStyle(color) {
 
   // Salva a preferência do usuário no localStorage
   localStorage.setItem("selectedStyle", color);
-
-  // Adiciona classe para ocultar o conteúdo até que o estilo seja aplicado
-  document.body.classList.add("content-hidden");
-
-  // Remove a classe após um pequeno intervalo de tempo
-  setTimeout(() => {
-    document.body.classList.remove("content-hidden");
-  }, 100);
 }
 
 // Obtém o elemento de alternância entre o modo claro e escuro

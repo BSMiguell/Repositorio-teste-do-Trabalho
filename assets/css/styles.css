@@ -1321,9 +1321,7 @@ footer .bottom-details .bottom_text {
 }
 
 /*=============== COLOR/THEME-MODE ===============*/
-.content-hidden {
-  visibility: hidden;
-}
+
 .style-switcher {
   position: fixed;
   right: 0;
