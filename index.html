@@ -27,10 +27,40 @@
     <!-- ===== STYLE CSS ===== -->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
+    <!-- ===== THEMES/COLOR - MODE ===== -->
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-red.css"
+      class="alternate-style"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-purple.css"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-pink.css"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-orange.css"
+      class="alternate-style"
+      title="color-4"
+      disabled
+    />
+
     <!-- ===== SCRIPT ===== -->
     <script src="assets/js/main.js" defer></script>
   </head>
-  <body>
+  <body class="content-hidden">
     <!-- ===== HEADER ===== -->
     <header>
       <a href="#" class="logo"
@@ -51,7 +81,6 @@
           <a class="login-icon" href="login.html"
             ><i class="bx bxs-user"></i
           ></a>
-          <img src="assets/img/theme/moon.png" class="theme-icon" alt="" />
         </div>
 
         <!-- CART -->
@@ -486,7 +515,7 @@
       <div class="bottom-details">
         <div class="bottom_text">
           <span class="copyright_text"
-            >Copyright © 2021 <a href="#">TESTE TESTE.</a>All rights
+            >Copyright © 2023 <a href="#">TESTE TESTE.</a>All rights
             reserved</span
           >
           <span class="policy_terms">
@@ -500,6 +529,20 @@
     <!-- ===== TAKE TO THE TOP ===== -->
     <div class="top">
       <a href="#"><i class="bx bxs-up-arrow-alt"></i></a>
+    </div>
+
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="day-night s-icon"><i class="fa fa-moon"></i></div>
+      <h4>Theme Colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+      </div>
     </div>
   </body>
 </html>

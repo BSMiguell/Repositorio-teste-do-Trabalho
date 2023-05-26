@@ -21,37 +21,78 @@ window.onscroll = () => {
 
 /*=============== =============== ===============*/
 
-/*=============== THEME-MODE ===============*/
+/*=============== THEME/COLOR - MODE ===============*/
 
-const whiteMode = document.querySelector(".theme-icon");
-const body = document.body;
-const themeKey = "whiteModeEnabled";
-
-// Verifica se há um valor armazenado
-if (localStorage.getItem(themeKey) === "true") {
-  body.classList.add("white-mode");
-  whiteMode.src = "assets/img/theme/sun.png";
-} else {
-  body.classList.remove("white-mode");
-  whiteMode.src = "assets/img/theme/moon.png";
-}
-
-whiteMode.addEventListener("click", function () {
-  // Inverte o estado do modo
-  const whiteModeEnabled = body.classList.toggle("white-mode");
-
-  // Trocar a imagem do ícone
-  if (whiteModeEnabled) {
-    whiteMode.src = "assets/img/theme/sun.png";
-  } else {
-    whiteMode.src = "assets/img/theme/moon.png";
-  }
-
-  // Armazena o estado do modo no armazenamento local
-  localStorage.setItem(themeKey, whiteModeEnabled);
+// Obtém o elemento de alternância do seletor de estilo
+const styleSwitcherToggle = document.querySelector(".style-switcher-toggler");
+styleSwitcherToggle.addEventListener("click", () => {
+  // Alternar a classe "open" no seletor de estilo para abrir ou fechar o seletor
+  document.querySelector(".style-switcher").classList.toggle("open");
 });
 
-/*=============== =============== ===============*/
+window.addEventListener("scroll", () => {
+  // Fecha o seletor de estilo quando o usuário rolar a página
+  if (document.querySelector(".style-switcher").classList.contains("open")) {
+    document.querySelector(".style-switcher").classList.remove("open");
+  }
+});
+
+// Obtém todos os estilos alternativos
+const alternateStyles = document.querySelectorAll(".alternate-style");
+
+// Define o estilo ativo com base na cor selecionada pelo usuário
+function setActiveStyle(color) {
+  alternateStyles.forEach((style) => {
+    if (color === style.getAttribute("title")) {
+      style.removeAttribute("disabled"); // Habilita o estilo selecionado
+    } else {
+      style.setAttribute("disabled", "true"); // Desabilita os outros estilos
+    }
+  });
+
+  // Salva a preferência do usuário no localStorage
+  localStorage.setItem("selectedStyle", color);
+
+  // Adiciona classe para ocultar o conteúdo até que o estilo seja aplicado
+  document.body.classList.add("content-hidden");
+
+  // Remove a classe após um pequeno intervalo de tempo
+  setTimeout(() => {
+    document.body.classList.remove("content-hidden");
+  }, 100);
+}
+
+// Obtém o elemento de alternância entre o modo claro e escuro
+const dayNight = document.querySelector(".day-night");
+dayNight.addEventListener("click", () => {
+  // Alterna entre os ícones de sol e lua
+  dayNight.querySelector("i").classList.toggle("fa-sun");
+  dayNight.querySelector("i").classList.toggle("fa-moon");
+
+  // Alterna a classe "white-mode" no corpo do documento para ativar ou desativar o modo claro
+  document.body.classList.toggle("white-mode");
+
+  // Salva a preferência do usuário no localStorage
+  const isWhiteMode = document.body.classList.contains("white-mode");
+  localStorage.setItem("isWhiteMode", isWhiteMode);
+});
+
+window.addEventListener("load", () => {
+  // Carrega as preferências salvas do usuário ao carregar a página
+  const selectedStyle = localStorage.getItem("selectedStyle");
+  const isWhiteMode = localStorage.getItem("isWhiteMode");
+
+  if (selectedStyle) {
+    setActiveStyle(selectedStyle); // Aplica o estilo salvo
+  }
+
+  if (isWhiteMode === "true") {
+    dayNight.querySelector("i").classList.add("fa-sun"); // Ativa o ícone do sol
+    document.body.classList.add("white-mode"); // Ativa o modo claro
+  } else {
+    dayNight.querySelector("i").classList.add("fa-moon"); // Ativa o ícone da lua
+  }
+});
 
 /*=============== THE SCRIPT OF PRODUCTS PAGE ===============*/
 

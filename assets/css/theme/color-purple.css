@@ -1,0 +1,5 @@
+:root {
+  --red-color: hsl(276, 100%, 50%);
+  --main-color: hsl(276, 100%, 30%);
+  --rotate-color: hsl(276, 100%, 30%), hsl(276, 100%, 50%), hsl(276, 100%, 70%);
+}

@@ -41,6 +41,7 @@
   --body-soft-color: hsla(79, 6%, 64%, 0.07);
   --card-color: hsl(154, 13%, 22%);
   --footer-color: hsla(79, 6%, 64%, 0.07);
+  --rotate-color: #5ddeff, #3c67e3 43%, #4e00c2;
 
   /*========== Font and typography ==========*/
   /* 1rem = 16px ... */
@@ -71,7 +72,7 @@ html::-webkit-scrollbar-track {
   background: transparent;
 }
 html::-webkit-scrollbar-thumb {
-  background: var(--main-color);
+  background: var(--red-color);
   border-radius: 5rem;
 }
 body {
@@ -916,10 +917,10 @@ header.sticky {
   border: 1px solid var(--body-color-2);
   border-radius: 25px;
 }
-.title-popular::before {
+.tag-popular::before {
   content: "#Popular";
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: -10px;
   background-color: hsl(34, 94%, 77%);
   color: hsl(0, 6%, 3%);
@@ -963,13 +964,8 @@ header.sticky {
 }
 
 /* AN ANIMATION FOR THE MOST POPULAR PRODUCT */
-.product__popular::before {
-  background-image: linear-gradient(
-    var(--rotate),
-    #5ddeff,
-    #3c67e3 43%,
-    #4e00c2
-  );
+.product__rotate::before {
+  background-image: linear-gradient(var(--rotate), var(--rotate-color));
 }
 .product-box::before {
   content: "";
@@ -1071,7 +1067,7 @@ footer::before {
   top: 100px;
   height: 1px;
   width: 100%;
-  background: var(--body-color-2);
+  background: var(--red-color);
 }
 footer .content {
   max-width: 1250px;
@@ -1107,7 +1103,7 @@ footer .content .footer__top {
   border-radius: 50%;
   text-align: center;
   line-height: 40px;
-  color: var(--header-color);
+  color: var(--white-color);
   font-size: var(--normal-font-size);
   text-decoration: none;
   transition: all 0.4s ease;
@@ -1117,35 +1113,35 @@ footer .content .footer__top {
 }
 .footer__top .media-icons a:nth-child(1):hover {
   color: hsl(220, 46%, 48%);
-  background: var(--header-color);
+  background: var(--white-color);
 }
 .footer__top .media-icons a:nth-child(2) {
   background: hsl(203, 89%, 53%);
 }
 .footer__top .media-icons a:nth-child(2):hover {
   color: hsl(203, 89%, 53%);
-  background: var(--header-color);
+  background: var(--white-color);
 }
 .footer__top .media-icons a:nth-child(3) {
   background: hsl(340, 75%, 54%);
 }
 .footer__top .media-icons a:nth-child(3):hover {
   color: hsl(340, 75%, 54%);
-  background: var(--header-color);
+  background: var(--white-color);
 }
 .footer__top .media-icons a:nth-child(4) {
   background: hsl(201, 100%, 35%);
 }
 .footer__top .media-icons a:nth-child(4):hover {
   color: hsl(201, 100%, 35%);
-  background: var(--header-color);
+  background: var(--white-color);
 }
 .footer__top .media-icons a:nth-child(5) {
-  background: var(--red-color);
+  background: hsl(0, 100%, 50%);
 }
 .footer__top .media-icons a:nth-child(5):hover {
-  color: var(--red-color);
-  background: var(--header-color);
+  color: hsl(0, 100%, 50%);
+  background: var(--white-color);
 }
 footer .content .link-boxes {
   width: 100%;
@@ -1169,7 +1165,7 @@ footer .content .link-boxes .box {
   bottom: -2px;
   height: 2px;
   width: 35px;
-  background: var(--body-color-2);
+  background: var(--red-color);
 }
 .content .link-boxes .box li {
   margin: 6px 0;
@@ -1186,6 +1182,7 @@ footer .content .link-boxes .box {
 .content .link-boxes .box li a:hover {
   opacity: 1;
   text-decoration: underline;
+  color: var(--red-color);
 }
 .content .link-boxes .input-box {
   margin-right: 55px;
@@ -1308,9 +1305,86 @@ footer .bottom-details .bottom_text {
   right: 2.1rem;
 }
 .top i {
-  background: var(--main-color);
+  background: var(--red-color);
   color: var(--header-color);
   font-size: 20px;
   padding: 10px;
   border-radius: 0.5rem;
+}
+
+/*=============== COLOR/THEME-MODE ===============*/
+.content-hidden {
+  visibility: hidden;
+}
+.style-switcher {
+  position: fixed;
+  right: 0;
+  top: 100px;
+  padding: 15px;
+  width: 200px;
+  border: 1px solid var(--red-color);
+  background: var(--white-color);
+  z-index: 101;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  transform: translateX(100%);
+}
+.style-switcher.open {
+  transform: translateX(-25px);
+}
+.style-switcher .s-icon {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  font-size: 20px;
+  background: var(--body-color);
+  color: var(--body-color-2);
+  right: 100%;
+  border: 1px solid var(--red-color);
+  margin-right: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+.style-switcher .s-icon i {
+  line-height: 40px;
+}
+.style-switcher .style-switcher-toggler {
+  top: 0;
+}
+.style-switcher .day-night {
+  top: 55px;
+}
+.style-switcher h4 {
+  margin: 0 0 10px;
+  color: var(--black-color);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.style-switcher .colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.style-switcher .colors span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid red;
+  cursor: pointer;
+}
+.style-switcher .color-1 {
+  background: hsl(0, 100%, 50%);
+}
+.style-switcher .color-2 {
+  background: hsl(276, 100%, 50%);
+}
+.style-switcher .color-3 {
+  background: hsl(303, 100%, 50%);
+}
+.style-switcher .color-4 {
+  background: #ff7f00;
 }
