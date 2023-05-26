@@ -25,15 +25,23 @@ window.onscroll = () => {
 
 // Obtém o elemento de alternância do seletor de estilo
 const styleSwitcherToggle = document.querySelector(".style-switcher-toggler");
+const styleSwitcher = document.querySelector(".style-switcher");
+
 styleSwitcherToggle.addEventListener("click", () => {
-  // Alternar a classe "open" no seletor de estilo para abrir ou fechar o seletor
-  document.querySelector(".style-switcher").classList.toggle("open");
+  styleSwitcher.classList.toggle("open");
+
+  // Adicionar ou remover a classe "stop-rotation" no ícone da engrenagem
+  const gearIcon = document.querySelector(".style-switcher-toggler .fa-cog");
+  gearIcon.classList.toggle("stop-rotation");
 });
 
 window.addEventListener("scroll", () => {
-  // Fecha o seletor de estilo quando o usuário rolar a página
-  if (document.querySelector(".style-switcher").classList.contains("open")) {
-    document.querySelector(".style-switcher").classList.remove("open");
+  if (styleSwitcher.classList.contains("open")) {
+    styleSwitcher.classList.remove("open");
+
+    // Remover a classe "stop-rotation" quando o seletor de estilo for fechado por meio da rolagem
+    const gearIcon = document.querySelector(".style-switcher-toggler .fa-cog");
+    gearIcon.classList.remove("stop-rotation");
   }
 });
 

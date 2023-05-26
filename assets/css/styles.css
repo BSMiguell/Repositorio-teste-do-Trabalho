@@ -1355,6 +1355,21 @@ footer .bottom-details .bottom_text {
   transition: all 0.3s ease;
   border-radius: 50%;
 }
+.style-switcher .s-icon .spin-toggler {
+  animation: rotate 1s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.style-switcher .style-switcher-toggler .fa-cog.stop-rotation {
+  animation-play-state: paused;
+}
 .style-switcher .s-icon i {
   line-height: 40px;
 }
@@ -1381,7 +1396,7 @@ footer .bottom-details .bottom_text {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  border: 1px solid red;
+  border: 2px solid var(--black-color);
   cursor: pointer;
 }
 .style-switcher .color-1 {
