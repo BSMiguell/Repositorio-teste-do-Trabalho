@@ -33,10 +33,16 @@
 
         <div class="icons-mode">
           <div class="bx bx-menu" id="menu-icon"></div>
-          <i class="bx bx-shopping-bag" id="cart-icon"></i>
+
+          <div class="cart__count">
+            <i class="bx bx-shopping-bag" id="cart-icon"></i>
+            <span class="item-count">0</span>
+          </div>
+
           <a class="login-icon" href="login.html"
             ><i class="bx bxs-user"></i
           ></a>
+
           <img src="assets/img/theme/moon.png" class="theme-icon" alt="" />
         </div>
 
@@ -55,7 +61,10 @@
             <div class="total-price">$0</div>
           </div>
           <!-- BUY BUTTON -->
-          <button type="button" class="btn-buy">Buy Now</button>
+          <div class="cart__btn">
+            <button type="button" class="btn-buy">Buy Now</button>
+            <button type="button" class="to-clean">Clean</button>
+          </div>
           <!-- CART CLOSE -->
           <i class="bx bx-x" id="cart-close"></i>
         </div>
@@ -86,9 +95,19 @@
           </div>
         </div>
 
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+          <button class="filter-button active" data-filter="all">Todos</button>
+          <button class="filter-button" data-filter="garrafas">Garrafas</button>
+          <button class="filter-button" data-filter="suplementos">
+            Suplementos
+          </button>
+          <button class="filter-button" data-filter="pesos">Pesos</button>
+        </div>
+
         <!-- CONTENT -->
         <div class="shop-content">
-          <article class="product-box">
+          <article class="product-box" data-category="garrafas">
             <img
               src="assets/img/products/product-1.jpg"
               alt=""
@@ -108,7 +127,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="suplementos">
             <a href="inspect-prod-1.html">
               <img
                 src="assets/img/products/product-2-1.jpg"
@@ -129,7 +148,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="pesos">
             <img
               src="assets/img/products/product-3.jpg"
               alt=""
@@ -149,7 +168,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="pesos">
             <img
               src="assets/img/products/product-4.jpg"
               alt=""
@@ -169,7 +188,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="garrafas">
             <img
               src="assets/img/products/product-1.jpg"
               alt=""
@@ -189,7 +208,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="suplementos">
             <a href="inspect-prod-1.html">
               <img
                 src="assets/img/products/product-2-1.jpg"
@@ -210,7 +229,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="pesos">
             <img
               src="assets/img/products/product-3.jpg"
               alt=""
@@ -230,7 +249,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="pesos">
             <img
               src="assets/img/products/product-4.jpg"
               alt=""
@@ -250,7 +269,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="garrafas">
             <img
               src="assets/img/products/product-1.jpg"
               alt=""
@@ -270,7 +289,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="suplementos">
             <a href="inspect-prod-1.html">
               <img
                 src="assets/img/products/product-2-1.jpg"
@@ -291,7 +310,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="pesos">
             <img
               src="assets/img/products/product-3.jpg"
               alt=""
@@ -311,7 +330,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="pesos">
             <img
               src="assets/img/products/product-4.jpg"
               alt=""
@@ -331,7 +350,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="garrafas">
             <img
               src="assets/img/products/product-1.jpg"
               alt=""
@@ -351,7 +370,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="suplementos">
             <a href="inspect-prod-1.html">
               <img
                 src="assets/img/products/product-2-1.jpg"
@@ -372,7 +391,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="pesos">
             <img
               src="assets/img/products/product-3.jpg"
               alt=""
@@ -392,7 +411,7 @@
             <i class="bx bx-shopping-bag add-cart"></i>
           </article>
 
-          <article class="product-box">
+          <article class="product-box" data-category="pesos">
             <img
               src="assets/img/products/product-4.jpg"
               alt=""

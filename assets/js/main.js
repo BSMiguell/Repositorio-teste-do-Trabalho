@@ -56,10 +56,12 @@ whiteMode.addEventListener("click", function () {
 /*=============== THE SCRIPT OF PRODUCTS PAGE ===============*/
 
 /*=============== CART ===============*/
+
 const cartIcon = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
 const closeCart = document.querySelector("#cart-close");
 const itemCountElement = document.querySelector(".item-count");
+const toCleanButton = document.querySelector(".to-clean");
 
 //=============== ABRIR E FECHAR O CART ================
 cartIcon.addEventListener("click", () => {
@@ -109,8 +111,13 @@ function addEvents() {
   });
 
   // Comprar Pedido
-  const buy_bnt = document.querySelector(".btn-buy");
-  buy_bnt.addEventListener("click", handle_buyOrder);
+  const buy_bnt = document.querySelectorAll(".btn-buy");
+  buy_bnt.forEach((btn) => {
+    btn.addEventListener("click", handle_buyOrder);
+  });
+
+  // Limpar Carrinho
+  toCleanButton.addEventListener("click", handle_cleanCart);
 }
 
 // ========================================
@@ -171,20 +178,34 @@ function handle_chageitemQuantity() {
   if (isNaN(this.value) || this.value < 1) {
     this.value = 1;
   }
-  this.value = Math.floor(this.value);
+  this.value = Math.floor(this.value); // para mantê-lo inteiro
 
   update();
 }
 
 function handle_buyOrder() {
   if (itemsAdded.length <= 0) {
-    alert("Ainda não há pedido a ser feito! Faça um pedido primeiro.");
+    alert("Ainda não há pedido a ser feito!\nFaça um pedido primeiro.");
     return;
   }
 
   const cartContent = cart.querySelector(".cart-content");
   cartContent.innerHTML = "";
   alert("Seu pedido foi feito com sucesso");
+  itemsAdded = [];
+
+  update();
+  updateItemCount(); // Atualiza o contador de itens
+}
+
+function handle_cleanCart() {
+  if (itemsAdded.length <= 0) {
+    alert("O carrinho já está vazio");
+    return;
+  }
+
+  const cartContent = cart.querySelector(".cart-content");
+  cartContent.innerHTML = "";
   itemsAdded = [];
 
   update();
@@ -231,3 +252,32 @@ function updateItemCount() {
 }
 
 /*=============== =============== ===============*/
+
+// Código JavaScript para lidar com a funcionalidade de filtro
+const filterButtons = document.querySelectorAll(".filter-button");
+const productBoxes = document.querySelectorAll(".product-box");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Remove active class from all buttons
+    filterButtons.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+
+    // Add active class to the clicked button
+    button.classList.add("active");
+
+    const category = button.dataset.filter;
+
+    // Filter the products based on the selected category
+    productBoxes.forEach((box) => {
+      const productCategory = box.dataset.category;
+
+      if (category === "all" || category === productCategory) {
+        box.style.display = "block";
+      } else {
+        box.style.display = "none";
+      }
+    });
+  });
+});
