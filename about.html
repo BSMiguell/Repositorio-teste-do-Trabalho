@@ -85,15 +85,15 @@
   <body>
     <!-- ===== HEADER ===== -->
     <header>
-      <a href="#" class="logo"
+      <a href="index.html" class="logo"
         ><img src="assets/img/header/header__logo.png"
       /></a>
 
       <nav>
         <ul class="navbar">
-          <li><a href="#" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#">Teste</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="#" class="active">About</a></li>
           <li><a href="produtos-1.html">Products</a></li>
         </ul>
 
@@ -138,12 +138,32 @@
     <!-- ===== MAIN CONTENT OF THE WEBSITE ===== -->
     <main class="main">
       <!-- ===== HOME ===== -->
-      <section class="home">
-        <h3>Super-Promoção</h3>
-        <h2>Ofertas especiais essa semana</h2>
-        <h1>Em todos os produtos</h1>
-        <p>Economize mais com cupons e até 70% de desconto!</p>
-        <button class="btn bnt__home">Compre agora</button>
+      <section class="About__section">
+        <div class="circle"></div>
+        <div class="About__home">
+          <div class="About__text">
+            <div class="About__text-h1">
+              <h1>
+                It's not just Coffee It's
+                <span class="section__title">Starbucks</span>
+              </h1>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo.
+            </p>
+            <a href="#" class="btn bnt__home">Learn More</a>
+          </div>
+          <div class="abou__img-box">
+            <img
+              src="assets/img/about/About__banner.png"
+              alt=""
+              class="img-box"
+            />
+          </div>
+        </div>
       </section>
 
       <!-- ===== PROGRAM ===== -->
@@ -152,8 +172,8 @@
           <div class="section__data">
             <h2 class="section__subtitle">Nosso programa</h2>
             <div class="section__titles">
-              <h1 class="section__title-border">CONSTRUA O SEU</h1>
-              <h1 class="section__title">MELHOR CORPO</h1>
+              <h2 class="section__title-border">CONSTRUA O SEU</h2>
+              <h3 class="section__title">MELHOR CORPO</h3>
             </div>
           </div>
 
@@ -251,7 +271,8 @@
               <h3 class="section__title">CONNOSCO</h3>
             </div>
           </div>
-          <div class="about__flex">
+
+          <article class="about__program">
             <div class="about-image">
               <img src="assets/img/about/about1.png" />
             </div>
@@ -276,14 +297,14 @@
                 Purchase Now <i class="bx bx-right-arrow-alt"></i>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="about__flex">
+          <article class="about__program">
             <div class="about-image">
               <img src="assets/img/about/about2.png" />
             </div>
             <div class="about-content about__card">
-              <h2>Esteira</h2>
+              <h2>Exercício Cardio</h2>
               <p>
                 A esteira é um equipamento de treinamento popular que simula a
                 corrida ou caminhada, permitindo que você realize um treino
@@ -304,188 +325,93 @@
                 Saber mais <i class="bx bx-right-arrow-alt"></i>
               </a>
             </div>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <!-- ===== CHOOSE ===== -->
-      <section class="choose section" id="choose">
-        <div class="choose__overflow">
-          <div class="choose__container container grid">
-            <div class="choose__content">
-              <div class="section__data">
-                <h2 class="section__subtitle">Melhores Motivo</h2>
-                <div class="section__titles">
-                  <h1 class="section__title-border">POR QUE</h1>
-                  <h1 class="section__title">ESCOLHER-NOS?</h1>
-                </div>
-              </div>
-
-              <p class="choose__description">
-                Escolha sua aula preferida e comece agora. Lembre-se que o único
-                treino ruim é aquele que você não fez.
+          <article class="about__program">
+            <div class="about-image">
+              <img src="assets/img/about/about3.png" />
+            </div>
+            <div class="about-content about__card">
+              <h2>Leg Press</h2>
+              <p>
+                O Leg Press é um exercício de musculação amplamente utilizado
+                para fortalecer e desenvolver os músculos das pernas, em
+                particular os quadríceps, isquiotibiais e glúteos. É uma máquina
+                com um assento inclinado que permite que você pressione pesos
+                com os pés, movimentando uma plataforma em um movimento de
+                empurrar.
               </p>
 
-              <div class="choose__content-grid">
-                <div class="choose__images">
-                  <img
-                    src="assets/img/choose/choose-img.png"
-                    alt=""
-                    class="choose__img"
-                  />
-
-                  <div class="choose__triangle choose__triangle-1"></div>
-                  <div class="choose__triangle choose__triangle-2"></div>
-                  <div class="choose__triangle choose__triangle-3"></div>
-                </div>
-
-                <div class="choose__data">
-                  <div class="choose__group">
-                    <h3 class="choose__number">4</h3>
-                    <p class="choose__subtitle">Todos os membros</p>
-                  </div>
-                  <div class="choose__group">
-                    <h3 class="choose__number">4</h3>
-                    <p class="choose__subtitle">melhores treinadores</p>
-                  </div>
-                  <div class="choose__group">
-                    <h3 class="choose__number">25+</h3>
-                    <p class="choose__subtitle">Programas</p>
-                  </div>
-                  <div class="choose__group">
-                    <h3 class="choose__number">100+</h3>
-                    <p class="choose__subtitle">Prêmios</p>
-                  </div>
-                </div>
-              </div>
+              <p>
+                Ao realizar o Leg Press, você começa ajustando o assento de
+                acordo com a sua altura e posiciona os pés na plataforma, com os
+                joelhos dobrados em um ângulo de 90 graus. A partir daí, você
+                empurra a plataforma para longe de você, estendendo
+                completamente as pernas, e depois retorna à posição inicial
+                controladamente.
+              </p>
+              <a href="#" class="btn bnt__pricing">
+                Saber mais <i class="bx bx-right-arrow-alt"></i>
+              </a>
             </div>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <!-- ===== PRICING ===== -->
-      <section class="pricing section" id="pricing">
-        <div class="container">
-          <div class="section__data">
-            <h2 class="section__subtitle">Preços</h2>
-            <div class="section__titles">
-              <h2 class="section__title-border">NOSSO</h2>
-              <h3 class="section__title">PLANO ESPECIAL</h3>
+          <article class="about__program">
+            <div class="about-image">
+              <img src="assets/img/about/about4.png" />
             </div>
-          </div>
+            <div class="about-content about__card">
+              <h2>Supino reto</h2>
+              <p>
+                O Supino Reto é um dos exercícios mais populares e amplamente
+                praticados na musculação. Ele é projetado para fortalecer e
+                desenvolver os músculos do peitoral, tríceps e ombros. O
+                exercício é realizado deitado em um banco plano, segurando uma
+                barra com pesos e executando um movimento de pressionar.
+              </p>
 
-          <div class="pricing__container grid">
-            <article class="pricing__card">
-              <div class="pricing__header">
-                <div class="pricing__shape">
-                  <img
-                    src="assets/img/pricing/pricing1.png"
-                    alt=""
-                    class="pricing__img"
-                  />
-                </div>
-
-                <h2 class="pricing__title">BASIC PACKAGE</h2>
-                <h3 class="pricing__number">$200</h3>
-              </div>
-
-              <ul class="pricing__list">
-                <li class="pricing__item">
-                  <i class="bx bx-check-circle"></i> 5 Days In A Week
-                </li>
-                <li class="pricing__item">
-                  <i class="bx bx-check-circle"></i> 01 Sweatshirt
-                </li>
-                <li class="pricing__item pricing__item-opacity">
-                  <i class="bx bx-check-circle"></i> 01 Bottle of Protein
-                </li>
-                <li class="pricing__item pricing__item-opacity">
-                  <i class="bx bx-check-circle"></i> Access to Videos
-                </li>
-                <li class="pricing__item pricing__item-opacity">
-                  <i class="bx bx-check-circle"></i> Muscle Stretching
-                </li>
-              </ul>
-
+              <p>
+                Para realizar o Supino Reto, comece deitado em um banco plano,
+                com os pés apoiados no chão para garantir estabilidade.
+                Posicione a barra no suporte ou peça ajuda para pegar a barra e
+                mantenha as mãos afastadas na largura dos ombros. Antes de
+                iniciar o movimento, certifique-se de que os cotovelos estejam
+                flexionados e alinhados com os ombros.
+              </p>
               <a href="#" class="btn bnt__pricing">
-                Purchase Now <i class="bx bx-right-arrow-alt"></i>
+                Saber mais <i class="bx bx-right-arrow-alt"></i>
               </a>
-            </article>
+            </div>
+          </article>
 
-            <article class="pricing__card pricing__card-active">
-              <div class="pricing__header">
-                <div class="pricing__shape">
-                  <img
-                    src="assets/img/pricing/pricing1.png"
-                    alt=""
-                    class="pricing__img"
-                  />
-                </div>
+          <article class="about__program">
+            <div class="about-image">
+              <img src="assets/img/about/about5.png" />
+            </div>
+            <div class="about-content about__card">
+              <h2>Puxador (pulley) Frontal</h2>
+              <p>
+                O Puxador Frontal, ou Pulley Frontal, é um exercício de
+                musculação que visa principalmente fortalecer e desenvolver os
+                músculos das costas, em particular o grande dorsal. Ele também
+                trabalha os músculos do braço, como os bíceps e os músculos do
+                antebraço.
+              </p>
 
-                <h2 class="pricing__title">PREMIUM PACKAGE</h2>
-                <h3 class="pricing__number">$300</h3>
-              </div>
-
-              <ul class="pricing__list">
-                <li class="pricing__item">
-                  <i class="bx bx-check-circle"></i> 5 Days In A Week
-                </li>
-                <li class="pricing__item">
-                  <i class="bx bx-check-circle"></i> 01 Sweatshirt
-                </li>
-                <li class="pricing__item">
-                  <i class="bx bx-check-circle"></i> 01 Bottle of Protein
-                </li>
-                <li class="pricing__item pricing__item-opacity">
-                  <i class="bx bx-check-circle"></i> Access to Videos
-                </li>
-                <li class="pricing__item pricing__item-opacity">
-                  <i class="bx bx-check-circle"></i> Muscle Stretching
-                </li>
-              </ul>
-
+              <p>
+                Para realizar o Puxador Frontal, você precisa de uma máquina de
+                puxada (pulley) com uma barra reta ou em formato de V. Primeiro,
+                ajuste a altura do assento para que você fique em uma posição
+                sentada confortável. Em seguida, segure a barra com as palmas
+                das mãos voltadas para você, mantendo as mãos afastadas na
+                largura dos ombros ou em uma pegada mais ampla, dependendo da
+                sua preferência.
+              </p>
               <a href="#" class="btn bnt__pricing">
-                Purchase Now <i class="bx bx-right-arrow-alt"></i>
+                Saber mais <i class="bx bx-right-arrow-alt"></i>
               </a>
-            </article>
-
-            <article class="pricing__card">
-              <div class="pricing__header">
-                <div class="pricing__shape">
-                  <img
-                    src="assets/img/pricing/pricing1.png"
-                    alt=""
-                    class="pricing__img"
-                  />
-                </div>
-
-                <h2 class="pricing__title">DIAMOND PACKAGE</h2>
-                <h3 class="pricing__number">$500</h3>
-              </div>
-
-              <ul class="pricing__list">
-                <li class="pricing__item">
-                  <i class="bx bx-check-circle"></i> 5 Days In A Week
-                </li>
-                <li class="pricing__item">
-                  <i class="bx bx-check-circle"></i> 01 Sweatshirt
-                </li>
-                <li class="pricing__item">
-                  <i class="bx bx-check-circle"></i> 01 Bottle of Protein
-                </li>
-                <li class="pricing__item">
-                  <i class="bx bx-check-circle"></i> Access to Videos
-                </li>
-                <li class="pricing__item">
-                  <i class="bx bx-check-circle"></i> Muscle Stretching
-                </li>
-              </ul>
-
-              <a href="#" class="btn bnt__pricing">
-                Purchase Now <i class="bx bx-right-arrow-alt"></i>
-              </a>
-            </article>
-          </div>
+            </div>
+          </article>
         </div>
       </section>
     </main>

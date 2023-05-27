@@ -504,7 +504,7 @@ header.sticky {
   padding: 18px 65px;
   border-radius: 10px;
   border: 2px solid var(--first-color-light);
-  color: var(--header-color);
+  color: var(--white-color);
   font-weight: var(--font-bold);
   cursor: pointer;
   transition: background 0.3s;
@@ -597,7 +597,7 @@ header.sticky {
 
 /*=============== ABOUT ===============*/
 
-.about__flex {
+.about__program {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -645,13 +645,18 @@ header.sticky {
 
 /* Responsive ABOUT */
 @media screen and (max-width: 768px) {
-  .about__flex {
+  .about__program {
     /* padding: 20px; */
     flex-direction: column;
   }
 
   .about-content h2 {
     margin-top: 10px;
+  }
+
+  .about-image {
+    margin-right: 0px;
+    margin-bottom: 20px;
   }
 
   .about-image {
@@ -1031,6 +1036,92 @@ header.sticky {
   }
 }
 
+/*=============== THE STYLE OF ABOUT PAGE ===============*/
+
+/*=============== ABOUT HOME ==============*/
+.About__section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--body-color);
+  border-bottom: 2px solid var(--red-color);
+}
+.About__home {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.About__home .About__text {
+  position: relative;
+  max-width: 850px;
+}
+.About__text-h1 h1 {
+  color: var(--body-color-2);
+  font-size: var(--big-font-size);
+  font-weight: var(--weight-700);
+  margin-top: 20px;
+}
+.About__text-h1 h1 span {
+  font-size: var(--bigger-font-size);
+  font-weight: var(--weight-900);
+  color: var(--red-color);
+}
+.About__home .About__text {
+  color: var(--body-color-2);
+}
+.About__home .abou__img-box {
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--red-color);
+  clip-path: circle(800px at right 800px);
+}
+@media (max-width: 1020px) {
+  .About__home {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .About__home .abou__img-box {
+    width: 300px;
+  }
+  .circle {
+    top: -7%;
+    left: -4%;
+    clip-path: circle(200px);
+  }
+}
+@media (max-width: 552px) {
+  .About__section {
+    padding: 10px;
+  }
+  .About__home .About__text .About__text-h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .About__home .abou__img-box {
+    padding-right: 0px;
+  }
+  .circle {
+    display: none;
+  }
+}
 /*=============== FOOTER ===============*/
 
 footer {
