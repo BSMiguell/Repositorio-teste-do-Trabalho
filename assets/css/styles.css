@@ -1457,6 +1457,8 @@ footer .bottom-details .bottom_text {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 10px;
+}
+.style-switcher .colors img {
   cursor: pointer;
 }
 .color-7 {
