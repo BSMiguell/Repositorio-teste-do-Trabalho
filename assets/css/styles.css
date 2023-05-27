@@ -1386,29 +1386,13 @@ footer .bottom-details .bottom_text {
 }
 .style-switcher .colors {
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-.style-switcher .colors span {
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  border: 2px solid var(--black-color);
+  margin-bottom: 10px;
   cursor: pointer;
 }
-.style-switcher .color-1 {
-  background: hsl(0, 100%, 50%);
-}
-.style-switcher .color-2 {
-  background: hsl(276, 100%, 50%);
-}
-.style-switcher .color-3 {
-  background: hsl(303, 100%, 50%);
-}
-.style-switcher .color-4 {
-  background: hsl(30, 100%, 50%);
-}
-.style-switcher .color-5 {
-  background: hsl(90, 80%, 56%);
+.color-7 {
+  position: absolute;
+  right: 60%;
 }
