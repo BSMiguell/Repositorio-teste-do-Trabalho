@@ -1059,7 +1059,8 @@ header.sticky {
 }
 .About__home .About__text {
   position: relative;
-  max-width: 850px;
+  max-width: 800px;
+  margin-top: 50px;
 }
 .About__text-h1 h1 {
   color: var(--body-color-2);
@@ -1068,9 +1069,12 @@ header.sticky {
   margin-top: 20px;
 }
 .About__text-h1 h1 span {
+  display: inline-block;
   font-size: var(--bigger-font-size);
   font-weight: var(--weight-900);
   color: var(--red-color);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .About__home .About__text {
   color: var(--body-color-2);
@@ -1100,7 +1104,7 @@ header.sticky {
     width: 300px;
   }
   .circle {
-    top: -7%;
+    top: -10%;
     left: -4%;
     clip-path: circle(200px);
   }
