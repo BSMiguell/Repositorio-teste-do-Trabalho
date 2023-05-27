@@ -2,6 +2,7 @@
 
 /* ===== Google Font Import - Poppins ===== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 * {
   margin: 0;
@@ -44,14 +45,13 @@
   /* 1rem = 16px ... */
   --biggest-font-size: 2rem;
   --bigger-font-size: 1.5rem;
-  --big-font-size: 1.25rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
+  --big-font-size: 1.5rem;
+  --h1-font-size: 1.7rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
-  --normal-font-size: 1rem;
   /*========== Font weight ==========*/
   --weight-400: 400;
   --weight-500: 500;
@@ -121,15 +121,15 @@ section {
 .section__title-border {
   font-size: var(--big-font-size);
   letter-spacing: 1.5px;
+  font-family: "Anton", sans-serif;
   color: var(--red-color);
 }
 .section__subtitle {
   font-size: var(--h2-font-size);
   font-family: var(--second-font);
-  font-weight: 400;
+  font-weight: var(--weight-400);
   letter-spacing: 1.5px;
   color: var(--red-color);
-  transform: rotate(-2deg);
 }
 .section__titles {
   display: flex;
@@ -185,6 +185,12 @@ section {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .section__title,
+  .section__title-border {
+    font-family: "Roboto", sans-serif;
+  }
+}
 /*=============== =============== ===============*/
 
 /*=============== HADER ===============*/
@@ -596,7 +602,6 @@ header.sticky {
 }
 
 /*=============== ABOUT ===============*/
-
 .about__program {
   display: flex;
   justify-content: space-between;
@@ -759,7 +764,6 @@ header.sticky {
 }
 
 /*===============  PRICING ===============*/
-
 .pricing__container {
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   justify-content: center;
@@ -829,6 +833,155 @@ header.sticky {
   transition: background 0.3s;
 }
 
+/*===============  CONTACT ===============*/
+
+.box-form {
+  grid-area: form;
+}
+.box-info {
+  grid-area: info;
+}
+.box-map {
+  grid-area: map;
+}
+.contact-box {
+  padding: 40px;
+  background: var(--body-color-2);
+  box-shadow: 0px 0px 35px var(--red-color);
+}
+.contact__boxs {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 5fr 4fr;
+  grid-template-areas:
+    "form info"
+    "form map";
+  grid-gap: 20px;
+}
+.contact-box h3 {
+  color: var(--red-color);
+  font-weight: 500;
+  font-size: var(--h3-font-size);
+  margin-bottom: 10px;
+}
+
+/*=== FORM ====*/
+.contact-form {
+  position: relative;
+  width: 100%;
+}
+.contact-form .row-form {
+  display: flex;
+  gap: 1.25rem;
+}
+.input-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  width: 65%;
+}
+.contact-form .row-form-2 .input-box {
+  width: 100%;
+}
+.input-box span {
+  color: var(--red-color);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: var(--weight-500);
+}
+.input-box input {
+  padding: 10px;
+  font-size: var(--normal-font-size);
+  border: 2px solid var(--red-color);
+}
+.input-box textarea {
+  padding: 10px;
+  font-size: var(--normal-font-size);
+  border: 2px solid var(--red-color);
+  resize: none;
+  min-height: 220px;
+  margin-bottom: 10px;
+}
+.input-box input[type="submit"] {
+  background: var(--red-color);
+  color: var(--white-color);
+  font-size: var(--normal-font-size);
+  max-width: 120px;
+  font-weight: var(--weight-500);
+  cursor: pointer;
+  padding: 9px 10px;
+}
+.input-box ::placeholder {
+  color: hsla(0, 0%, 60%, 0.6);
+}
+/*=== INFO ====*/
+.box-info {
+  background: hsl(0, 0%, 91%);
+}
+.box-info .input-box .contact__box-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.box-info .input-box .contact__box-info span {
+  min-width: 40px;
+  height: 40px;
+  color: var(--white-color);
+  background: var(--red-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.box-info .input-box .contact__box-info p {
+  color: var(--black-color);
+  font-size: var(--normal-font-size);
+}
+.box-info .input-box .contact__box-info a {
+  color: var(--black-color);
+  font-size: var(--normal-font-size);
+}
+.contact-icons {
+  margin-top: 20px;
+  display: flex;
+}
+.contact-icons li a {
+  color: var(--red-color);
+  font-size: var(--big-font-size);
+}
+.contact-icons li a:hover {
+  opacity: 0.5;
+}
+.box-map img {
+  width: 100%;
+  height: 100%;
+}
+/* Responsive CHOOSE */
+@media (max-width: 991px) {
+  .contact__boxs {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "form"
+      "info"
+      "map";
+    grid-gap: 20px;
+  }
+  .contact-form .row-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .input-box {
+    width: 100%;
+  }
+  .contact-box {
+    padding: 20px;
+  }
+}
 /*=============== THE STYLE OF PRODUCT PAGES ===============*/
 
 /*=============== PAGE-HEADER PRODUTOS-1, PRODUTOS-3, PRODUTOS-3 ==============*/
@@ -898,6 +1051,7 @@ header.sticky {
 .filter-button.active {
   background-color: var(--red-color);
   color: var(--white-color);
+  border: 2px solid var(--body-color-2);
 }
 
 /* Responsive typography */
