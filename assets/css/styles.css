@@ -846,7 +846,7 @@ header.sticky {
 }
 .contact-box {
   padding: 40px;
-  background: var(--body-color-2);
+  background: var(--white-color);
   box-shadow: 0px 0px 35px var(--red-color);
 }
 .contact__boxs {
@@ -944,17 +944,7 @@ header.sticky {
   color: var(--black-color);
   font-size: var(--normal-font-size);
 }
-.contact-icons {
-  margin-top: 20px;
-  display: flex;
-}
-.contact-icons li a {
-  color: var(--red-color);
-  font-size: var(--big-font-size);
-}
-.contact-icons li a:hover {
-  opacity: 0.5;
-}
+
 .box-map img {
   width: 100%;
   height: 100%;
@@ -1224,7 +1214,7 @@ header.sticky {
 }
 .About__text-h1 h1 span {
   display: inline-block;
-  font-size: var(--bigger-font-size);
+  font-size: var(--big-font-size);
   font-weight: var(--weight-900);
   color: var(--red-color);
   margin-top: 10px;
@@ -1249,18 +1239,26 @@ header.sticky {
   background: var(--red-color);
   clip-path: circle(800px at right 800px);
 }
+.img-box-2 {
+  display: none;
+}
 @media (max-width: 1020px) {
   .About__home {
     display: flex;
     flex-direction: column-reverse;
   }
   .About__home .abou__img-box {
-    width: 300px;
+    width: 500px;
+    padding-right: 0px;
+  }
+  .img-box {
+    display: none;
+  }
+  .img-box-2 {
+    display: block;
   }
   .circle {
-    top: -10%;
-    left: -4%;
-    clip-path: circle(200px);
+    display: none;
   }
 }
 @media (max-width: 552px) {
@@ -1275,9 +1273,38 @@ header.sticky {
   }
   .About__home .abou__img-box {
     padding-right: 0px;
+    width: 300px;
   }
-  .circle {
-    display: none;
+}
+/*=============== THE STYLE OF ABOUT PAGE ===============*/
+/*=============== timeline ==============*/
+.title__timeline {
+  margin-bottom: 20px;
+  color: var(--body-color-2);
+}
+.table-box {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.table-box th,
+td {
+  border: 2px solid var(--red-color);
+  padding: 10px;
+}
+.table-box tr td {
+  border: 2px solid var(--body-color-2);
+  padding: 10px;
+  color: var(--body-color-2);
+}
+.table-box th {
+  background-color: hsl(0, 0%, 95%);
+  font-weight: bold;
+}
+@media screen and (max-width: 500px) {
+  .timeline {
+    overflow-x: auto;
   }
 }
 /*=============== FOOTER ===============*/
