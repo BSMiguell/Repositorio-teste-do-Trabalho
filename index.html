@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="{% static 'img/header/header__logo.png' %}"
-      type="image/x-icon"
-    />
+
     <title>Fit Match</title>
 
     <!-- ===== Boxicons CSS ===== -->
@@ -504,27 +500,51 @@
           <div class="contact__boxs">
             <div class="contact-box box-form">
               <h3>Envie sua mensagem</h3>
-              <form>
+              <form id="contact-form">
                 <div class="contact-form">
                   <div class="row-form">
                     <div class="input-box">
                       <span>Nome</span>
-                      <input type="text" placeholder="Greg" />
+                      <input
+                        type="text"
+                        id="name-input"
+                        placeholder="Greg"
+                        required
+                      />
                     </div>
                     <div class="input-box">
-                      <span>Sobrenome Name</span>
-                      <input type="text" placeholder="Tonero" />
+                      <span>Sobrenome</span>
+                      <input
+                        type="text"
+                        id="surname-input"
+                        placeholder="Tonero"
+                        required
+                      />
                     </div>
                   </div>
 
                   <div class="row-form">
                     <div class="input-box">
                       <span>Email</span>
-                      <input type="text" placeholder="gregtonero@email.com" />
+                      <input
+                        type="email"
+                        id="email-input"
+                        placeholder="seuemail@example.com"
+                        required
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                        title="Insira um endereço de e-mail válido"
+                      />
                     </div>
                     <div class="input-box">
                       <span>Telefone</span>
-                      <input type="text" placeholder="+21 999-999-9999" />
+                      <input
+                        type="tel"
+                        id="phone-input"
+                        placeholder="+21 999-999-9999"
+                        required
+                        pattern="\+[0-9]{2} [0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        title="Insira um número de telefone válido no formato '+XX XXX-XXX-XXXX'"
+                      />
                     </div>
                   </div>
 
@@ -532,14 +552,20 @@
                     <div class="input-box">
                       <span>Mensagem</span>
                       <textarea
+                        id="message-input"
                         placeholder="Escreva sua mensagem aqui..."
+                        required
                       ></textarea>
                     </div>
                   </div>
 
                   <div class="row-form-2">
                     <div class="input-box">
-                      <input type="submit" value="Send" />
+                      <input
+                        type="submit"
+                        value="Enviar"
+                        onclick="clearForm()"
+                      />
                     </div>
                   </div>
                 </div>
@@ -555,7 +581,7 @@
                 </div>
                 <div class="contact__box-info">
                   <span><i class="bx bx-envelope"></i></span>
-                  <a href="#">loremipsun@email.com</a>
+                  <a href="#">seuemail@example.com</a>
                 </div>
                 <div class="contact__box-info">
                   <span><i class="fas fa-phone"></i></span>

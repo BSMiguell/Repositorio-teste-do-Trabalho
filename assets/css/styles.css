@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   transition: all 0.4s ease;
   scroll-behavior: smooth;
 }
@@ -1360,7 +1360,49 @@ header.sticky {
   box-shadow: 0 10px 1rem hwb(0 0% 100% / 0.3);
   transform: scale(1.03);
 }
-
+/*=============== ABOUT PROGRAMMERS ==============*/
+.programmers {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+  row-gap: 1rem;
+}
+.programmers .technology-boxs img {
+  border-radius: 50%;
+}
+.programmers ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.programmers ul li {
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+}
+.programmers ul li a {
+  color: var(--white-color);
+  font-size: var(--normal-font-size);
+  transition: all 0.4s ease;
+}
+.programmers ul li:nth-child(1) {
+  background: hsl(240, 8%, 3%);
+}
+.programmers ul li:nth-child(2) {
+  background: hsl(220, 46%, 48%);
+}
+.programmers ul li:nth-child(3) {
+  background: hsl(317, 100%, 50%);
+}
+@media (max-width: 500px) {
+  .programmers {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    row-gap: 3rem;
+  }
+}
 /*=============== THE STYLE OF ABOUT PAGE ===============*/
 
 /*=============== timeline ==============*/

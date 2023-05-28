@@ -322,3 +322,8 @@ filterButtons.forEach((button) => {
     });
   });
 });
+
+// Limpar os capos do form
+function clearForm() {
+  document.getElementById("contact-form").reset();
+}
