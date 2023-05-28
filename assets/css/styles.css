@@ -1,8 +1,7 @@
 /*=============== RESET ===============*/
 
-/* ===== Google Font Import - Poppins ===== */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+/* ===== Google Font Import - Poppins/Anton ===== */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@500&display=swap");
 
 * {
   margin: 0;
@@ -28,6 +27,7 @@
   --header-color: hsl(0, 0%, 100%);
   --nav-color: hsl(0, 0%, 98%);
   --red-color: hsl(0, 100%, 50%);
+  --bow-color: hsl(0, 100%, 54%);
   --main-color: hsl(0, 80%, 61%);
   --second-color: hsl(34, 94%, 87%);
   --body-color: hsl(236, 80%, 4%);
@@ -847,7 +847,7 @@ header.sticky {
 .contact-box {
   padding: 40px;
   background: var(--white-color);
-  box-shadow: 0px 0px 35px var(--red-color);
+  box-shadow: 0px 0px 5px 5px var(--red-color);
 }
 .contact__boxs {
   position: relative;
@@ -1230,6 +1230,24 @@ header.sticky {
   padding-right: 50px;
   margin-top: 50px;
 }
+.box-bow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box-bow img {
+  position: relative;
+  z-index: 10px;
+}
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .circle {
   position: absolute;
   top: 0;
@@ -1238,6 +1256,19 @@ header.sticky {
   height: 100%;
   background: var(--red-color);
   clip-path: circle(800px at right 800px);
+}
+.bow {
+  position: absolute;
+  display: none;
+  width: 600px;
+  height: 600px;
+  border: 10px solid transparent;
+  border-top-color: var(--bow-color);
+  border-bottom-color: var(--red-color);
+  border-left-color: var(--red-color);
+  border-right-color: var(--red-color);
+  border-radius: 50%;
+  animation: girar 1s linear infinite;
 }
 .img-box-2 {
   display: none;
@@ -1260,6 +1291,11 @@ header.sticky {
   .circle {
     display: none;
   }
+  .bow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media (max-width: 552px) {
   .About__section {
@@ -1275,8 +1311,58 @@ header.sticky {
     padding-right: 0px;
     width: 300px;
   }
+  .bow {
+    width: 400px;
+    height: 400px;
+  }
 }
+@media (max-width: 400px) {
+  .bow {
+    width: 330px;
+    height: 330px;
+  }
+}
+
+/*=============== ABOUT Technology ==============*/
+.technology__box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 5rem;
+}
+.technology__box .technology-boxs {
+  box-shadow: 0 0px 10px 5px var(--red-color);
+  border-radius: 5px;
+  background: var(--white-color);
+  text-align: center;
+  padding: 30px 20px;
+}
+.technology__box .technology-boxs img {
+  height: 80px;
+}
+.technology__box .technology-boxs h3 {
+  color: hsl(0, 0%, 27%);
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+.technology__box .technology-boxs p {
+  color: hsl(0, 0%, 47%);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.technology__box .technology-boxs .btn {
+  margin-top: 10px;
+  padding: 8px 25px;
+}
+.technology__box .technology-boxs .btn:hover {
+  letter-spacing: 1px;
+}
+.technology__box .technology-boxs:hover {
+  box-shadow: 0 10px 1rem hwb(0 0% 100% / 0.3);
+  transform: scale(1.03);
+}
+
 /*=============== THE STYLE OF ABOUT PAGE ===============*/
+
 /*=============== timeline ==============*/
 .title__timeline {
   margin-bottom: 20px;
