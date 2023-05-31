@@ -695,6 +695,7 @@ header.sticky {
 .choose__description {
   text-align: center;
   margin-bottom: 2.5rem;
+  color: var(--body-color);
 }
 .choose__content-grid {
   position: relative;
@@ -1776,8 +1777,4 @@ footer .bottom-details .bottom_text {
 }
 .style-switcher .colors img {
   cursor: pointer;
-}
-.color-7 {
-  position: absolute;
-  right: 60%;
 }
