@@ -177,8 +177,8 @@ section {
     --bigger-font-size: 3.5rem;
     --big-font-size: 2.75rem;
     --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
+    --h2-font-size: 1.7rem;
+    --h3-font-size: 1.5rem;
     --normal-font-size: 1rem;
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
@@ -191,7 +191,6 @@ section {
     font-family: "Roboto", sans-serif;
   }
 }
-
 /*===============X===============X===============X===============X===============*/
 
 /*=============== HADER ===============*/
@@ -1625,6 +1624,63 @@ td {
 }
 /*===============X===============X===============X===============X===============*/
 
+/*=============== THE STYLE OF COMMON-QUESTIONS PAGE ===============*/
+.common-questions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.faq-container {
+  max-width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.102);
+  border-radius: 5px;
+  padding: 20px;
+}
+.question {
+  font-size: var(--h1-font-size);
+  cursor: pointer;
+  color: var(--body-color-2);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+.question i {
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+.answer {
+  display: none;
+  margin-bottom: 10px;
+  color: hsl(0, 0%, 40%);
+}
+.answer ul,
+.answer p {
+  max-width: 800px;
+  margin-bottom: 10px;
+  font-size: var(--normal-font-size);
+}
+.answer ul li {
+  margin-bottom: 10px;
+}
+.question.active {
+  color: var(--red-color);
+}
+.question.active i {
+  transform: rotate(90deg);
+}
+.answer.active {
+  display: block;
+}
+@media (max-width: 900px) {
+  .question {
+    font-size: var(--h3-font-size);
+  }
+}
+/*===============X===============X===============X===============X===============*/
+
 /*=============== SECTIONS/DIV STYLES USED THROUGHOUT PAGES ===============*/
 
 /*=============== FOOTER ===============*/
@@ -1931,7 +1987,6 @@ footer .bottom-details .bottom_text {
     transform: rotate(360deg);
   }
 }
-
 .style-switcher .style-switcher-toggler .fa-cog.stop-rotation {
   animation-play-state: paused;
 }

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fit Match</title>
+
+    <!-- ===== Boxicons CSS ===== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- ===== STYLE CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- ===== THEMES/COLOR - MODE ===== -->
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-red.css"
+      class="alternate-style"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-purple.css"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-pink.css"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-orange.css"
+      class="alternate-style"
+      title="color-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-green.css"
+      class="alternate-style"
+      title="color-5"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-blue.css"
+      class="alternate-style"
+      title="color-6"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-yellow.css"
+      class="alternate-style"
+      title="color-7"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-ceano.css"
+      class="alternate-style"
+      title="color-8"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-gray.css"
+      class="alternate-style"
+      title="color-9"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-light-green.css"
+      class="alternate-style"
+      title="color-10"
+      disabled
+    />
+
+    <!-- ===== SCRIPT ===== -->
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <a href="#" class="logo"
+        ><img src="assets/img/header/header__logo.png"
+      /></a>
+
+      <nav>
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cronograma.html">Timeline</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="produtos-1.html">Products</a></li>
+        </ul>
+
+        <div class="icons-mode">
+          <div class="bx bx-menu" id="menu-icon"></div>
+
+          <div class="cart__count">
+            <i class="bx bx-shopping-bag" id="cart-icon"></i>
+            <span class="item-count">0</span>
+          </div>
+
+          <a class="login-icon" href="login.html"
+            ><i class="bx bxs-user"></i
+          ></a>
+        </div>
+
+        <!-- CART -->
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+          <!-- CONTENT -->
+
+          <div class="cart-content">
+            <!-- TEST BOX -->
+          </div>
+
+          <!-- TOTAL -->
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
+          <!-- BUY BUTTON -->
+          <div class="cart__btn">
+            <button type="button" class="btn-buy">Buy Now</button>
+            <button type="button" class="to-clean">Clean</button>
+          </div>
+          <!-- CART CLOSE -->
+          <i class="bx bx-x" id="cart-close"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT OF THE WEBSITE ===== -->
+    <main class="main">
+      <!-- ===== HOME ===== -->
+      <section class="About__section">
+        <div class="circle"></div>
+        <div class="About__home">
+          <div class="About__text">
+            <div class="About__text-h1">
+              <h1>
+                Tem duvidas?
+                <span class="section__title">Fit Match</span>
+              </h1>
+            </div>
+            <p>
+              Aqui você encontrará uma lista de perguntas frequentes feitas por
+              nossos clientes. Essas perguntas abrangem diversos tópicos e foram
+              compiladas para ajudar a esclarecer dúvidas comuns e fornecer
+              informações úteis. Continue lendo para encontrar respostas para
+              algumas das principais perguntas que nossos clientes costumam
+              fazer
+            </p>
+          </div>
+          <div class="abou__img-box">
+            <img
+              src="assets/img/about/About__banner3.png"
+              alt=""
+              class="img-box"
+            />
+            <div class="box-bow">
+              <div class="bow"></div>
+              <img
+                src="assets/img/about/About__banner3.png"
+                alt=""
+                class="img-box-2"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="common-questions">
+        <div class="container">
+          <div class="section__data">
+            <div class="section__titles">
+              <h3 class="section__title">Perguntas Frequentes - Fit Match</h3>
+            </div>
+          </div>
+
+          <div
+            class="question active"
+            id="question-answer1"
+            onclick="toggleAnswer('answer1')"
+          >
+            Como faço para me matricular na Fit Match?
+            <i class="bx bx-down-arrow-alt"></i>
+          </div>
+
+          <div id="answer1" class="answer active">
+            <p>Para se matricular na Fit Match, siga os seguintes passos:</p>
+            <ul>
+              <li>Visite nossa academia localizada na Rua Principal, 123.</li>
+              <li>
+                Fale com um de nossos atendentes para obter mais informações e
+                preencher o formulário de matrícula.
+              </li>
+              <li>
+                Escolha o plano de assinatura que melhor se adequa às suas
+                necessidades.
+              </li>
+              <li>
+                Realize o pagamento da taxa de matrícula e da primeira
+                mensalidade.
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="question"
+            id="question-answer2"
+            onclick="toggleAnswer('answer2')"
+          >
+            Quais são os horários de funcionamento da academia?
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+
+          <div id="answer2" class="answer">
+            <p>
+              A Fit Match está aberta todos os dias da semana, de segunda a
+              domingo. Nossos horários de funcionamento são:
+            </p>
+            <ul>
+              <li>Segunda a sexta: das 6h às 22h</li>
+              <li>Sábado: das 8h às 20h</li>
+              <li>Domingo: das 9h às 18h</li>
+            </ul>
+          </div>
+
+          <div
+            class="question"
+            id="question-answer3"
+            onclick="toggleAnswer('answer3')"
+          >
+            Posso cancelar minha assinatura a qualquer momento?
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+
+          <div id="answer3" class="answer">
+            <p>
+              Sim, você pode cancelar sua assinatura na Fit Match a qualquer
+              momento. Entre em contato com nossa equipe de atendimento ao
+              cliente para obter mais informações sobre o processo de
+              cancelamento.
+            </p>
+          </div>
+
+          <div
+            class="question"
+            id="question-answer4"
+            onclick="toggleAnswer('answer4')"
+          >
+            Quais modalidades de treino são oferecidas pela Fit Match?
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+
+          <div id="answer4" class="answer">
+            <p>
+              A Fit Match oferece uma variedade de modalidades de treino,
+              incluindo:
+            </p>
+            <ul>
+              <li>Aulas de musculação</li>
+              <li>Aulas de cardio fitness</li>
+              <li>Aulas de dança</li>
+              <li>Aulas de yoga</li>
+              <li>Aulas de pilates</li>
+              <li>Aulas de artes marciais</li>
+            </ul>
+            <p>
+              Entre em contato conosco para conhecer mais detalhes sobre cada
+              modalidade e os horários de aula.
+            </p>
+          </div>
+
+          <div
+            class="question"
+            id="question-answer5"
+            onclick="toggleAnswer('answer5')"
+          >
+            Existe estacionamento disponível na academia?
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+
+          <div id="answer5" class="answer">
+            <p>
+              Sim, a Fit Match possui estacionamento disponível para os membros
+              da academia. Temos um amplo estacionamento para garantir que você
+              possa estacionar com facilidade e segurança.
+            </p>
+          </div>
+
+          <div
+            class="question"
+            id="question-answer6"
+            onclick="toggleAnswer('answer6')"
+          >
+            Quais são as opções de pagamento aceitas na Fit Match?
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+
+          <div id="answer6" class="answer">
+            <p>
+              A Fit Match aceita pagamentos em dinheiro, cartões de crédito e
+              débito das principais bandeiras, além de pagamentos através de
+              aplicativos de pagamento eletrônico. Oferecemos diversas opções
+              para que você possa escolher a forma mais conveniente de
+              pagamento.
+            </p>
+          </div>
+
+          <div
+            class="question"
+            id="question-answer7"
+            onclick="toggleAnswer('answer7')"
+          >
+            Existe um período de teste gratuito na Fit Match?
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+
+          <div id="answer7" class="answer">
+            <p>
+              Sim, oferecemos um período de teste gratuito de uma semana para
+              novos membros. Durante esse período, você terá acesso total às
+              nossas instalações e poderá experimentar todas as modalidades de
+              treino que oferecemos.
+            </p>
+          </div>
+
+          <div
+            class="question"
+            id="question-answer8"
+            onclick="toggleAnswer('answer8')"
+          >
+            Quais são os benefícios de se exercitar na Fit Match?
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+
+          <div id="answer8" class="answer">
+            <p>
+              Exercitar-se na Fit Match traz uma série de benefícios, incluindo:
+            </p>
+            <ul>
+              <li>Melhora da saúde cardiovascular</li>
+              <li>Aumento da força e resistência muscular</li>
+              <li>Redução do estresse e melhora do bem-estar mental</li>
+              <li>Perda de peso e controle do peso corporal</li>
+              <li>Aumento da flexibilidade e da coordenação motora</li>
+            </ul>
+            <p>
+              Além disso, você terá a oportunidade de socializar com outros
+              membros e receber orientação profissional de nossos instrutores
+              qualificados.
+            </p>
+          </div>
+
+          <div
+            class="question"
+            id="question-answer9"
+            onclick="toggleAnswer('answer9')"
+          >
+            A Fit Match oferece serviços de personal trainer?
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+
+          <div id="answer9" class="answer">
+            <p>
+              Sim, a Fit Match oferece serviços de personal trainer. Nossos
+              personal trainers são profissionais qualificados que podem
+              fornecer orientação personalizada, criar um programa de
+              treinamento adaptado às suas necessidades e objetivos, além de
+              oferecer suporte e motivação durante suas sessões de treinamento.
+            </p>
+          </div>
+
+          <div
+            class="question"
+            id="question-answer10"
+            onclick="toggleAnswer('answer10')"
+          >
+            Quais são as medidas de segurança e higiene adotadas pela Fit Match?
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+
+          <div id="answer10" class="answer">
+            <p>
+              A Fit Match leva a segurança e a higiene muito a sério. Nossas
+              medidas incluem:
+            </p>
+            <ul>
+              <li>
+                Limpeza e desinfecção regular de todas as áreas e equipamentos
+              </li>
+              <li>
+                Disponibilização de dispensadores de álcool em gel em vários
+                pontos da academia
+              </li>
+              <li>
+                Obrigatoriedade do uso de toalhas e garrafas de água individuais
+              </li>
+              <li>
+                Distanciamento social e limitação do número de pessoas nas aulas
+                e áreas comuns
+              </li>
+            </ul>
+            <p>
+              Estamos comprometidos em oferecer um ambiente seguro e saudável
+              para todos os nossos membros.
+            </p>
+          </div>
+
+          <div
+            class="question"
+            id="question-answer11"
+            onclick="toggleAnswer('answer11')"
+          >
+            A Fit Match oferece programas de treinamento para iniciantes?
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+
+          <div id="answer11" class="answer">
+            <p>
+              Sim, a Fit Match oferece programas de treinamento específicos para
+              iniciantes. Nossos instrutores qualificados estão disponíveis para
+              ajudar os iniciantes a começar de forma segura e eficaz,
+              oferecendo orientações e suporte durante todo o processo de
+              adaptação.
+            </p>
+          </div>
+
+          <div
+            class="question"
+            id="question-answer12"
+            onclick="toggleAnswer('answer12')"
+          >
+            Quais são as medidas de segurança para evitar lesões durante o
+            treino?
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+
+          <div id="answer12" class="answer">
+            <p>
+              Na Fit Match, a segurança dos nossos membros é uma prioridade.
+              Algumas medidas de segurança incluem:
+            </p>
+            <ul>
+              <li>
+                Realizar uma avaliação física inicial para entender suas
+                limitações e necessidades específicas.
+              </li>
+              <li>
+                Providenciar instrutores qualificados para garantir uma técnica
+                correta de exercício.
+              </li>
+              <li>
+                Oferecer orientações e demonstrações sobre o uso adequado dos
+                equipamentos.
+              </li>
+              <li>
+                Monitorar constantemente os treinos para evitar lesões e
+                corrigir possíveis erros de postura.
+              </li>
+            </ul>
+            <p>
+              Lembre-se de sempre respeitar seus limites e comunicar qualquer
+              desconforto aos nossos instrutores.
+            </p>
+          </div>
+
+          <div
+            class="question"
+            id="question-answer13"
+            onclick="toggleAnswer('answer13')"
+          >
+            Posso convidar um amigo para treinar comigo na Fit Match?
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+
+          <div id="answer13" class="answer">
+            <p>
+              Sim, você pode convidar um amigo para treinar com você na Fit
+              Match. Oferecemos programas especiais para membros que convidam
+              amigos, incluindo descontos e benefícios adicionais. Entre em
+              contato com nossa equipe de atendimento ao cliente para obter mais
+              informações sobre como convidar um amigo.
+            </p>
+          </div>
+
+          <div
+            class="question"
+            id="question-answer14"
+            onclick="toggleAnswer('answer14')"
+          >
+            A Fit Match oferece serviços de nutricionista?
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+
+          <div id="answer14" class="answer">
+            <p>
+              Sim, a Fit Match oferece serviços de nutricionista. Nossos
+              nutricionistas qualificados podem fornecer orientações
+              personalizadas sobre alimentação saudável, dieta equilibrada e
+              nutrição esportiva. Eles podem ajudá-lo a estabelecer metas
+              nutricionais e desenvolver um plano alimentar adequado aos seus
+              objetivos de fitness.
+            </p>
+          </div>
+
+          <div
+            class="question"
+            id="question-answer15"
+            onclick="toggleAnswer('answer15')"
+          >
+            A Fit Match oferece acompanhamento e suporte durante os treinos?
+            <i class="bx bx-right-arrow-alt"></i>
+          </div>
+
+          <div id="answer15" class="answer">
+            <p>
+              Sim, na Fit Match, oferecemos acompanhamento e suporte durante os
+              treinos. Nossos instrutores estão disponíveis para responder
+              perguntas, fornecer orientações e ajustar seu programa de
+              treinamento conforme necessário. Além disso, também oferecemos
+              sessões de treinamento personalizado para ajudar a alcançar seus
+              objetivos específicos.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="content">
+        <div class="footer__top">
+          <div class="logo-details">
+            <img src="assets/img/header/header__logo.png" alt="" />
+            <span class="logo_name">Fit Match</span>
+          </div>
+          <div class="media-icons">
+            <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+          </div>
+        </div>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">Website</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#choose">Choose</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Services</li>
+            <li><a href="#">App design</a></li>
+            <li><a href="#">Web design</a></li>
+            <li><a href="#">Logo design</a></li>
+            <li><a href="#">Banner design</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Pages</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cronograma.html">Timeline</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="produtos-1.html">Produtos</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Courses</li>
+            <li><a href="#">HTML & CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">Django</a></li>
+          </ul>
+          <ul class="box input-box">
+            <li class="link_name">Subscribe</li>
+            <li><input type="text" placeholder="Enter your email" /></li>
+            <li><input type="button" value="Subscribe" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text"
+            >Copyright © 2023 <a href="#">TESTE TESTE.</a>All rights
+            reserved</span
+          >
+          <span class="policy_terms">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & condition</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== TAKE TO THE TOP ===== -->
+    <div class="top">
+      <a href="#"><i class="bx bxs-up-arrow-alt"></i></a>
+    </div>
+
+    <!-- ===== THEME/COLOR - MODE ===== -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin spin-toggler"></i>
+      </div>
+      <div class="day-night s-icon"><i class="fa"></i></div>
+      <h4>Theme Colors</h4>
+
+      <div class="colors">
+        <img
+          src="assets/img/theme/red.png"
+          alt=""
+          class="color-1"
+          onclick="setActiveStyle('color-1')"
+        />
+        <img
+          src="assets/img/theme/purple.png"
+          alt=""
+          class="color-2"
+          onclick="setActiveStyle('color-2')"
+        />
+        <img
+          src="assets/img/theme/magenta.png"
+          alt=""
+          class="color-3"
+          onclick="setActiveStyle('color-3')"
+        />
+        <img
+          src="assets/img/theme/orange.png"
+          alt=""
+          class="color-4"
+          onclick="setActiveStyle('color-4')"
+        />
+        <img
+          src="assets/img/theme/green.png"
+          alt=""
+          class="color-5"
+          onclick="setActiveStyle('color-5')"
+        />
+      </div>
+
+      <div class="colors">
+        <img
+          src="assets/img/theme/blue.png"
+          alt=""
+          class="color-6"
+          onclick="setActiveStyle('color-6')"
+        />
+        <img
+          src="assets/img/theme/yellow.png"
+          alt=""
+          class="color-7"
+          onclick="setActiveStyle('color-7')"
+        />
+        <img
+          src="assets/img/theme/ceano.png"
+          alt=""
+          class="color-8"
+          onclick="setActiveStyle('color-8')"
+        />
+        <img
+          src="assets/img/theme/gray.png"
+          alt=""
+          class="color-9"
+          onclick="setActiveStyle('color-9')"
+        />
+        <img
+          src="assets/img/theme/light-green.png"
+          alt=""
+          class="color-9"
+          onclick="setActiveStyle('color-10')"
+        />
+      </div>
+    </div>
+  </body>
+</html>

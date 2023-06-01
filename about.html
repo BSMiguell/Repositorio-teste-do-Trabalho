@@ -620,6 +620,117 @@
           </div>
         </div>
       </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section class="contact section" id="contact">
+        <div class="container">
+          <div class="section__data">
+            <h2 class="section__subtitle">Suporte</h2>
+            <div class="section__titles">
+              <h2 class="section__title-border">PROBLEMAS?</h2>
+              <h3 class="section__title">FALE CONOSCO</h3>
+            </div>
+          </div>
+
+          <div class="contact__boxs">
+            <div class="contact-box box-form">
+              <h3>Envie sua mensagem</h3>
+              <form id="contact-form">
+                <div class="contact-form">
+                  <div class="row-form">
+                    <div class="input-box">
+                      <span>Nome</span>
+                      <input
+                        type="text"
+                        id="name-input"
+                        placeholder="Greg"
+                        required
+                      />
+                    </div>
+                    <div class="input-box">
+                      <span>Sobrenome</span>
+                      <input
+                        type="text"
+                        id="surname-input"
+                        placeholder="Tonero"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row-form">
+                    <div class="input-box">
+                      <span>Email</span>
+                      <input
+                        type="email"
+                        id="email-input"
+                        placeholder="seuemail@example.com"
+                        required
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                        title="Insira um endereço de e-mail válido"
+                      />
+                    </div>
+                    <div class="input-box">
+                      <span>Telefone</span>
+                      <input
+                        type="tel"
+                        id="phone-input"
+                        placeholder="+21 999-999-9999"
+                        required
+                        pattern="[0-9]+"
+                        title="Insira um número de telefone válido contendo apenas dígitos de 0 a 9"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row-form-2">
+                    <div class="input-box">
+                      <span>Mensagem</span>
+                      <textarea
+                        id="message-input"
+                        placeholder="Escreva sua mensagem aqui..."
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <div class="row-form-2">
+                    <div class="input-box">
+                      <input type="submit" value="Enviar" />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="contact-box box-info">
+              <h3>Contatar</h3>
+              <div class="input-box">
+                <div class="contact__box-info">
+                  <span><i class="fas fa-map-marker-alt"></i></span>
+                  <p>Brasil/Rio de Janeiro</p>
+                </div>
+                <div class="contact__box-info">
+                  <span><i class="bx bx-envelope"></i></span>
+                  <a href="#">seuemail@example.com</a>
+                </div>
+                <div class="contact__box-info">
+                  <span><i class="fas fa-phone"></i></span>
+                  <a href="#">+21 999-999-9999</a>
+                </div>
+                <div class="contact__box-info">
+                  <span><i class="bx bx-support"></i></span>
+                  <a href="common-questions.html">Perguntas Frecontes</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="box-map">
+              <img src="assets/img/mps/mp.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- ===== FOOTER ===== -->

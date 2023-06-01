@@ -337,7 +337,7 @@ function showReview(event) {
 }
 /*=============== =============== ===============*/
 
-/*=============== THE STYLE OF DETALHES PAGE ===============*/
+/*=============== THE SCRIPT OF DETALHES PAGE ===============*/
 
 /*=============== FILTER-DETALHES ===============*/
 const MainImg = document.getElementById("MainImg");
@@ -377,3 +377,18 @@ tabs.forEach((tab) => {
     tab.classList.add("tab__active");
   });
 });
+
+/*=============== THE SCRIPT OF COMMON-QUESTIONS PAGE ===============*/
+
+function toggleAnswer(id) {
+  var answer = document.getElementById(id);
+  var question = document.getElementById("question-" + id);
+
+  if (answer.style.display === "none") {
+    answer.style.display = "block";
+    question.classList.add("active");
+  } else {
+    answer.style.display = "none";
+    question.classList.remove("active");
+  }
+}
