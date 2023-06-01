@@ -19,8 +19,6 @@ window.onscroll = () => {
   navbar.classList.remove("active");
 };
 
-/*=============== =============== ===============*/
-
 /*=============== THEME/COLOR - MODE ===============*/
 
 // Obtém o elemento de alternância do seletor de estilo
@@ -93,6 +91,7 @@ window.addEventListener("load", () => {
     dayNight.querySelector("i").classList.add("fa-moon"); // Ativa o ícone da lua
   }
 });
+/*=============== =============== ===============*/
 
 /*=============== THE SCRIPT OF PRODUCTS PAGE ===============*/
 
@@ -292,8 +291,6 @@ function updateItemCount() {
   itemCountElement.textContent = itemsAdded.length.toString();
 }
 
-/*=============== =============== ===============*/
-
 // Código JavaScript para lidar com a funcionalidade de filtro
 const filterButtons = document.querySelectorAll(".filter-button");
 const productBoxes = document.querySelectorAll(".product-box");
@@ -320,5 +317,63 @@ filterButtons.forEach((button) => {
         box.style.display = "none";
       }
     });
+  });
+});
+
+/*=============== REVIEWS ===============*/
+let userTexts = document.getElementsByClassName("user-text");
+let userPics = document.getElementsByClassName("user-pic");
+
+function showReview(event) {
+  for (let userPic of userPics) {
+    userPic.classList.remove("active-pic");
+  }
+  for (let userText of userTexts) {
+    userText.classList.remove("active-text");
+  }
+  let i = Array.from(userPics).indexOf(event.target);
+  userPics[i].classList.add("active-pic");
+  userTexts[i].classList.add("active-text");
+}
+/*=============== =============== ===============*/
+
+/*=============== THE STYLE OF DETALHES PAGE ===============*/
+
+/*=============== FILTER-DETALHES ===============*/
+const MainImg = document.getElementById("MainImg");
+const smallimg = document.getElementsByClassName("small-img");
+
+// Manipulando IMGS
+smallimg[0].onclick = function () {
+  MainImg.src = smallimg[0].src;
+};
+smallimg[1].onclick = function () {
+  MainImg.src = smallimg[1].src;
+};
+smallimg[2].onclick = function () {
+  MainImg.src = smallimg[2].src;
+};
+smallimg[3].onclick = function () {
+  MainImg.src = smallimg[3].src;
+};
+
+const tabs = document.querySelectorAll("[data-target]"),
+  tabContents = document.querySelectorAll("[data-content]");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.target);
+
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove("tab__active");
+    });
+
+    target.classList.add("tab__active");
+
+    tabs.forEach((tab) => {
+      tab.classList.remove("tab__active");
+    });
+
+    tab.classList.add("tab__active");
   });
 });

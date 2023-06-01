@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fit Match</title>
+
+    <!-- ===== Boxicons CSS ===== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- ===== STYLE CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- ===== THEMES/COLOR - MODE ===== -->
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-red.css"
+      class="alternate-style"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-purple.css"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-pink.css"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-orange.css"
+      class="alternate-style"
+      title="color-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-green.css"
+      class="alternate-style"
+      title="color-5"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-blue.css"
+      class="alternate-style"
+      title="color-6"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-yellow.css"
+      class="alternate-style"
+      title="color-7"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-ceano.css"
+      class="alternate-style"
+      title="color-8"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-gray.css"
+      class="alternate-style"
+      title="color-9"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-light-green.css"
+      class="alternate-style"
+      title="color-10"
+      disabled
+    />
+
+    <!-- ===== SCRIPT ===== -->
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <a href="#" class="logo"
+        ><img src="assets/img/header/header__logo.png"
+      /></a>
+
+      <nav>
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cronograma.html">Timeline</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="produtos-1.html">Products</a></li>
+        </ul>
+
+        <div class="icons-mode">
+          <div class="bx bx-menu" id="menu-icon"></div>
+
+          <div class="cart__count">
+            <i class="bx bx-shopping-bag" id="cart-icon"></i>
+            <span class="item-count">0</span>
+          </div>
+
+          <a class="login-icon" href="login.html"
+            ><i class="bx bxs-user"></i
+          ></a>
+        </div>
+
+        <!-- CART -->
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+          <!-- CONTENT -->
+
+          <div class="cart-content">
+            <!-- TEST BOX -->
+          </div>
+
+          <!-- TOTAL -->
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
+          <!-- BUY BUTTON -->
+          <div class="cart__btn">
+            <button type="button" class="btn-buy">Buy Now</button>
+            <button type="button" class="to-clean">Clean</button>
+          </div>
+          <!-- CART CLOSE -->
+          <i class="bx bx-x" id="cart-close"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- ===== MAIN CONTENT OF THE WEBSITE ===== -->
+    <main class="main">
+      <!-- ===== BANNER PAGE ===== -->
+      <section class="page-header-detalhes program section__program">
+        <div class="container">
+          <div class="section__data">
+            <h2 class="section__subtitle">Nossos Produtos</h2>
+            <div class="section__titles">
+              <h2 class="section__title-border">Descontos Increves</h2>
+              <h3 class="section__title">20% de Desconto#</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== DETALHES ===== -->
+      <section class="detalhes container">
+        <div class="section__data">
+          <div class="section__titles">
+            <h3 class="section__title">GARRAFAS</h3>
+          </div>
+        </div>
+
+        <div class="prodetails">
+          <div class="single-pro-image">
+            <img
+              src="assets/img/products/product-1-1.jpg"
+              width="100%"
+              id="MainImg"
+              alt=""
+            />
+            <div class="small-img-group">
+              <div class="small-img-col tab__active" data-target="#img-1">
+                <img
+                  src="assets/img/products/product-1-1.jpg"
+                  width="100%"
+                  class="small-img"
+                  alt=""
+                />
+              </div>
+
+              <div class="small-img-col" data-target="#img-2">
+                <img
+                  src="assets/img/products/product-1-2.jpg"
+                  width="100%"
+                  class="small-img"
+                  alt=""
+                />
+              </div>
+
+              <div class="small-img-col" data-target="#img-3">
+                <img
+                  src="assets/img/products/product-1-3.jpg"
+                  width="100%"
+                  class="small-img"
+                  alt=""
+                />
+              </div>
+
+              <div class="small-img-col" data-target="#img-4">
+                <img
+                  src="assets/img/products/product-1-4.jpg"
+                  width="100%"
+                  class="small-img"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="single-pro-details">
+            <article class="tabs__item tab__active" data-content id="img-1">
+              <h4>Garrafa</h4>
+              <h3 class="product-title">
+                Galão 2 Litros Preto Bpa Free - Growth Supplements Academia
+              </h3>
+              <h2 class="product-price">R$49,80</h2>
+              <h4>Product Details</h4>
+              <span>Galão De Água 1 Litro - Integralmédica </span>
+              <span>Preta/Transparente</span>
+              <span
+                >- Hidratação é fundamental para hipertrofia, as células do
+                tecido muscular são compostas por mais de 70% de água, a
+                deficiência em sua ingestão compromete o ganho de volume
+                muscular.</span
+              >
+              <span
+                >Feito em material altamente resistente, ele tem capacidade para
+                1 litro, alça para fácil transporte, tampa emborrachada e a
+                pegada hardcore da 1ª linha 100% bodybuilder do Brasil.</span
+              >
+              <span>
+                Intensidade e resultado são palavras-chave para aqueles que
+                acreditam no próprio potencial e não medem esforços para dar
+                sempre um passo além.
+              </span>
+              <span>SUA PERFORMANCE E SEU ESTILO VÃO MELHORAR MUITO !!</span>
+              <span
+                >Avaliações dos clientes:
+                <div class="star">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i></div
+              ></span>
+            </article>
+
+            <article class="tabs__item" data-content id="img-2">
+              <h4>Garrafa</h4>
+              <h3 class="product-title">
+                Garrafa Squeeze 600ml Alumínio Fitness Água Academia
+              </h3>
+              <h2 class="product-price">R$28,27</h2>
+              <h4>Product Details</h4>
+              <span
+                >- Squeeze não Térmica 600ML - Apesar de não ser térmico ele
+                mantem a temperatura um tempo maior do que o squeeze
+                plástico.</span
+              >
+              <span>- Material em Alumínio</span>
+              <span
+                >- Tampa Plástica com rosca dupla para evitar vazamentos, bico
+                com tampa o que mantém o local mais higienizado.</span
+              >
+              <span
+                >- Alça para carregar, ideal para academias e treinos ao ar
+                livre.</span
+              >
+              <span>- Pintura fosca.</span>
+              <span>- O squeeze mais vendido do mercado livre</span>
+              <span>Altura : 21,1 cm</span>
+              <span>Largura : 8,8 cm</span>
+              <span>Circunferência : 22,6 cm</span>
+              <span
+                >Avaliações dos clientes:
+                <div class="star">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i></div
+              ></span>
+            </article>
+
+            <article class="tabs__item" data-content id="img-3">
+              <h4>Garrafa</h4>
+              <h3 class="product-title">
+                Coqueteleira Academia Shakeira Garrafa - Integralmédica
+              </h3>
+              <h2 class="product-price">R$21,63</h2>
+              <h4>Product Details</h4>
+              <span
+                >Prática e segura, a Coqueteleira Integralmédica irá te ajudar
+                no preparo dos shakes e suplementos. Ela tem capacidade para até
+                600ml e vem com misturador.</span
+              >
+              <span
+                >Compacta e funcional, assim é a coqueteleira 600 ml
+                Integralmédica
+              </span>
+              <span
+                >Ideal para consumo imediato de suplementos ou hidratação
+                durante o treino, é feita em material de alta resistência,
+                atóxico.
+              </span>
+              <span>Coqueteleira livre de bisfenol (BPA Free).</span>
+              <span
+                >Um ótimo custo benefício para te ajudar nos seus treinos e no
+                dia-a-dia.</span
+              >
+
+              <span>- O squeeze mais vendido do mercado livre</span>
+              <span>Altura : 21,1 cm</span>
+              <span>Largura : 8,8 cm</span>
+              <span>Circunferência : 22,6 cm</span>
+              <span
+                >Avaliações dos clientes:
+                <div class="star">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i></div
+              ></span>
+            </article>
+
+            <article class="tabs__item" data-content id="img-4">
+              <h4>Garrafa</h4>
+              <h3 class="product-title">
+                Garrafa Água Galão 2500ml Squeeze Academia Antivazamento
+              </h3>
+              <h2 class="product-price">R$39,50</h2>
+              <h4>Product Details</h4>
+              <span>
+                Garrafa Squeeze Galão De Agua Academia Treino Sport 2500ml,
+                Canudo incluso.</span
+              >
+              <span
+                >Garrafa com grande capacidade 1,5 Litros, fácil de transportar,
+                material resistente, sensação de mão confortável e não vaza!
+              </span>
+              <span
+                >- Não vazará, a rosca interna é aprofundada e com o anel de
+                silicone de vedação, a trava é mais segura mesmo 360° não vaza,
+                o transporte é garantido.</span
+              >
+
+              <span>Marca: BBC</span>
+              <span>Material: Plástico PP e PC (muito resistente)</span>
+              <span>Capacidade: 2500ml</span>
+              <span>Medidas aproximadas: Altura 30cm</span>
+              <span>Diâmetro da boca: 8cm</span>
+
+              <span
+                >Avaliações dos clientes:
+                <div class="star">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i></div
+              ></span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SHOP SCTION ===== -->
+      <section class="shop container">
+        <div class="section__data">
+          <div class="section__titles">
+            <h2 class="section__title-border">Produtos</h2>
+            <h3 class="section__title">Em Oferta#</h3>
+          </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="shop-content">
+          <article class="product-box" data-category="garrafas">
+            <img
+              src="assets/img/products/product-1-1.jpg  "
+              alt=""
+              class="product-img"
+            />
+            <h2 class="product-title tag-popular">
+              GALÃO PRETO 2 LITROS - GROWTH SUPPLEMENTS
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$20,70</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="suplementos">
+            <a href="inspect-prod-1.html">
+              <img
+                src="assets/img/products/product-2-1.jpg"
+                alt=""
+                class="product-img"
+            /></a>
+            <h2 class="product-title tag-novo">
+              Waxy Whey - 2kg - Bodybuilders Sabor Chocolate
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+            <span class="product-price">$86,90</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="pesos">
+            <img
+              src="assets/img/products/product-3.jpg"
+              alt=""
+              class="product-img"
+            />
+            <h2 class="product-title tag-egotado">
+              Kettlebell Emborrachado 20kg – Peso Academia Exercit Esportes
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$338,00</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+
+          <article class="product-box" data-category="pesos">
+            <img
+              src="assets/img/products/product-4.jpg"
+              alt=""
+              class="product-img"
+            />
+            <h2 class="product-title">
+              POLIMET Anilha de Ferro Pintada, Unissex Adulto
+            </h2>
+            <div class="star">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <span class="product-price">$39,10</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="content">
+        <div class="footer__top">
+          <div class="logo-details">
+            <img src="assets/img/header/header__logo.png" alt="" />
+            <span class="logo_name">Fit Match</span>
+          </div>
+          <div class="media-icons">
+            <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+          </div>
+        </div>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">Website</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#choose">Choose</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Services</li>
+            <li><a href="#">App design</a></li>
+            <li><a href="#">Web design</a></li>
+            <li><a href="#">Logo design</a></li>
+            <li><a href="#">Banner design</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Pages</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cronograma.html">Timeline</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="produtos-1.html">Produtos</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Courses</li>
+            <li><a href="#">HTML & CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">Django</a></li>
+          </ul>
+          <ul class="box input-box">
+            <li class="link_name">Subscribe</li>
+            <li><input type="text" placeholder="Enter your email" /></li>
+            <li><input type="button" value="Subscribe" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text"
+            >Copyright © 2023 <a href="#">TESTE TESTE.</a>All rights
+            reserved</span
+          >
+          <span class="policy_terms">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & condition</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== TAKE TO THE TOP ===== -->
+    <div class="top">
+      <a href="#"><i class="bx bxs-up-arrow-alt"></i></a>
+    </div>
+
+    <!-- ===== THEME/COLOR - MODE ===== -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin spin-toggler"></i>
+      </div>
+      <div class="day-night s-icon"><i class="fa"></i></div>
+      <h4>Theme Colors</h4>
+
+      <div class="colors">
+        <img
+          src="assets/img/theme/red.png"
+          alt=""
+          class="color-1"
+          onclick="setActiveStyle('color-1')"
+        />
+        <img
+          src="assets/img/theme/purple.png"
+          alt=""
+          class="color-2"
+          onclick="setActiveStyle('color-2')"
+        />
+        <img
+          src="assets/img/theme/magenta.png"
+          alt=""
+          class="color-3"
+          onclick="setActiveStyle('color-3')"
+        />
+        <img
+          src="assets/img/theme/orange.png"
+          alt=""
+          class="color-4"
+          onclick="setActiveStyle('color-4')"
+        />
+        <img
+          src="assets/img/theme/green.png"
+          alt=""
+          class="color-5"
+          onclick="setActiveStyle('color-5')"
+        />
+      </div>
+
+      <div class="colors">
+        <img
+          src="assets/img/theme/blue.png"
+          alt=""
+          class="color-6"
+          onclick="setActiveStyle('color-6')"
+        />
+        <img
+          src="assets/img/theme/yellow.png"
+          alt=""
+          class="color-7"
+          onclick="setActiveStyle('color-7')"
+        />
+        <img
+          src="assets/img/theme/ceano.png"
+          alt=""
+          class="color-8"
+          onclick="setActiveStyle('color-8')"
+        />
+        <img
+          src="assets/img/theme/gray.png"
+          alt=""
+          class="color-9"
+          onclick="setActiveStyle('color-9')"
+        />
+        <img
+          src="assets/img/theme/light-green.png"
+          alt=""
+          class="color-9"
+          onclick="setActiveStyle('color-10')"
+        />
+      </div>
+    </div>
+  </body>
+</html>
