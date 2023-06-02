@@ -24,22 +24,27 @@
 :root {
   /*========== Colors ==========*/
   /* Color mode HSL(hue, saturation, lightness) */
+
+  /* Theme-Mode */
+  --body-color: hsl(236, 80%, 4%);
+  --body-color-2: hsl(0, 0%, 100%);
   --header-color: hsl(0, 0%, 100%);
+  --card-color: hsl(154, 13%, 22%);
   --nav-color: hsl(0, 0%, 98%);
+
+  /* Color-Mode */
   --red-color: hsl(0, 100%, 50%);
   --bow-color: hsl(0, 100%, 54%);
   --main-color: hsl(0, 80%, 61%);
+  --choose-color-1: hsl(0, 100%, 37%);
+  --choose-color-2: hsl(0, 100%, 26%);
+
+  /* non-mutable variables */
   --second-color: hsl(34, 94%, 87%);
-  --body-color: hsl(236, 80%, 4%);
-  --body-color-2: hsl(0, 0%, 100%);
   --black-color: hsl(0, 0%, 0%);
   --white-color: hsl(0, 0%, 100%);
   --body-soft-color: hsla(79, 6%, 64%, 0.07);
-  --card-color: hsl(154, 13%, 22%);
   --footer-color: hsla(79, 6%, 64%, 0.07);
-  --rotate-color: #5ddeff, #3c67e3 43%, #4e00c2;
-  --choose-color-1: hsl(0, 100%, 37%);
-  --choose-color-2: hsl(0, 100%, 26%);
 
   /*========== Font and typography ==========*/
   /* 1rem = 16px ... */
@@ -170,6 +175,84 @@ section {
     0 0 80px var(--red-color);
 }
 
+/*=============== ANIMATION ===============*/
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes Zoom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes moveup {
+  0% {
+    margin-top: -50%;
+  }
+
+  100% {
+    margin-top: 0px;
+  }
+}
+
 /* Responsive typography */
 @media screen and (min-width: 1024px) {
   :root {
@@ -184,7 +267,6 @@ section {
     --smaller-font-size: 0.813rem;
   }
 }
-
 @media screen and (max-width: 800px) {
   .section__title,
   .section__title-border {
@@ -216,11 +298,29 @@ nav {
 .logo img {
   width: 50px;
   height: 50px;
+  animation: slideRight 1s ease forwards;
+  opacity: 0;
 }
 .navbar {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.navbar li {
+  animation: slideTop 0.5s ease forwards;
+  opacity: 0;
+}
+.navbar li:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.navbar li:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.navbar li:nth-child(3) {
+  animation-delay: 0.9s;
+}
+.navbar li:nth-child(4) {
+  animation-delay: 1.2s;
 }
 .navbar a {
   color: var(--nav-color);
@@ -232,6 +332,7 @@ nav {
   transition: all 0.4s ease;
   cursor: pointer;
 }
+
 .navbar a:hover {
   background: var(--main-color);
   color: var(--white-color);
@@ -264,6 +365,9 @@ a.active {
   border-radius: 0.5rem;
   transition: all 0.4s ease;
   cursor: pointer;
+  animation: slideTop 0.5s ease forwards;
+  opacity: 0;
+  animation-delay: 1.4s;
 }
 
 /* ===== LOGIN ICON ===== */
@@ -275,6 +379,15 @@ a.active {
   border-radius: 0.5rem;
   transition: all 0.4s ease;
   cursor: pointer;
+  color: var(--nav-color);
+  font-size: 1.5rem;
+  font-weight: var(--weight-600);
+  border-radius: 0.5rem;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  animation: slideTop 0.5s ease forwards;
+  opacity: 0;
+  animation-delay: 1.6s;
 }
 .login-icon {
   display: flex;
@@ -286,7 +399,6 @@ a.active {
   width: 1.5rem;
   cursor: pointer;
 }
-
 .item-count {
   position: absolute;
   top: -10px;
@@ -492,17 +604,29 @@ header.sticky {
   font-size: var(--h3-font-size);
   padding-bottom: 15px;
   color: hsl(156, 33%, 91%);
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
 }
 .home h2 {
   color: var(--main-color);
   font-size: var(--h2-font-size);
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
 }
 .home h1 {
   color: var(--red-color);
   font-size: var(--bigger-font-size);
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
 }
 .home p {
   color: var(--second-color);
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
 }
 .bnt__home {
   background-color: var(--red-color);
@@ -514,6 +638,9 @@ header.sticky {
   cursor: pointer;
   transition: background 0.3s;
   margin-top: 10px;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
 }
 
 /* Responsive HOME */
@@ -1251,15 +1378,6 @@ header.sticky {
   width: 100px;
   border: 3px solid var(--red-color);
 }
-@keyframes moveup {
-  0% {
-    margin-top: -50%;
-  }
-
-  100% {
-    margin-top: 0px;
-  }
-}
 
 /* Responsive PRODUTOS */
 @media (max-width: 555px) {
@@ -1277,7 +1395,7 @@ header.sticky {
 
 /*=============== THE STYLE OF ABOUT PAGE ===============*/
 
-/*=============== ABOUT HOME ==============*/
+/*=============== ABOUT HOME, ABOUT-1, ABOUT-2, ABOUT-3 ==============*/
 .About__section {
   position: relative;
   width: 100%;
@@ -1306,6 +1424,9 @@ header.sticky {
   font-size: var(--big-font-size);
   font-weight: var(--weight-700);
   margin-top: 20px;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
 }
 .About__text-h1 h1 span {
   display: inline-block;
@@ -1314,9 +1435,15 @@ header.sticky {
   color: var(--red-color);
   margin-top: 10px;
   margin-bottom: 10px;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
 }
-.About__home .About__text {
+.About__home .About__text p {
   color: var(--body-color-2);
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
 }
 .About__home .abou__img-box {
   width: 600px;
@@ -1324,6 +1451,9 @@ header.sticky {
   justify-content: flex-end;
   padding-right: 50px;
   margin-top: 50px;
+  animation: Zoom 1s ease forwards;
+  animation-delay: 2s;
+  opacity: 0;
 }
 .box-bow {
   position: relative;
@@ -1334,14 +1464,6 @@ header.sticky {
 .box-bow img {
   position: relative;
   z-index: 10px;
-}
-@keyframes girar {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 .circle {
   position: absolute;
@@ -1929,11 +2051,13 @@ footer .bottom-details .bottom_text {
 }
 
 /*=============== TOP ===============*/
-
 .top {
   position: fixed;
   bottom: 2.1rem;
   right: 2.1rem;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
 }
 .top i {
   background: var(--red-color);
@@ -1978,14 +2102,6 @@ footer .bottom-details .bottom_text {
 }
 .style-switcher .s-icon .spin-toggler {
   animation: rotate 1s infinite linear;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 .style-switcher .style-switcher-toggler .fa-cog.stop-rotation {
   animation-play-state: paused;
