@@ -97,19 +97,20 @@
 
     <!-- ===== SCRIPT ===== -->
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/user.js" defer></script>
   </head>
   <body>
     <!-- ===== HEADER ===== -->
     <header>
-      <a href="index.html" class="logo"
+      <a href="#" class="logo"
         ><img src="assets/img/header/header__logo.png"
       /></a>
 
       <nav>
         <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="#" class="active">Home</a></li>
           <li><a href="cronograma.html">Timeline</a></li>
-          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="produtos-1.html">Products</a></li>
         </ul>
 
@@ -120,10 +121,65 @@
             <i class="bx bx-shopping-bag" id="cart-icon"></i>
             <span class="item-count">0</span>
           </div>
+        </div>
 
-          <a class="login-icon" href="login.html"
-            ><i class="bx bxs-user"></i
-          ></a>
+        <div class="profile-dropdown">
+          <div class="profile-dropdown-btn">
+            <div class="profile-img">
+              <i class="fa-solid fa-circle"></i>
+            </div>
+            <span id="username">
+              User
+              <i class="fa-solid fa-angle-down"></i>
+            </span>
+          </div>
+
+          <ul class="profile-dropdown-list">
+            <li class="profile-dropdown-list-item">
+              <a href="#" id="edit-profile-link"
+                ><i class="fa-regular fa-user"></i> Edit Profile</a
+              >
+            </li>
+
+            <li class="profile-dropdown-list-item">
+              <a href="#">
+                <i class="fa-regular fa-envelope"></i>
+                Ihbox
+              </a>
+            </li>
+            <li class="profile-dropdown-list-item">
+              <a href="#"> <i class="fa-solid fa-chart-line"></i> Analytics </a>
+            </li>
+            <li class="profile-dropdown-list-item">
+              <a href="#">
+                <i class="fa-solid fa-sliders"></i>
+                Settings
+              </a>
+            </li>
+            <li class="profile-dropdown-list-item">
+              <a href="#contact">
+                <i class="fa-regular fa-circle-question"></i>
+                Help & Support
+              </a>
+            </li>
+            <hr />
+            <li class="profile-dropdown-list-item">
+              <a href="index.html">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Log out
+              </a>
+            </li>
+          </ul>
+
+          <div id="edit-profile-modal" class="modal">
+            <div class="modal-content">
+              <span class="modal-close">&times;</span>
+              <h2>Edit Profile</h2>
+              <input type="file" id="profile-img-input" />
+              <input type="text" id="username-input" placeholder="Username" />
+              <button id="save-profile-btn">Save</button>
+            </div>
+          </div>
         </div>
 
         <!-- CART -->
@@ -154,44 +210,16 @@
     <!-- ===== MAIN CONTENT OF THE WEBSITE ===== -->
     <main class="main">
       <!-- ===== HOME ===== -->
-      <section class="About__section">
-        <div class="circle"></div>
-        <div class="About__home">
-          <div class="About__text">
-            <div class="About__text-h1">
-              <h1>
-                Não somos mais uma academia, somos a academia
-                <span class="section__title">Fit Match</span>
-              </h1>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo.
-            </p>
-            <a href="#" class="btn bnt__home">Ver mais</a>
-          </div>
-          <div class="abou__img-box">
-            <img
-              src="assets/img/about/About__banner.png"
-              alt=""
-              class="img-box"
-            />
-            <div class="box-bow">
-              <div class="bow"></div>
-              <img
-                src="assets/img/about/About__banner.png"
-                alt=""
-                class="img-box-2"
-              />
-            </div>
-          </div>
-        </div>
+      <section class="home" id="home">
+        <h3>Super-Promoção</h3>
+        <h2>Ofertas especiais essa semana</h2>
+        <h1>Em todos os produtos</h1>
+        <p>Economize mais com cupons e até 70% de desconto!</p>
+        <button class="btn bnt__home">Compre agora</button>
       </section>
 
       <!-- ===== PROGRAM ===== -->
-      <section class="program section__program">
+      <section class="program section__program" id="program">
         <div class="container">
           <div class="section__data">
             <h2 class="section__subtitle">Nosso programa</h2>
@@ -286,13 +314,13 @@
       </section>
 
       <!-- ===== ABOUT ===== -->
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <div class="section__data">
             <h2 class="section__subtitle">Sobre nós</h2>
             <div class="section__titles">
               <h2 class="section__title-border">TREINE</h2>
-              <h3 class="section__title">CONNOSCO</h3>
+              <h3 class="section__title">CONOSCO</h3>
             </div>
           </div>
 
@@ -317,7 +345,7 @@
                 promove o aumento do metabolismo, auxiliando na perda de peso e
                 no controle da gordura corporal.
               </p>
-              <a href="#" class="btn bnt__pricing">
+              <a href="about.html" class="btn bnt__pricing">
                 Purchase Now <i class="bx bx-right-arrow-alt"></i>
               </a>
             </div>
@@ -328,7 +356,7 @@
               <img src="assets/img/about/about2.png" />
             </div>
             <div class="about-content about__card">
-              <h2>Exercício Cardio</h2>
+              <h2>Esteira</h2>
               <p>
                 A esteira é um equipamento de treinamento popular que simula a
                 corrida ou caminhada, permitindo que você realize um treino
@@ -345,93 +373,7 @@
                 prática regular auxilia na perda de peso, queima de calorias e
                 tonificação dos músculos das pernas.
               </p>
-              <a href="#" class="btn bnt__pricing">
-                Saber mais <i class="bx bx-right-arrow-alt"></i>
-              </a>
-            </div>
-          </article>
-
-          <article class="about__program">
-            <div class="about-image">
-              <img src="assets/img/about/about3.png" />
-            </div>
-            <div class="about-content about__card">
-              <h2>Leg Press</h2>
-              <p>
-                O Leg Press é um exercício de musculação amplamente utilizado
-                para fortalecer e desenvolver os músculos das pernas, em
-                particular os quadríceps, isquiotibiais e glúteos. É uma máquina
-                com um assento inclinado que permite que você pressione pesos
-                com os pés, movimentando uma plataforma em um movimento de
-                empurrar.
-              </p>
-
-              <p>
-                Ao realizar o Leg Press, você começa ajustando o assento de
-                acordo com a sua altura e posiciona os pés na plataforma, com os
-                joelhos dobrados em um ângulo de 90 graus. A partir daí, você
-                empurra a plataforma para longe de você, estendendo
-                completamente as pernas, e depois retorna à posição inicial
-                controladamente.
-              </p>
-              <a href="#" class="btn bnt__pricing">
-                Saber mais <i class="bx bx-right-arrow-alt"></i>
-              </a>
-            </div>
-          </article>
-
-          <article class="about__program">
-            <div class="about-image">
-              <img src="assets/img/about/about4.png" />
-            </div>
-            <div class="about-content about__card">
-              <h2>Supino reto</h2>
-              <p>
-                O Supino Reto é um dos exercícios mais populares e amplamente
-                praticados na musculação. Ele é projetado para fortalecer e
-                desenvolver os músculos do peitoral, tríceps e ombros. O
-                exercício é realizado deitado em um banco plano, segurando uma
-                barra com pesos e executando um movimento de pressionar.
-              </p>
-
-              <p>
-                Para realizar o Supino Reto, comece deitado em um banco plano,
-                com os pés apoiados no chão para garantir estabilidade.
-                Posicione a barra no suporte ou peça ajuda para pegar a barra e
-                mantenha as mãos afastadas na largura dos ombros. Antes de
-                iniciar o movimento, certifique-se de que os cotovelos estejam
-                flexionados e alinhados com os ombros.
-              </p>
-              <a href="#" class="btn bnt__pricing">
-                Saber mais <i class="bx bx-right-arrow-alt"></i>
-              </a>
-            </div>
-          </article>
-
-          <article class="about__program">
-            <div class="about-image">
-              <img src="assets/img/about/about5.png" />
-            </div>
-            <div class="about-content about__card">
-              <h2>Puxador (pulley) Frontal</h2>
-              <p>
-                O Puxador Frontal, ou Pulley Frontal, é um exercício de
-                musculação que visa principalmente fortalecer e desenvolver os
-                músculos das costas, em particular o grande dorsal. Ele também
-                trabalha os músculos do braço, como os bíceps e os músculos do
-                antebraço.
-              </p>
-
-              <p>
-                Para realizar o Puxador Frontal, você precisa de uma máquina de
-                puxada (pulley) com uma barra reta ou em formato de V. Primeiro,
-                ajuste a altura do assento para que você fique em uma posição
-                sentada confortável. Em seguida, segure a barra com as palmas
-                das mãos voltadas para você, mantendo as mãos afastadas na
-                largura dos ombros ou em uma pegada mais ampla, dependendo da
-                sua preferência.
-              </p>
-              <a href="#" class="btn bnt__pricing">
+              <a href="about.html" class="btn bnt__pricing">
                 Saber mais <i class="bx bx-right-arrow-alt"></i>
               </a>
             </div>
@@ -439,201 +381,189 @@
         </div>
       </section>
 
-      <!-- ===== PAGINATION ===== -->
-      <section id="pagination">
-        <a href="about-2.html"><i class="bx bx-left-arrow-alt"></i></a>
+      <!-- ===== CHOOSE ===== -->
+      <section class="choose section" id="choose">
+        <div class="choose__overflow">
+          <div class="choose__container container grid">
+            <div class="choose__content">
+              <div class="section__data">
+                <h2 class="section__subtitle">Melhores Motivo</h2>
+                <div class="section__titles">
+                  <h2 class="section__title-border">POR QUE</h2>
+                  <h3 class="section__title">ESCOLHER-NOS?</h3>
+                </div>
+              </div>
 
-        <a href="about.html">1</a>
-        <a href="about-2.html">2</a>
-        <a href="#" class="active-pagination">3</a>
+              <p class="choose__description">
+                Escolha sua aula preferida e comece agora. Lembre-se que o único
+                treino ruim é aquele que você não fez.
+              </p>
 
-        <a href="about.html"><i class="bx bx-right-arrow-alt"></i></a>
-      </section>
+              <div class="choose__content-grid">
+                <div class="choose__images">
+                  <img
+                    src="assets/img/choose/choose-img.png"
+                    alt=""
+                    class="choose__img"
+                  />
 
-      <!-- ===== PROGRAMMERS ===== -->
-      <section class="technology">
-        <div class="container">
-          <div class="section__data">
-            <h2 class="section__subtitle">Sobre o Site</h2>
-            <div class="section__titles">
-              <h2 class="section__title-border">Desenvolvido por</h2>
-              <h3 class="section__title">4 devs</h3>
+                  <div class="choose__triangle choose__triangle-1"></div>
+                  <div class="choose__triangle choose__triangle-2"></div>
+                  <div class="choose__triangle choose__triangle-3"></div>
+                </div>
+
+                <div class="choose__data">
+                  <div class="choose__group">
+                    <h3 class="choose__number">4</h3>
+                    <p class="choose__subtitle">Todos os membros</p>
+                  </div>
+                  <div class="choose__group">
+                    <h3 class="choose__number">4</h3>
+                    <p class="choose__subtitle">melhores treinadores</p>
+                  </div>
+                  <div class="choose__group">
+                    <h3 class="choose__number">25+</h3>
+                    <p class="choose__subtitle">Programas</p>
+                  </div>
+                  <div class="choose__group">
+                    <h3 class="choose__number">100+</h3>
+                    <p class="choose__subtitle">Prêmios</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-
-          <div class="technology__box programmers">
-            <article class="technology-boxs">
-              <img src="assets/img/about/Programmers-2.png" alt="" />
-              <h3>Josias</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Delectus fuga similique voluptate in harum, amet voluptatibus
-                quos soluta numquam, aut explicabo quaerat illum iusto adipisci
-                ipsam, itaque consectetur quia vel.
-              </p>
-              <ul>
-                <li>
-                  <a href="#"><i class="bx bxl-github"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="bx bxl-linkedin-square"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="bx bxl-instagram-alt"></i></a>
-                </li>
-              </ul>
-              <a href="#" class="btn bnt__pricing">read more</a>
-            </article>
-
-            <article class="technology-boxs">
-              <img src="assets/img/about/Programmers-3.png" alt="" />
-              <h3>Manel</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolorum distinctio quidem doloremque ducimus quae hic quas ea,
-                eligendi recusandae beatae? Sed temporibus dolorem nobis vero
-                quisquam cupiditate saepe, sunt ex!
-              </p>
-              <ul>
-                <li>
-                  <a href="#"><i class="bx bxl-github"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="bx bxl-linkedin-square"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="bx bxl-instagram-alt"></i></a>
-                </li>
-              </ul>
-              <a href="#" class="btn bnt__pricing">read more</a>
-            </article>
-
-            <article class="technology-boxs">
-              <img src="assets/img/about/Programmers-1.png" alt="" />
-              <h3>Bruno</h3>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Incidunt iste velit, voluptatem nihil, cumque minus eius dolores
-                excepturi veniam voluptates porro ipsa, ea unde magni. Totam,
-                vel natus! Consequatur, tenetur.
-              </p>
-              <ul>
-                <li>
-                  <a href="#"><i class="bx bxl-github"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="bx bxl-linkedin-square"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="bx bxl-instagram-alt"></i></a>
-                </li>
-              </ul>
-              <a href="#" class="btn bnt__pricing">read more</a>
-            </article>
-
-            <article class="technology-boxs">
-              <img src="assets/img/about/Programmers-4.png" alt="" />
-              <h3>Caique Silva</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                aspernatur deserunt omnis, accusantium eius nostrum est
-                perspiciatis delectus pariatur debitis laborum quis libero
-                suscipit ullam error fuga dolor consequatur incidunt.
-              </p>
-              <ul>
-                <li>
-                  <a href="#"><i class="bx bxl-github"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="bx bxl-linkedin-square"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="bx bxl-instagram-alt"></i></a>
-                </li>
-              </ul>
-              <a href="#" class="btn bnt__pricing">read more</a>
-            </article>
           </div>
         </div>
       </section>
 
-      <!-- ===== TECHNOLOGY ===== -->
-      <section class="technology">
+      <!-- ===== PRICING ===== -->
+      <section class="pricing section" id="pricing">
         <div class="container">
           <div class="section__data">
-            <h2 class="section__subtitle">Sobre o Site</h2>
+            <h2 class="section__subtitle">Preços</h2>
             <div class="section__titles">
-              <h2 class="section__title-border">TECNOLOGIAS</h2>
-              <h3 class="section__title">USADAS</h3>
+              <h2 class="section__title-border">NOSSO</h2>
+              <h3 class="section__title">PLANO ESPECIAL</h3>
             </div>
           </div>
 
-          <div class="technology__box">
-            <article class="technology-boxs">
-              <img src="assets/img/about/About_icon-1.png" alt="" />
-              <h3>HTML 5</h3>
-              <p>
-                O HTML 5 foi empregado na estruturação do site de maneira
-                semântica, por meio do uso de tags..
-              </p>
-              <a href="#" class="btn bnt__pricing">read more</a>
+          <div class="pricing__container grid">
+            <article class="pricing__card">
+              <div class="pricing__header">
+                <div class="pricing__shape">
+                  <img
+                    src="assets/img/pricing/pricing1.png"
+                    alt=""
+                    class="pricing__img"
+                  />
+                </div>
+
+                <h2 class="pricing__title">BASIC PACKAGE</h2>
+                <h3 class="pricing__number">R$200</h3>
+              </div>
+
+              <ul class="pricing__list">
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 5 Days In A Week
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Sweatshirt
+                </li>
+                <li class="pricing__item pricing__item-opacity">
+                  <i class="bx bx-check-circle"></i> 01 Bottle of Protein
+                </li>
+                <li class="pricing__item pricing__item-opacity">
+                  <i class="bx bx-check-circle"></i> Access to Videos
+                </li>
+                <li class="pricing__item pricing__item-opacity">
+                  <i class="bx bx-check-circle"></i> Muscle Stretching
+                </li>
+              </ul>
+
+              <a href="#" class="btn bnt__pricing">
+                Purchase Now <i class="bx bx-right-arrow-alt"></i>
+              </a>
             </article>
 
-            <article class="technology-boxs">
-              <img src="assets/img/about/About_icon-2.png" alt="" />
-              <h3>CSS 3</h3>
-              <p>
-                O CSS foi empregado para estilizar o site de forma visualmente
-                atraente, por meio da definição de estilos e propriedades.
-              </p>
-              <a href="#" class="btn bnt__pricing">read more</a>
+            <article class="pricing__card pricing__card-active">
+              <div class="pricing__header">
+                <div class="pricing__shape">
+                  <img
+                    src="assets/img/pricing/pricing1.png"
+                    alt=""
+                    class="pricing__img"
+                  />
+                </div>
+
+                <h2 class="pricing__title">PREMIUM PACKAGE</h2>
+                <h3 class="pricing__number">R$300</h3>
+              </div>
+
+              <ul class="pricing__list">
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 5 Days In A Week
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Sweatshirt
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Bottle of Protein
+                </li>
+                <li class="pricing__item pricing__item-opacity">
+                  <i class="bx bx-check-circle"></i> Access to Videos
+                </li>
+                <li class="pricing__item pricing__item-opacity">
+                  <i class="bx bx-check-circle"></i> Muscle Stretching
+                </li>
+              </ul>
+
+              <a href="#" class="btn bnt__pricing">
+                Purchase Now <i class="bx bx-right-arrow-alt"></i>
+              </a>
             </article>
 
-            <article class="technology-boxs">
-              <img src="assets/img/about/About_icon-3.png" alt="" />
-              <h3>JavaScript</h3>
-              <p>
-                O JavaScript foi utilizado para adicionar interatividade ao
-                site, por meio da manipulação dinâmica de elementos e eventos.
-              </p>
-              <a href="#" class="btn bnt__pricing">read more</a>
-            </article>
+            <article class="pricing__card">
+              <div class="pricing__header">
+                <div class="pricing__shape">
+                  <img
+                    src="assets/img/pricing/pricing1.png"
+                    alt=""
+                    class="pricing__img"
+                  />
+                </div>
 
-            <article class="technology-boxs">
-              <img src="assets/img/about/About_icon-4.png" alt="" />
-              <h3>PYTHON 3</h3>
-              <p>
-                O Python foi utilizado no desenvolvimento do site para
-                implementar funcionalidades avançadas e processamento de dados.
-              </p>
-              <a href="#" class="btn bnt__pricing">read more</a>
-            </article>
+                <h2 class="pricing__title">DIAMOND PACKAGE</h2>
+                <h3 class="pricing__number">R$500</h3>
+              </div>
 
-            <article class="technology-boxs">
-              <img src="assets/img/about/About_icon-5.png" alt="" />
-              <h3>DJANGO</h3>
-              <p>
-                O Django, um framework de desenvolvimento web em Python, foi
-                utilizado para criar o site de forma eficiente e estruturada.
-              </p>
-              <a href="#" class="btn bnt__pricing">read more</a>
-            </article>
+              <ul class="pricing__list">
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 5 Days In A Week
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Sweatshirt
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Bottle of Protein
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> Access to Videos
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> Muscle Stretching
+                </li>
+              </ul>
 
-            <article class="technology-boxs">
-              <img src="assets/img/about/About_icon-6.png" alt="" />
-              <h3>BOXICONS</h3>
-              <p>
-                Os ícones do Boxicons foram utilizados para adicionar elementos
-                visuais significativos ao site.
-              </p>
-              <a href="#" class="btn bnt__pricing">read more</a>
+              <a href="#" class="btn bnt__pricing">
+                Purchase Now <i class="bx bx-right-arrow-alt"></i>
+              </a>
             </article>
           </div>
         </div>
       </section>
 
       <!-- ===== CONTACT ===== -->
-      <section class="contact section">
+      <section class="contact section" id="contact">
         <div class="container">
           <div class="section__data">
             <h2 class="section__subtitle">Suporte</h2>
@@ -732,6 +662,10 @@
                 <div class="contact__box-info">
                   <span><i class="bx bx-support"></i></span>
                   <a href="common-questions.html">Perguntas Frecontes</a>
+                </div>
+                <div class="contact__box-info">
+                  <span><i class="bx bx-group"></i></span>
+                  <a href="pare.html">Conhecer alguem para treinar com você</a>
                 </div>
               </div>
             </div>

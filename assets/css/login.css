@@ -1,5 +1,17 @@
 /*=============== THE STYLE OF LOGIN PAGE ===============*/
+/*===== IMG-BACKGROUND ======*/
+#body__login {
+  height: 100vh;
+  background: linear-gradient(hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0.8)),
+    url(../img/Login/banner-1.png);
+  background-size: 100%;
+  font-family: "Poppins", sans-serif;
+}
 
+/*===== HADER/LOGO-LOGIN ======*/
+#header_login {
+  height: 100px;
+}
 #body__login {
   height: 100vh;
   background-color: hsl(224, 89%, 60%);

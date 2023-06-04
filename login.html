@@ -28,21 +28,39 @@
     <script src="assets/js/login.js" defer></script>
   </head>
   <body id="body__login">
+    <!-- ===== LOGO-LOGIN ===== -->
+    <div>
+      <header id="header_login">
+        <a href="index.html" class="logo"
+          ><img src="assets/img/header/header__logo.png"
+        /></a>
+      </header>
+    </div>
+
     <!-- ===== FOMR LOGIN/REGISTER ===== -->
     <section class="container-login forms">
       <!-- Signup LOGIN -->
-
       <div class="form login">
         <div class="form-content">
           <h2 class="title__login">Login</h2>
 
           <form action="#">
             <div class="field input-field">
-              <input type="email" placeholder="Email" class="input" />
+              <input
+                type="email"
+                placeholder="Email"
+                class="input"
+                id="emailInput"
+              />
             </div>
 
             <div class="field input-field">
-              <input type="password" placeholder="Password" class="password" />
+              <input
+                type="password"
+                placeholder="Password"
+                class="password"
+                id="passwordInput"
+              />
               <i class="bx bx-hide eye-icon"></i>
             </div>
 
@@ -51,7 +69,7 @@
             </div>
 
             <div class="field button-field">
-              <button>Login</button>
+              <button id="loginButton">Login</button>
             </div>
           </form>
 
@@ -62,6 +80,7 @@
             >
           </div>
         </div>
+
         <div class="line"></div>
         <div class="media-options">
           <a href="#" class="field facebook">
@@ -83,7 +102,6 @@
       </div>
 
       <!-- Signup FORM -->
-
       <div class="form signup">
         <div class="form-content">
           <h2 class="title__login">Signup</h2>

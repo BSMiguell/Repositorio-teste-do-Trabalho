@@ -1,10 +1,7 @@
-/*=============== THE SCRIPT OF LOGIN PAGE ===============*/
-
-/*=============== LOGIN/REGISTER ===============*/
-
-const forms = document.querySelector(".forms"),
-  pwShowHide = document.querySelectorAll(".eye-icon"),
-  links = document.querySelectorAll(".link");
+const forms = document.querySelector(".forms");
+const pwShowHide = document.querySelectorAll(".eye-icon");
+const links = document.querySelectorAll(".link");
+const loginButton = document.getElementById("loginButton");
 
 pwShowHide.forEach((eyeIcon) => {
   eyeIcon.addEventListener("click", () => {
@@ -25,7 +22,20 @@ pwShowHide.forEach((eyeIcon) => {
 
 links.forEach((link) => {
   link.addEventListener("click", (e) => {
-    e.preventDefault(); //preventing form submit
+    e.preventDefault();
     forms.classList.toggle("show-signup");
   });
+});
+
+loginButton.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const emailInput = document.querySelector("#emailInput");
+  const passwordInput = document.querySelector("#passwordInput");
+
+  if (emailInput.value.trim() !== "" && passwordInput.value.trim() !== "") {
+    window.location.href = "user-index.html";
+  } else {
+    alert("Por favor, preencha todos os campos.");
+  }
 });
