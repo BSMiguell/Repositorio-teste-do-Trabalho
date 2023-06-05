@@ -16,7 +16,6 @@
 
 .white-mode {
   --body-color: hsl(210, 85%, 95%);
-  --header-color: hsl(34, 100%, 77%);
   --body-color-2: hsl(236, 80%, 4%);
   --card-color: hsl(156, 29%, 78%);
   --nav-color: hsl(34, 100%, 77%);
@@ -428,6 +427,15 @@ header.sticky {
     padding: 8px 3%;
   }
 }
+@media (max-width: 1080px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  section {
+    padding: 3rem 0 2rem;
+  }
+}
 @media (max-width: 830px) {
   #menu-icon {
     display: block;
@@ -455,7 +463,15 @@ header.sticky {
     top: 100%;
   }
 }
-
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  section {
+    padding: 2rem 0 2rem;
+  }
+}
 /*=============== CART ===============*/
 
 .cart {
@@ -747,7 +763,7 @@ header.sticky {
   flex: 1;
 }
 .about-pro .about-image img {
-  max-width: 50%;
+  max-width: 100%;
 }
 .about-image img {
   max-width: 100%;
@@ -804,21 +820,20 @@ header.sticky {
     /* padding: 20px; */
     flex-direction: column;
   }
-
   .about-content h2 {
     margin-top: 10px;
   }
-
+  .about__card {
+    padding: 1.5rem 0.5rem;
+  }
   .about-image {
     margin-right: 0px;
     margin-bottom: 20px;
   }
-
   .about-image {
     margin-right: 0px;
     margin-bottom: 20px;
   }
-
   .about-content p {
     padding: 0px;
     font-size: 14px;
@@ -1313,13 +1328,6 @@ header.sticky {
 
 /* Responsive PRODUTOS */
 @media (max-width: 1080px) {
-  .container {
-    width: 90%;
-    margin: 0 auto;
-  }
-  section {
-    padding: 3rem 0 2rem;
-  }
   .shop {
     margin-top: 2rem;
   }
@@ -1802,14 +1810,21 @@ td {
   padding: 20px;
 }
 .question {
-  font-size: var(--h1-font-size);
-  cursor: pointer;
-  color: var(--body-color-2);
-  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: var(--h2-font-size);
+  color: var(--body-color);
+  background-color: var(--body-color-2);
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  cursor: pointer;
   transition: all 0.3s ease;
+}
+.question:hover {
+  background-color: hsl(215, 97%, 59%);
+  transition: 0.5s ease;
 }
 .question i {
   margin-left: 5px;
@@ -1822,12 +1837,16 @@ td {
 }
 .answer ul,
 .answer p {
-  max-width: 800px;
+  max-width: 920px;
   margin-bottom: 10px;
   font-size: var(--normal-font-size);
+  background-color: var(--white-color);
+  padding: 15px 10px;
+  border-radius: 20px;
 }
 .answer ul li {
   margin-bottom: 10px;
+  color: var(--black-color);
 }
 .question.active {
   color: var(--red-color);
@@ -1993,128 +2012,6 @@ h3.pare-content {
     height: auto;
   }
 }
-/*===============X===============X===============X===============X===============*/
-
-/*=============== HTMLS LOGGED ON THE SITE ===============*/
-
-.profile-dropdown {
-  position: relative;
-  width: fit-content;
-  margin-left: 30px;
-}
-.profile-dropdown-btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 1em;
-  font-size: 0.9rem;
-  font-weight: 500;
-  border: 1px solid var(--red-color);
-  background-color: var(--white-color);
-  border-radius: 50px;
-  cursor: pointer;
-  width: 150px;
-  transition: box-shadow 0.2s, background-color 0.2s;
-}
-.profile-dropdown-btn:hover {
-  background-color: hsl(210, 85%, 95%);
-  box-shadow: var(--red-color);
-}
-.profile-img {
-  position: relative;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background: url(../img/User/user-0.png);
-  background-size: cover;
-}
-.profile-img i {
-  position: absolute;
-  right: 0;
-  bottom: 0.3rem;
-  font-size: 0.5rem;
-  color: hsl(120, 100%, 25%);
-}
-.profile-dropdown-btn span {
-  margin: 0 0.5rem;
-  margin-right: 0;
-}
-.profile-dropdown-list {
-  position: absolute;
-  top: 50px;
-  width: 220px;
-  right: -1px;
-  background-color: var(--white-color);
-  border-radius: 10px;
-  box-shadow: var(--red-color);
-  max-height: 0;
-  overflow: hidden;
-}
-.profile-dropdown-list.active {
-  max-height: 500px;
-}
-.profile-dropdown-list-item {
-  padding: 0.5rem 0 0.5rem 1rem;
-}
-.profile-dropdown-list hr {
-  border: 0.5px solid var(--red-color);
-}
-.profile-dropdown-list-item:hover {
-  padding-left: 1.5rem;
-  background-color: hsl(210, 85%, 95%);
-  transition: background-color 0.2s, padding-left 0.2s;
-}
-.profile-dropdown-list-item a {
-  align-items: center;
-  display: flex;
-  text-decoration: none;
-  font-size: 0.9rem;
-  color: var(--black-color);
-  font-weight: 500;
-}
-.profile-dropdown-list-item a i {
-  margin-right: 1em;
-  font-size: 1.1rem;
-  width: 2.3rem;
-  height: 2.3rem;
-  background-color: var(--red-color);
-  color: var(--white-color);
-  line-height: 2.3rem;
-  text-align: center;
-  border-radius: 50%;
-}
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.modal-content {
-  background-color: var(--white-color);
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid hsl(0, 0%, 53%);
-  width: 300px;
-}
-.modal-close {
-  color: hsl(0, 0%, 67%);
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.modal-close:hover,
-.modal-close:focus {
-  color: var(--black-color);
-  text-decoration: none;
-  cursor: pointer;
-}
-
 /*===============X===============X===============X===============X===============*/
 
 /*=============== SECTIONS/DIV STYLES USED THROUGHOUT PAGES ===============*/

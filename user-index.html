@@ -22,6 +22,7 @@
 
     <!-- ===== STYLE CSS ===== -->
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/user.css" />
 
     <!-- ===== THEMES/COLOR - MODE ===== -->
     <link
@@ -94,6 +95,41 @@
       title="color-10"
       disabled
     />
+    <link
+      rel="stylesheet"
+      href="assets/css/user-theme/body-1.css"
+      class="alternate-style"
+      title="color-11"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/user-theme/body-2.css"
+      class="alternate-style"
+      title="color-12"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/user-theme/body-3.css"
+      class="alternate-style"
+      title="color-13"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/user-theme/body-4.css"
+      class="alternate-style"
+      title="color-14"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/user-theme/body-5.css"
+      class="alternate-style"
+      title="color-15"
+      disabled
+    />
 
     <!-- ===== SCRIPT ===== -->
     <script src="assets/js/main.js" defer></script>
@@ -116,11 +152,6 @@
 
         <div class="icons-mode">
           <div class="bx bx-menu" id="menu-icon"></div>
-
-          <div class="cart__count">
-            <i class="bx bx-shopping-bag" id="cart-icon"></i>
-            <span class="item-count">0</span>
-          </div>
         </div>
 
         <div class="profile-dropdown">
@@ -142,27 +173,27 @@
             </li>
 
             <li class="profile-dropdown-list-item">
-              <a href="#">
-                <i class="fa-regular fa-envelope"></i>
-                Ihbox
+              <a href="#" id="editar-color-link">
+                <i class="bx bx-palette"></i> Editar-Color
               </a>
             </li>
+
             <li class="profile-dropdown-list-item">
-              <a href="#"> <i class="fa-solid fa-chart-line"></i> Analytics </a>
-            </li>
-            <li class="profile-dropdown-list-item">
-              <a href="#">
+              <a href="#" id="settings-link">
                 <i class="fa-solid fa-sliders"></i>
                 Settings
               </a>
             </li>
+
             <li class="profile-dropdown-list-item">
-              <a href="#contact">
+              <a href="#" id="help-support-link">
                 <i class="fa-regular fa-circle-question"></i>
                 Help & Support
               </a>
             </li>
+
             <hr />
+
             <li class="profile-dropdown-list-item">
               <a href="index.html">
                 <i class="fa-solid fa-arrow-right-from-bracket"></i>
@@ -180,29 +211,113 @@
               <button id="save-profile-btn">Save</button>
             </div>
           </div>
-        </div>
 
-        <!-- CART -->
-        <div class="cart">
-          <h2 class="cart-title">Your Cart</h2>
-          <!-- CONTENT -->
+          <div id="editar-color-modal" class="modal">
+            <div class="modal-content">
+              <span class="modal-close">&times;</span>
+              <h4>Theme Site</h4>
+              <div class="colors body-color">
+                <img
+                  src="assets/img/body-theme/body-1.jpg"
+                  alt=""
+                  class="color-11"
+                  onclick="setActiveStyle('color-11')"
+                />
+                <img
+                  src="assets/img/body-theme/body-2.jpg"
+                  alt=""
+                  class="color-2"
+                  onclick="setActiveStyle('color-12')"
+                />
+                <img
+                  src="assets/img/body-theme/body-3.jpg"
+                  alt=""
+                  class="color-3"
+                  onclick="setActiveStyle('color-13')"
+                />
+                <img
+                  src="assets/img/body-theme/body-4.jpg"
+                  alt=""
+                  class="color-4"
+                  onclick="setActiveStyle('color-14')"
+                />
+                <img
+                  src="assets/img/body-theme/body-5.jpg"
+                  alt=""
+                  class="color-5"
+                  onclick="setActiveStyle('color-15')"
+                />
+              </div>
 
-          <div class="cart-content">
-            <!-- TEST BOX -->
-          </div>
+              <h4>Theme Colors</h4>
 
-          <!-- TOTAL -->
-          <div class="total">
-            <div class="total-title">Total</div>
-            <div class="total-price">$0</div>
+              <div class="colors">
+                <img
+                  src="assets/img/theme/red.png"
+                  alt=""
+                  class="color-1"
+                  onclick="setActiveStyle('color-1')"
+                />
+                <img
+                  src="assets/img/theme/purple.png"
+                  alt=""
+                  class="color-2"
+                  onclick="setActiveStyle('color-2')"
+                />
+                <img
+                  src="assets/img/theme/magenta.png"
+                  alt=""
+                  class="color-3"
+                  onclick="setActiveStyle('color-3')"
+                />
+                <img
+                  src="assets/img/theme/orange.png"
+                  alt=""
+                  class="color-4"
+                  onclick="setActiveStyle('color-4')"
+                />
+                <img
+                  src="assets/img/theme/green.png"
+                  alt=""
+                  class="color-5"
+                  onclick="setActiveStyle('color-5')"
+                />
+              </div>
+
+              <div class="colors">
+                <img
+                  src="assets/img/theme/blue.png"
+                  alt=""
+                  class="color-6"
+                  onclick="setActiveStyle('color-6')"
+                />
+                <img
+                  src="assets/img/theme/yellow.png"
+                  alt=""
+                  class="color-7"
+                  onclick="setActiveStyle('color-7')"
+                />
+                <img
+                  src="assets/img/theme/ceano.png"
+                  alt=""
+                  class="color-8"
+                  onclick="setActiveStyle('color-8')"
+                />
+                <img
+                  src="assets/img/theme/gray.png"
+                  alt=""
+                  class="color-9"
+                  onclick="setActiveStyle('color-9')"
+                />
+                <img
+                  src="assets/img/theme/light-green.png"
+                  alt=""
+                  class="color-9"
+                  onclick="setActiveStyle('color-10')"
+                />
+              </div>
+            </div>
           </div>
-          <!-- BUY BUTTON -->
-          <div class="cart__btn">
-            <button type="button" class="btn-buy">Buy Now</button>
-            <button type="button" class="to-clean">Clean</button>
-          </div>
-          <!-- CART CLOSE -->
-          <i class="bx bx-x" id="cart-close"></i>
         </div>
       </nav>
     </header>
@@ -755,6 +870,7 @@
         <i class="fas fa-cog fa-spin spin-toggler"></i>
       </div>
       <div class="day-night s-icon"><i class="fa"></i></div>
+
       <h4>Theme Colors</h4>
 
       <div class="colors">
