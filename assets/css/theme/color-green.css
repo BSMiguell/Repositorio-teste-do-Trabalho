@@ -1,7 +1,7 @@
 :root {
-  --red-color: hsl(154, 85%, 37%);
+  --main-color: hsl(154, 85%, 37%);
   --bow-color: hsl(154, 85%, 81%);
   --choose-color-1: hsl(154, 85%, 37%);
   --choose-color-2: hsl(154, 85%, 26%);
-  --main-color: hsl(154, 85%, 46%);
+  --sub-color: hsl(154, 85%, 46%);
 }
