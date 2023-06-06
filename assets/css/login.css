@@ -3,7 +3,7 @@
 #body__login {
   height: 100vh;
   background: linear-gradient(hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0.8)),
-    url(../img/Login/banner-1.png);
+    url(../img/Login/banner.png);
   background-size: 100%;
   font-family: "Poppins", sans-serif;
 }
