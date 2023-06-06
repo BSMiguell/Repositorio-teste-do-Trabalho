@@ -12,11 +12,6 @@
 #header_login {
   height: 100px;
 }
-#body__login {
-  height: 100vh;
-  background-color: hsl(224, 89%, 60%);
-  font-family: "Poppins", sans-serif;
-}
 input[type="checkbox"] {
   display: none;
 }
