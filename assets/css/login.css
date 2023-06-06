@@ -16,7 +16,7 @@ input[type="checkbox"] {
 .container-login {
   height: 100vh;
   background: linear-gradient(hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0.8)),
-    url(../img/login/banner.jpg);
+    url(../img/login/banner-login.png);
   background-size: 100%;
   width: 100%;
   display: flex;
