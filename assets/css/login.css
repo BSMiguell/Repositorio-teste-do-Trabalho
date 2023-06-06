@@ -1,6 +1,6 @@
 /*=============== THE STYLE OF LOGIN PAGE ===============*/
 /*===== IMG-BACKGROUND ======*/
-#body__login {
+body {
   height: 100vh;
   background: linear-gradient(hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0.8)),
     url(../img/Login/banner.png);
