@@ -240,4 +240,40 @@ function showReview(event) {
   userPics[i].classList.add("active-pic");
   userTexts[i].classList.add("active-text");
 }
+
+// Search functionality
+const searchInput = document.querySelector("#search-input");
+searchInput.addEventListener("input", handleSearch);
+
+function handleSearch() {
+  const searchValue = removeAccents(searchInput.value.toLowerCase());
+
+  productBoxes.forEach((box) => {
+    const productName = removeAccents(
+      box.querySelector(".product-title").innerText.toLowerCase()
+    );
+
+    if (productName.includes(searchValue)) {
+      box.style.display = "block";
+    } else {
+      box.style.display = "none";
+    }
+  });
+}
+
+function removeAccents(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+const heartIcons = document.querySelectorAll(".heart-icon");
+
+heartIcons.forEach((icon) => {
+  icon.addEventListener("click", toggleHeart);
+});
+
+function toggleHeart(event) {
+  const icon = event.target;
+  icon.classList.toggle("filled");
+}
+
 /*=============== =============== ===============*/

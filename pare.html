@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Links e integrações de APIS para o MAPA -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
     <title>Fit Match</title>
 
@@ -19,7 +32,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <!-- ===== STYLE CSS ===== -->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
@@ -97,6 +109,7 @@
 
     <!-- ===== SCRIPT ===== -->
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/pare.js" defer></script>
   </head>
   <body>
     <body>
@@ -158,7 +171,7 @@
                 </p>
               </div>
               <div class="pare-img">
-                <img src="assets/img/about/About__banner2.png" alt="" />
+                <img src="assets/img/subs-homes/home2.png" alt="" />
               </div>
             </div>
           </div>
@@ -174,17 +187,6 @@
             </div>
             <form>
               <p></p>
-              <label for="acadNome">Nome da Academia:</label>
-              <input type="text" id="acadNome" name="acadNome" required />
-              <label for="acadEnd">Endereço da Academia:</label>
-              <input type="text" id="acadEnd" name="acadEnd" required />
-              <label for="location">Localização:</label>
-              <input type="text" id="loc" name="loc" readonly />
-
-              <button type="button" onclick="getLocation()">
-                Obter Localização
-              </button>
-
               <label for="genero">Preferência de Gênero do Parceiro:</label>
               <select id="genero" name="genero">
                 <option value="">Selecione uma opção</option>
@@ -198,6 +200,17 @@
                 semanal de treino</label
               >
               <textarea id="addInfor" name="addInfor"></textarea>
+              <label for="acadNome">Nome da Academia:</label>
+              <input type="text" id="acadNome" name="acadNome" required />
+              <label for="acadEnd">Endereço da Academia:</label>
+              <input type="text" id="acadEnd" name="acadEnd" required />
+              <p>
+                Insira sua localização apenas quando estiver na sua academia,
+                dessa forma irá encontrar seus parceiros localizados nas em suas
+                próximidades.
+              </p>
+              <label for="location">Sua localização atual no mapa:</label>
+              <div id="mapid"></div>
 
               <button type="submit">Enviar</button>
             </form>

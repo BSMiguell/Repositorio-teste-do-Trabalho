@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fit Match</title>
+
+    <!-- ===== Boxicons CSS ===== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- ===== STYLE CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- ===== THEMES/COLOR - MODE ===== -->
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-red.css"
+      class="alternate-style"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-purple.css"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-pink.css"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-orange.css"
+      class="alternate-style"
+      title="color-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-green.css"
+      class="alternate-style"
+      title="color-5"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-blue.css"
+      class="alternate-style"
+      title="color-6"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-yellow.css"
+      class="alternate-style"
+      title="color-7"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-ceano.css"
+      class="alternate-style"
+      title="color-8"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-gray.css"
+      class="alternate-style"
+      title="color-9"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/theme/color-light-green.css"
+      class="alternate-style"
+      title="color-10"
+      disabled
+    />
+
+    <!-- ===== SCRIPT ===== -->
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <a href="index.html" class="logo"
+        ><img src="assets/img/header/header__logo.png"
+      /></a>
+
+      <nav>
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cronograma.html">Timeline</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="produtos-1.html">Products</a></li>
+        </ul>
+
+        <div class="icons-mode">
+          <div class="bx bx-menu" id="menu-icon"></div>
+
+          <a class="login-icon" href="login.html"
+            ><i class="bx bxs-user"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT OF THE WEBSITE ===== -->
+    <main class="main">
+      <!-- ===== HOME ===== -->
+      <section class="About__section">
+        <div class="circle__timeline"></div>
+        <div class="About__home">
+          <div class="About__text">
+            <div class="About__text-h1">
+              <h1>
+                Porque treinar na
+                <span class="section__title">FitMatch?</span>
+              </h1>
+            </div>
+            <p>
+              Por que usar o FitMatch? Temos uma resposta simples: porque
+              queremos ajudar você a encontrar o parceiro perfeito que se
+              encaixe em seu estilo de treino, preferências e metas específicas.
+              Nosso site é uma plataforma inovadora projetada para conectar
+              indivíduos como você com academias e nossos profissionais de
+              fitness altamente qualificados.
+            </p>
+            <a href="#" class="btn bnt__home">Ver mais</a>
+          </div>
+          <div class="abou__img-box timeline__img">
+            <img src="assets/img/subs-homes/home4.png" alt="" class="img-box" />
+            <div class="box-bow">
+              <div class="bow"></div>
+              <img
+                src="assets/img/subs-homes/home4.png"
+                alt=""
+                class="img-box-2"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PRICING ===== -->
+      <section class="pricing section" id="pricing">
+        <div class="container">
+          <div class="section__data">
+            <h2 class="section__subtitle">Preços</h2>
+            <div class="section__titles">
+              <h2 class="section__title-border">NOSSOS</h2>
+              <h3 class="section__title">PLANO ESPECIAL</h3>
+            </div>
+          </div>
+
+          <div class="pricing__container grid">
+            <article class="pricing__card">
+              <div class="pricing__header">
+                <div class="pricing__shape">
+                  <img
+                    src="assets/img/pricing/pricing1.png"
+                    alt=""
+                    class="pricing__img"
+                  />
+                </div>
+
+                <h2 class="pricing__title">BASIC PACKAGE</h2>
+                <h3 class="pricing__number">R$200</h3>
+              </div>
+
+              <ul class="pricing__list">
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 5 Days In A Week
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Sweatshirt
+                </li>
+                <li class="pricing__item pricing__item-opacity">
+                  <i class="bx bx-check-circle"></i> 01 Bottle of Protein
+                </li>
+                <li class="pricing__item pricing__item-opacity">
+                  <i class="bx bx-check-circle"></i> Access to Videos
+                </li>
+                <li class="pricing__item pricing__item-opacity">
+                  <i class="bx bx-check-circle"></i> Muscle Stretching
+                </li>
+              </ul>
+
+              <a href="#" class="btn bnt__pricing">
+                Purchase Now <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+
+            <article class="pricing__card">
+              <div class="pricing__header">
+                <div class="pricing__shape">
+                  <img
+                    src="assets/img/pricing/pricing1.png"
+                    alt=""
+                    class="pricing__img"
+                  />
+                </div>
+
+                <h2 class="pricing__title">PREMIUM PACKAGE</h2>
+                <h3 class="pricing__number">R$300</h3>
+              </div>
+
+              <ul class="pricing__list">
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 5 Days In A Week
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Sweatshirt
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Bottle of Protein
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle pricing__item-opacity"></i>
+                  Access to Videos
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle pricing__item-opacity"></i>
+                  Muscle Stretching
+                </li>
+              </ul>
+
+              <a href="#" class="btn bnt__pricing">
+                Purchase Now <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+
+            <article class="pricing__card">
+              <div class="pricing__header">
+                <div class="pricing__shape">
+                  <img
+                    src="assets/img/pricing/pricing1.png"
+                    alt=""
+                    class="pricing__img"
+                  />
+                </div>
+
+                <h2 class="pricing__title">GOLD PACKAGE</h2>
+                <h3 class="pricing__number">R$500</h3>
+              </div>
+
+              <ul class="pricing__list">
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 5 Days In A Week
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Sweatshirt
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Bottle of Protein
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> Access to Videos
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle pricing__item-opacity"></i>
+                  Muscle Stretching
+                </li>
+              </ul>
+
+              <a href="#" class="btn bnt__pricing">
+                Purchase Now <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+
+            <article class="pricing__card pricing__card-active">
+              <div class="pricing__header">
+                <div class="pricing__shape">
+                  <i class="bx bxs-crown"></i>
+                </div>
+
+                <h2 class="pricing__title">DIAMOND PACKAGE</h2>
+                <h3 class="pricing__number">R$900</h3>
+              </div>
+
+              <ul class="pricing__list">
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 5 Days In A Week
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Sweatshirt
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> 01 Bottle of Protein
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> Access to Videos
+                </li>
+                <li class="pricing__item">
+                  <i class="bx bx-check-circle"></i> Muscle Stretching
+                </li>
+              </ul>
+
+              <a href="#" class="btn bnt__pricing">
+                Purchase Now <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== COURSES ===== -->
+      <section class="courses section" id="courses">
+        <div class="container">
+          <div class="section__data">
+            <h2 class="section__subtitle">Personal</h2>
+            <div class="section__titles">
+              <h2 class="section__title-border">PERSONAL TRAINER</h2>
+              <h3 class="section__title">PARTICULAR</h3>
+            </div>
+          </div>
+
+          <div class="courses__container grid">
+            <div class="course__item">
+              <div class="course__box">
+                <img
+                  src="assets/img/Personal/trainer-1.jpg"
+                  alt=""
+                  class="course__img"
+                />
+                <div class="course__tag">Yoga</div>
+              </div>
+
+              <div class="course__content">
+                <div class="course__meta">
+                  <div class="course__Lesson">
+                    <i class="bx bxs-book"></i> 25 Lesson
+                  </div>
+                  <div class="course__rating">
+                    <i class="bx bxs-star"></i> 3.5 (35)
+                  </div>
+                </div>
+
+                <h3 class="course__title">Vou ser seu personal de Yoga</h3>
+                <div class="course__teacher">
+                  <img
+                    src="assets/img/Personal/personal-1.jpg"
+                    alt=""
+                    class="course__teacher-img"
+                  />
+                  <h3 class="course__teacher-title">Maria</h3>
+                </div>
+              </div>
+
+              <div class="course__more">
+                <div class="course__prices">
+                  <span class="course__discount">R$46.00</span>
+                  <span class="course__price">R$72.00</span>
+                </div>
+                <span class="course__button">
+                  Saber detalhes
+                  <i class="bx bx-right-arrow-alt course__button-icon"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="course__item">
+              <div class="course__box">
+                <img
+                  src="assets/img/Personal/trainer-1.jpg"
+                  alt=""
+                  class="course__img"
+                />
+                <div class="course__tag">Yoga</div>
+              </div>
+
+              <div class="course__content">
+                <div class="course__meta">
+                  <div class="course__Lesson">
+                    <i class="bx bxs-book"></i> 25 Lesson
+                  </div>
+                  <div class="course__rating">
+                    <i class="bx bxs-star"></i> 3.5 (35)
+                  </div>
+                </div>
+
+                <h3 class="course__title">Vou ser seu personal de Yoga</h3>
+                <div class="course__teacher">
+                  <img
+                    src="assets/img/Personal/personal-1.jpg"
+                    alt=""
+                    class="course__teacher-img"
+                  />
+                  <h3 class="course__teacher-title">Maria</h3>
+                </div>
+              </div>
+
+              <div class="course__more">
+                <div class="course__prices">
+                  <span class="course__discount">R$46.00</span>
+                  <span class="course__price">R$72.00</span>
+                </div>
+                <span class="course__button">
+                  Saber detalhes
+                  <i class="bx bx-right-arrow-alt course__button-icon"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="course__item">
+              <div class="course__box">
+                <img
+                  src="assets/img/Personal/trainer-1.jpg"
+                  alt=""
+                  class="course__img"
+                />
+                <div class="course__tag">Yoga</div>
+              </div>
+
+              <div class="course__content">
+                <div class="course__meta">
+                  <div class="course__Lesson">
+                    <i class="bx bxs-book"></i> 25 Lesson
+                  </div>
+                  <div class="course__rating">
+                    <i class="bx bxs-star"></i> 3.5 (35)
+                  </div>
+                </div>
+
+                <h3 class="course__title">Vou ser seu personal de Yoga</h3>
+                <div class="course__teacher">
+                  <img
+                    src="assets/img/Personal/personal-1.jpg"
+                    alt=""
+                    class="course__teacher-img"
+                  />
+                  <h3 class="course__teacher-title">Maria</h3>
+                </div>
+              </div>
+
+              <div class="course__more">
+                <div class="course__prices">
+                  <span class="course__discount">R$46.00</span>
+                  <span class="course__price">R$72.00</span>
+                </div>
+                <span class="course__button">
+                  Saber detalhes
+                  <i class="bx bx-right-arrow-alt course__button-icon"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="course__item">
+              <div class="course__box">
+                <img
+                  src="assets/img/Personal/trainer-1.jpg"
+                  alt=""
+                  class="course__img"
+                />
+                <div class="course__tag">Yoga</div>
+              </div>
+
+              <div class="course__content">
+                <div class="course__meta">
+                  <div class="course__Lesson">
+                    <i class="bx bxs-book"></i> 25 Lesson
+                  </div>
+                  <div class="course__rating">
+                    <i class="bx bxs-star"></i> 3.5 (35)
+                  </div>
+                </div>
+
+                <h3 class="course__title">Vou ser seu personal de Yoga</h3>
+                <div class="course__teacher">
+                  <img
+                    src="assets/img/Personal/personal-1.jpg"
+                    alt=""
+                    class="course__teacher-img"
+                  />
+                  <h3 class="course__teacher-title">Maria</h3>
+                </div>
+              </div>
+
+              <div class="course__more">
+                <div class="course__prices">
+                  <span class="course__discount">R$46.00</span>
+                  <span class="course__price">R$72.00</span>
+                </div>
+                <span class="course__button">
+                  Saber detalhes
+                  <i class="bx bx-right-arrow-alt course__button-icon"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="course__item">
+              <div class="course__box">
+                <img
+                  src="assets/img/Personal/trainer-1.jpg"
+                  alt=""
+                  class="course__img"
+                />
+                <div class="course__tag">Yoga</div>
+              </div>
+
+              <div class="course__content">
+                <div class="course__meta">
+                  <div class="course__Lesson">
+                    <i class="bx bxs-book"></i> 25 Lesson
+                  </div>
+                  <div class="course__rating">
+                    <i class="bx bxs-star"></i> 3.5 (35)
+                  </div>
+                </div>
+
+                <h3 class="course__title">Vou ser seu personal de Yoga</h3>
+                <div class="course__teacher">
+                  <img
+                    src="assets/img/Personal/personal-1.jpg"
+                    alt=""
+                    class="course__teacher-img"
+                  />
+                  <h3 class="course__teacher-title">Maria</h3>
+                </div>
+              </div>
+
+              <div class="course__more">
+                <div class="course__prices">
+                  <span class="course__discount">R$46.00</span>
+                  <span class="course__price">R$72.00</span>
+                </div>
+                <span class="course__button">
+                  Saber detalhes
+                  <i class="bx bx-right-arrow-alt course__button-icon"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="course__item">
+              <div class="course__box">
+                <img
+                  src="assets/img/Personal/trainer-1.jpg"
+                  alt=""
+                  class="course__img"
+                />
+                <div class="course__tag">Yoga</div>
+              </div>
+
+              <div class="course__content">
+                <div class="course__meta">
+                  <div class="course__Lesson">
+                    <i class="bx bxs-book"></i> 25 Lesson
+                  </div>
+                  <div class="course__rating">
+                    <i class="bx bxs-star"></i> 3.5 (35)
+                  </div>
+                </div>
+
+                <h3 class="course__title">Vou ser seu personal de Yoga</h3>
+                <div class="course__teacher">
+                  <img
+                    src="assets/img/Personal/personal-1.jpg"
+                    alt=""
+                    class="course__teacher-img"
+                  />
+                  <h3 class="course__teacher-title">Maria</h3>
+                </div>
+              </div>
+
+              <div class="course__more">
+                <div class="course__prices">
+                  <span class="course__discount">R$46.00</span>
+                  <span class="course__price">R$72.00</span>
+                </div>
+                <span class="course__button">
+                  Saber detalhes
+                  <i class="bx bx-right-arrow-alt course__button-icon"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="content">
+        <div class="footer__top">
+          <div class="logo-details">
+            <img src="assets/img/header/header__logo.png" alt="" />
+            <span class="logo_name">Fit Match</span>
+          </div>
+          <div class="media-icons">
+            <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+          </div>
+        </div>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">Website</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#choose">Choose</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Services</li>
+            <li><a href="#">App design</a></li>
+            <li><a href="#">Web design</a></li>
+            <li><a href="#">Logo design</a></li>
+            <li><a href="#">Banner design</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Pages</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cronograma.html">Timeline</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="produtos-1.html">Produtos</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Courses</li>
+            <li><a href="#">HTML & CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">Django</a></li>
+          </ul>
+          <ul class="box input-box">
+            <li class="link_name">Subscribe</li>
+            <li><input type="text" placeholder="Enter your email" /></li>
+            <li><input type="button" value="Subscribe" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text"
+            >Copyright © 2023 <a href="#">TESTE TESTE.</a>All rights
+            reserved</span
+          >
+          <span class="policy_terms">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & condition</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== TAKE TO THE TOP ===== -->
+    <div class="top">
+      <a href="#"><i class="bx bxs-up-arrow-alt"></i></a>
+    </div>
+
+    <!-- ===== THEME/COLOR - MODE ===== -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin spin-toggler"></i>
+      </div>
+      <div class="day-night s-icon"><i class="fa"></i></div>
+      <h4>Theme Colors</h4>
+
+      <div class="colors">
+        <img
+          src="assets/img/theme/red.png"
+          alt=""
+          class="color-1"
+          onclick="setActiveStyle('color-1')"
+        />
+        <img
+          src="assets/img/theme/purple.png"
+          alt=""
+          class="color-2"
+          onclick="setActiveStyle('color-2')"
+        />
+        <img
+          src="assets/img/theme/magenta.png"
+          alt=""
+          class="color-3"
+          onclick="setActiveStyle('color-3')"
+        />
+        <img
+          src="assets/img/theme/orange.png"
+          alt=""
+          class="color-4"
+          onclick="setActiveStyle('color-4')"
+        />
+        <img
+          src="assets/img/theme/green.png"
+          alt=""
+          class="color-5"
+          onclick="setActiveStyle('color-5')"
+        />
+      </div>
+
+      <div class="colors">
+        <img
+          src="assets/img/theme/blue.png"
+          alt=""
+          class="color-6"
+          onclick="setActiveStyle('color-6')"
+        />
+        <img
+          src="assets/img/theme/yellow.png"
+          alt=""
+          class="color-7"
+          onclick="setActiveStyle('color-7')"
+        />
+        <img
+          src="assets/img/theme/ceano.png"
+          alt=""
+          class="color-8"
+          onclick="setActiveStyle('color-8')"
+        />
+        <img
+          src="assets/img/theme/gray.png"
+          alt=""
+          class="color-9"
+          onclick="setActiveStyle('color-9')"
+        />
+        <img
+          src="assets/img/theme/light-green.png"
+          alt=""
+          class="color-9"
+          onclick="setActiveStyle('color-10')"
+        />
+      </div>
+    </div>
+  </body>
+</html>
