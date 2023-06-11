@@ -109,6 +109,7 @@
 
     <!-- ===== SCRIPT ===== -->
     <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/theme.js" defer></script>
     <script src="../assets/js/pare.js" defer></script>
   </head>
   <body>
@@ -124,6 +125,7 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="cronograma.html">Timeline</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="about-Us.html">About Us</a></li>
             <li><a href="produtos-1.html">Products</a></li>
           </ul>
 
@@ -139,14 +141,12 @@
 
       <!-- ===== MAIN CONTENT OF THE WEBSITE ===== -->
       <main class="main">
-        <!-- ===== PARE-HOME   ===== -->
+        <!-- ===== PARE-HOME ===== -->
         <section class="pare-home">
           <div class="container">
             <div class="pare-row">
               <div class="pare-info">
-                <h3 class="pare-hello">
-                  Então você não quer <span class="pare-name">Treinar</span>
-                </h3>
+                <h3 class="pare-hello">Então você não quer Treinar</h3>
                 <h3 class="pare-content">
                   Sozinho?
                   <span class="pare-typing">Conheça alguem para treinar</span>
@@ -382,7 +382,13 @@
             </ul>
             <ul class="box input-box">
               <li class="link_name">Subscribe</li>
-              <li><input type="text" placeholder="Enter your email" /></li>
+              <li>
+                <input
+                  type="text"
+                  id="form-email"
+                  placeholder="Enter your email"
+                />
+              </li>
               <li><input type="button" value="Subscribe" /></li>
             </ul>
           </div>

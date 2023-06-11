@@ -97,6 +97,7 @@
 
     <!-- ===== SCRIPT ===== -->
     <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/theme.js" defer></script>
   </head>
   <body>
     <!-- ===== HEADER ===== -->
@@ -110,6 +111,7 @@
           <li><a href="../index.html">Home</a></li>
           <li><a href="cronograma.html">Timeline</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="about-Us.html">About Us</a></li>
           <li><a href="produtos-1.html">Products</a></li>
         </ul>
 
@@ -126,11 +128,11 @@
     <!-- ===== MAIN CONTENT OF THE WEBSITE ===== -->
     <main class="main">
       <!-- ===== HOME ===== -->
-      <section class="About__section">
-        <div class="circle"></div>
-        <div class="About__home">
-          <div class="About__text">
-            <div class="About__text-h1">
+      <section class="home__section-sub">
+        <div class="right-circle"></div>
+        <div class="sub__home">
+          <div class="sub__home-text">
+            <div class="sub__home-text-h1">
               <h1>
                 Tem duvidas?
                 <span class="section__title">Fit Match</span>
@@ -145,7 +147,7 @@
               fazer
             </p>
           </div>
-          <div class="abou__img-box">
+          <div class="sub__home-img-box">
             <img
               src="../assets/img/subs-homes/home3.png"
               alt=""
@@ -526,7 +528,13 @@
       <section class="contact section" id="contact">
         <div class="container">
           <div class="section__data">
-            <h2 class="section__subtitle">Suporte</h2>
+            <div class="wrapper">
+              <ul class="dynamic-txts">
+                <li>
+                  <span class="section__subtitle">Suporte</span>
+                </li>
+              </ul>
+            </div>
             <div class="section__titles">
               <h2 class="section__title-border">PROBLEMAS?</h2>
               <h3 class="section__title">FALE CONOSCO</h3>
@@ -611,21 +619,27 @@
                   <span><i class="fas fa-map-marker-alt"></i></span>
                   <p>Brasil/Rio de Janeiro</p>
                 </div>
+
                 <div class="contact__box-info">
                   <span><i class="bx bx-envelope"></i></span>
                   <a href="#">seuemail@example.com</a>
                 </div>
+
                 <div class="contact__box-info">
                   <span><i class="fas fa-phone"></i></span>
                   <a href="#">+21 999-999-9999</a>
                 </div>
+
                 <div class="contact__box-info">
                   <span><i class="bx bx-support"></i></span>
-                  <a href="common-questions.html">Perguntas Frecontes</a>
+                  <a href="html/common-questions.html">Perguntas Frecontes</a>
                 </div>
+
                 <div class="contact__box-info">
                   <span><i class="bx bx-group"></i></span>
-                  <a href="pare.html">Conhecer alguem para treinar com você</a>
+                  <a href="html/pare.html"
+                    >Conhecer alguem para treinar com você</a
+                  >
                 </div>
               </div>
             </div>
@@ -685,7 +699,13 @@
           </ul>
           <ul class="box input-box">
             <li class="link_name">Subscribe</li>
-            <li><input type="text" placeholder="Enter your email" /></li>
+            <li>
+              <input
+                type="text"
+                id="form-email"
+                placeholder="Enter your email"
+              />
+            </li>
             <li><input type="button" value="Subscribe" /></li>
           </ul>
         </div>

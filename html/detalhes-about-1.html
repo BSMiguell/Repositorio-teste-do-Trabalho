@@ -97,6 +97,7 @@
 
     <!-- ===== SCRIPT ===== -->
     <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/theme.js" defer></script>
   </head>
   <body>
     <!-- ===== HEADER ===== -->
@@ -110,6 +111,7 @@
           <li><a href="../index.html">Home</a></li>
           <li><a href="cronograma.html">Timeline</a></li>
           <li><a href="about.html" class="active">About</a></li>
+          <li><a href="about-Us.html">About Us</a></li>
           <li><a href="produtos-1.html">Products</a></li>
         </ul>
 
@@ -126,11 +128,11 @@
     <!-- ===== MAIN CONTENT OF THE WEBSITE ===== -->
     <main class="main">
       <!-- ===== HOME ===== -->
-      <section class="About__section">
+      <section class="home__section-sub">
         <div class="circle"></div>
-        <div class="About__home">
-          <div class="About__text">
-            <div class="About__text-h1">
+        <div class="sub__home">
+          <div class="sub__home-text">
+            <div class="sub__home-text-h1">
               <h1>
                 Não somos mais uma academia, somos a academia
                 <span class="section__title">Fit Match</span>
@@ -144,7 +146,7 @@
             </p>
             <a href="#" class="btn bnt__home">Ver mais</a>
           </div>
-          <div class="abou__img-box">
+          <div class="sub__home-img-box">
             <img
               src="../assets/img/subs-homes/home5.png"
               alt=""
@@ -471,7 +473,13 @@
           </ul>
           <ul class="box input-box">
             <li class="link_name">Subscribe</li>
-            <li><input type="text" placeholder="Enter your email" /></li>
+            <li>
+              <input
+                type="text"
+                id="form-email"
+                placeholder="Enter your email"
+              />
+            </li>
             <li><input type="button" value="Subscribe" /></li>
           </ul>
         </div>
