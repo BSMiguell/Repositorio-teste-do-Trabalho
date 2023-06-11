@@ -1,33 +1,39 @@
-// Função para alternar entre dev e skills
-function toggleDivs() {
-  const parentElement = this.parentElement;
-  const devDiv = parentElement.querySelector(".dev");
-  const skillsDiv = parentElement.querySelector(".skills");
-  const btnSkills = this;
+document.addEventListener("DOMContentLoaded", function () {
+  const btnSkills = document.querySelectorAll(".btn-skills");
+  btnSkills.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      toggleDivs(btn);
+    });
+  });
 
-  const isDevActive = devDiv.classList.contains("active");
-  const isSkillsActive = skillsDiv.classList.contains("active");
+  // Função para adicionar os eventos aos botões
+  function toggleDivs(btnSkills) {
+    const parentElement = btnSkills.parentElement;
+    const devDiv = parentElement.querySelector(".dev");
+    const skillsDiv = parentElement.querySelector(".skills");
 
-  if (isDevActive && !isSkillsActive) {
-    devDiv.classList.remove("active");
-    skillsDiv.classList.add("active");
-    btnSkills.textContent = "Dev";
-    animateSkills(skillsDiv);
-  } else {
-    devDiv.classList.add("active");
-    skillsDiv.classList.remove("active");
-    btnSkills.textContent = "Skills";
-    resetSkills(skillsDiv);
+    if (devDiv.classList.contains("active")) {
+      devDiv.classList.remove("active");
+      skillsDiv.classList.add("active");
+      btnSkills.textContent = "Dev";
+      animateSkills(skillsDiv);
+      parentElement.classList.add("skils-color");
+    } else {
+      devDiv.classList.add("active");
+      skillsDiv.classList.remove("active");
+      btnSkills.textContent = "Skills";
+      resetSkills(skillsDiv);
+      parentElement.classList.remove("skils-color");
+    }
   }
-}
 
-// Função para adicionar os eventos aos botões
-const btnSkillsList = document.querySelectorAll(".btn-skills");
-btnSkillsList.forEach(function (btn) {
-  btn.addEventListener("click", toggleDivs);
+  const btnSkillsList = document.querySelectorAll(".btn-skills");
+  btnSkillsList.forEach(function (btn) {
+    btn.addEventListener("click", toggleDivs);
+  });
 });
 
-// Função para animar as barras
+// Função para animar as barras de skills com base nas porcentagens
 function animateSkills(skillsDiv) {
   const skills = skillsDiv.querySelectorAll(".skill");
   skills.forEach(function (skill) {
@@ -48,11 +54,22 @@ function animateSkills(skillsDiv) {
   });
 }
 
-// Função para redefinir as barras de habilidades para zero
+// Função para redefinir as barras de skills para zero
 function resetSkills(skillsDiv) {
   const fills = skillsDiv.querySelectorAll(".fill");
   fills.forEach(function (fill) {
     fill.style.width = "0%";
+  });
+}
+
+function updateTechnologyBoxesColor(isSkillsActive) {
+  const technologyBoxes = document.querySelectorAll(".technology__box");
+  technologyBoxes.forEach(function (box) {
+    if (isSkillsActive && box.classList.contains("skils-color")) {
+      box.querySelector(".technology-boxs").classList.add("skils-color");
+    } else {
+      box.querySelector(".technology-boxs").classList.remove("skils-color");
+    }
   });
 }
 
@@ -62,4 +79,5 @@ window.addEventListener("load", function () {
   skillsDivs.forEach(function (skillsDiv) {
     skillsDiv.classList.remove("active");
   });
+  updateTechnologyBoxesColor(false); // Inicialmente define a cor das caixas de tecnologia para a cor padrão
 });

@@ -19,6 +19,7 @@
   --body-color-2: hsl(236, 80%, 4%);
   --card-color: hsl(156, 29%, 78%);
   --nav-color: hsl(34, 100%, 77%);
+  --box-shadow: hwb(0 0% 100% / 0.3);
 }
 :root {
   /*========== Colors ==========*/
@@ -31,6 +32,7 @@
   --header-color: hsl(0, 0%, 100%);
   --card-color: hsl(154, 13%, 22%);
   --nav-color: hsl(0, 0%, 98%);
+  --box-shadow: hwb(0 100% 0% / 0.3);
 
   /* Color-Mode */
   --main-color: hsl(0, 100%, 50%);
@@ -1899,7 +1901,6 @@ header.sticky {
 }
 .technology__box .technology-boxs {
   position: relative;
-  box-shadow: 0 0px 10px 5px var(--main-color);
   border-radius: 5px;
   background: var(--white-color);
   text-align: center;
@@ -1926,7 +1927,7 @@ header.sticky {
   letter-spacing: 1px;
 }
 .technology__box .technology-boxs:hover {
-  box-shadow: 0 10px 1rem hwb(0 0% 100% / 0.3);
+  box-shadow: 0 10px 1rem var(--box-shadow);
   transform: scale(1.03);
 }
 /*=============== ABOUT PROGRAMMERS ==============*/
@@ -1978,17 +1979,33 @@ header.sticky {
   text-align: center;
 }
 .skills h2 {
-  font-size: var(--normal-font-size);
+  font-size: var(--h3-font-size);
+  color: var(--white-color);
 }
-.skills .skill h3 {
+.skill-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skill .skill-content h3 {
   font-size: var(--normal-font-size);
+  color: var(--white-color);
+}
+.skill .skill-content span {
+  font-size: var(--normal-font-size);
+  color: var(--white-color);
+}
+.skills-bar {
+  position: relative;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.5rem;
 }
 .bar {
   width: 100%;
   height: 15px;
-  background-color: #eee;
+  background-color: hsl(0, 0%, 93%);
   position: relative;
-  border-radius: 10px;
   overflow: hidden;
 }
 .fill {
@@ -1998,36 +2015,34 @@ header.sticky {
 }
 .percentage {
   display: inline-block;
-  margin-top: 5px;
+  visibility: collapse;
+  position: absolute;
 }
 .html {
-  background-color: #f16529;
+  background-color: var(--main-color);
 }
 .css {
-  background-color: #2965f1;
+  background-color: var(--main-color);
 }
 .python {
-  background-color: #3672a3;
+  background-color: var(--main-color);
 }
 .javascript {
-  background-color: #f7df1e;
+  background-color: var(--main-color);
 }
 .django {
-  background-color: #092e20;
+  background-color: var(--main-color);
 }
 .btn-skills {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: hsl(122, 39%, 49%);
-  color: hsl(0, 0%, 100%);
+  background-color: var(--main-color);
+  color: var(--white-color);
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-}
-.btn-skills:hover {
-  background-color: hsl(123, 40%, 45%);
 }
 .dev,
 .skills {
@@ -2038,6 +2053,10 @@ header.sticky {
 }
 .skills.active {
   display: block;
+}
+.technology__box .skils-color {
+  background-color: #112e42;
+  border: 2px solid var(--main-color);
 }
 
 /*===============X===============X===============X===============X===============*/
@@ -2972,72 +2991,4 @@ footer .bottom-details .bottom_text {
 }
 .style-switcher .colors img {
   cursor: pointer;
-}
-
-.skills {
-  text-align: center;
-}
-.skills h2 {
-  font-size: var(--normal-font-size);
-}
-.skills .skill h3 {
-  font-size: var(--normal-font-size);
-}
-.bar {
-  width: 100%;
-  height: 15px;
-  background-color: #eee;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.fill {
-  position: absolute;
-  height: 100%;
-  transition: width 1s ease;
-}
-.percentage {
-  display: inline-block;
-  margin-top: 5px;
-}
-.html {
-  background-color: #f16529;
-}
-.css {
-  background-color: #2965f1;
-}
-.python {
-  background-color: #3672a3;
-}
-.javascript {
-  background-color: #f7df1e;
-}
-.django {
-  background-color: #092e20;
-}
-.btn-skills {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: hsl(122, 39%, 49%);
-  color: hsl(0, 0%, 100%);
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-.btn-skills:hover {
-  background-color: #45a049;
-}
-.dev,
-.skills {
-  display: none;
-}
-
-.dev.active {
-  display: block;
-}
-
-.skills.active {
-  display: block;
 }
