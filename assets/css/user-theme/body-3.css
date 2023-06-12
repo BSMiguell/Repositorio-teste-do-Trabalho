@@ -1,3 +1,8 @@
 :root {
-  --body-color: hsl(0, 0%, 100%);
+  --body-color: #10002b;
+  --main-color: hsl(90, 79%, 56%);
+  --bow-color: hsl(90, 100%, 81%);
+  --choose-color-1: hsl(90, 100%, 37%);
+  --choose-color-2: hsl(90, 100%, 26%);
+  --sub-color: hsl(90, 100%, 46%);
 }
