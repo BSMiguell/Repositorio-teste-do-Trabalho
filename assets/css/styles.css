@@ -573,7 +573,7 @@ header.sticky {
 .cart-quantity {
   border: 1px solid var(--black-color);
   outline-color: var(--sub-color);
-  width: 2.4rem;
+  width: 3rem;
   text-align: center;
   font-size: var(--h3-font-size);
 }

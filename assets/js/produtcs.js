@@ -122,6 +122,8 @@ function handle_removeCartItem() {
 function handle_chageitemQuantity() {
   if (isNaN(this.value) || this.value < 1) {
     this.value = 1;
+  } else if (this.value > 10) {
+    this.value = 10;
   }
   this.value = Math.floor(this.value); // para mantê-lo inteiro
 
