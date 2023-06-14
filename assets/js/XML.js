@@ -2,7 +2,7 @@
 function loadXML() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState === 4 && this.status === 200) {
       displayData(this);
     }
   };
@@ -15,14 +15,22 @@ function displayData(xml) {
   var xmlDoc = xml.responseXML;
 
   // Obter os elementos do XML
-  var name = xmlDoc.querySelector("academia > nome").textContent;
-  var address = xmlDoc.querySelector("academia > endereco");
-  var street = address.querySelector("rua").textContent;
-  var city = address.querySelector("cidade").textContent;
-  var state = address.querySelector("estado").textContent;
-  var zip = address.querySelector("cep").textContent;
-  var schedule = xmlDoc.querySelectorAll("horario");
-  var services = xmlDoc.querySelectorAll("servico");
+  var academiaElement = xmlDoc.querySelector("academia");
+  var nameElement = academiaElement.querySelector("nome");
+  var addressElement = academiaElement.querySelector("endereco");
+  var streetElement = addressElement.querySelector("rua");
+  var cityElement = addressElement.querySelector("cidade");
+  var stateElement = addressElement.querySelector("estado");
+  var zipElement = addressElement.querySelector("cep");
+  var scheduleElements = xmlDoc.querySelectorAll("horario");
+  var serviceElements = xmlDoc.querySelectorAll("servico");
+
+  // Obter o texto dos elementos
+  var name = nameElement.textContent;
+  var street = streetElement.textContent;
+  var city = cityElement.textContent;
+  var state = stateElement.textContent;
+  var zip = zipElement.textContent;
 
   // Exibir os dados da academia
   var gymInfo = document.getElementById("gym-info");
@@ -42,21 +50,23 @@ function displayData(xml) {
 
   // Exibir os horários de funcionamento
   var scheduleTable = document.getElementById("schedule-table");
-  schedule.forEach(function (item) {
-    var day = item.getAttribute("dia");
-    var time = item.textContent;
+  scheduleElements.forEach(function (scheduleElement) {
+    var day = scheduleElement.getAttribute("dia");
+    var time = scheduleElement.textContent;
     var row = scheduleTable.insertRow();
     var dayCell = row.insertCell(0);
     var timeCell = row.insertCell(1);
-    dayCell.innerHTML = day;
-    timeCell.innerHTML = time;
+    dayCell.textContent = day;
+    timeCell.textContent = time;
   });
 
   // Exibir os serviços
   var servicesList = document.getElementById("services-list");
-  services.forEach(function (item) {
-    var serviceName = item.querySelector("nome").textContent;
-    var serviceDescription = item.querySelector("descricao").textContent;
+  serviceElements.forEach(function (serviceElement) {
+    var serviceNameElement = serviceElement.querySelector("nome");
+    var serviceDescriptionElement = serviceElement.querySelector("descricao");
+    var serviceName = serviceNameElement.textContent;
+    var serviceDescription = serviceDescriptionElement.textContent;
     var listItem = document.createElement("li");
     listItem.innerHTML =
       "<strong>" + serviceName + ":</strong> " + serviceDescription;

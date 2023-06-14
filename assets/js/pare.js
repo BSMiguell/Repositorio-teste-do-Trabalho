@@ -1,32 +1,26 @@
-var map;
+let map;
 
 function success(pos) {
-  // Se a variavel map ainda não existir(for igual a undefined
-  // criamos o mapa)
+  const { latitude, longitude } = pos.coords;
+
+  // Se a variável map ainda não existir, criamos o mapa
   if (map === undefined) {
-    map = L.map("mapid").setView(
-      [pos.coords.latitude, pos.coords.longitude],
-      16
-    );
+    map = L.map("mapid").setView([latitude, longitude], 16);
   }
-  // Já se a variavel já tiver valor atribuido removeremos o mapa atribuido
-  // e recriamos outro.
+  // Caso contrário, removemos o mapa existente e criamos um novo
   else {
     map.remove();
-    map = L.map("mapid").setView(
-      [pos.coords.latitude, pos.coords.longitude],
-      16
-    );
+    map = L.map("mapid").setView([latitude, longitude], 16);
   }
-  // Função tileLayer utiliza uma API para renderizar as ruas e partes do mapa
+
+  // Utilizamos uma API para renderizar as ruas e partes do mapa
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    // attribution sendo utilizado para das os créditos a API, por ser uma API gratis ela cobra apenas os
-    // devidos créditos
   }).addTo(map);
-  // Para adicionar a figurinha de marcação no mapa
-  L.marker([pos.coords.latitude, pos.coords.longitude])
+
+  // Adicionamos um marcador no mapa para indicar a posição atual
+  L.marker([latitude, longitude])
     .addTo(map)
     .bindPopup("Você está aqui!")
     .openPopup();
@@ -36,7 +30,9 @@ function error(err) {
   console.log(err);
 }
 
-var olhaminhaLoc = navigator.geolocation.watchPosition(success, error, {
+const options = {
   enableHighAccuracy: true,
   timeout: 5000,
-});
+};
+
+const watchId = navigator.geolocation.watchPosition(success, error, options);
