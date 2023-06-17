@@ -34,7 +34,7 @@ loginButton.addEventListener("click", function (e) {
   const passwordInput = document.querySelector("#passwordInput");
 
   if (emailInput.value.trim() !== "" && passwordInput.value.trim() !== "") {
-    window.location.href = "user-index.html";
+    window.location.href = "../User_html/user-index.html";
   } else {
     alert("Por favor, preencha todos os campos.");
   }
