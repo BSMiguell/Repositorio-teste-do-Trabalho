@@ -227,4 +227,55 @@ filterButtons.forEach((button) => {
   });
 });
 
+/*=============== REVIEWS ===============*/
+let userTexts = document.getElementsByClassName("user-text");
+let userPics = document.getElementsByClassName("user-pic");
+
+function showReview(event) {
+  for (let userPic of userPics) {
+    userPic.classList.remove("active-pic");
+  }
+  for (let userText of userTexts) {
+    userText.classList.remove("active-text");
+  }
+  let i = Array.from(userPics).indexOf(event.target);
+  userPics[i].classList.add("active-pic");
+  userTexts[i].classList.add("active-text");
+}
+
+// Search functionality
+const searchInput = document.querySelector("#search-input");
+searchInput.addEventListener("input", handleSearch);
+
+function handleSearch() {
+  const searchValue = removeAccents(searchInput.value.toLowerCase());
+
+  productBoxes.forEach((box) => {
+    const productName = removeAccents(
+      box.querySelector(".product-title").innerText.toLowerCase()
+    );
+
+    if (productName.includes(searchValue)) {
+      box.style.display = "block";
+    } else {
+      box.style.display = "none";
+    }
+  });
+}
+
+function removeAccents(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+const heartIcons = document.querySelectorAll(".heart-icon");
+
+heartIcons.forEach((icon) => {
+  icon.addEventListener("click", toggleHeart);
+});
+
+function toggleHeart(event) {
+  const icon = event.target;
+  icon.classList.toggle("filled");
+}
+
 /*=============== =============== ===============*/
