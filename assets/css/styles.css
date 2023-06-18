@@ -822,19 +822,6 @@ header.sticky {
 .img-box-2 {
   display: none;
 }
-.home-imgHover {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 45%;
-  height: 100%;
-  background: transparent;
-  transition: 1s;
-}
-.home-imgHover:hover {
-  background-color: var(--body-color);
-  opacity: 0.5;
-}
 
 /* Responsive SUB-HOME */
 @media (max-width: 1300px) {
