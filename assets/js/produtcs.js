@@ -296,11 +296,19 @@ const heartIcons = document.querySelectorAll(".heart-icon");
 
 heartIcons.forEach((icon) => {
   icon.addEventListener("click", toggleHeart);
+  const heartId = icon.dataset.heartId;
+  const savedState = localStorage.getItem(`heartState_${heartId}`);
+  if (savedState === "filled") {
+    icon.classList.add("filled");
+  }
 });
 
 function toggleHeart(event) {
   const icon = event.target;
   icon.classList.toggle("filled");
+  const heartId = icon.dataset.heartId;
+  const currentState = icon.classList.contains("filled") ? "filled" : "empty";
+  localStorage.setItem(`heartState_${heartId}`, currentState);
 }
 
 /*=============== =============== ===============*/
