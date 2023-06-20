@@ -245,12 +245,14 @@ function showReview(event) {
 
 // Search functionality
 const searchInput = document.querySelector("#search-input");
+const productBoxess = document.querySelectorAll(".product-box");
+
 searchInput.addEventListener("input", handleSearch);
 
 function handleSearch() {
   const searchValue = removeAccents(searchInput.value.toLowerCase());
 
-  productBoxes.forEach((box) => {
+  productBoxess.forEach((box) => {
     const productName = removeAccents(
       box.querySelector(".product-title").innerText.toLowerCase()
     );
@@ -261,11 +263,34 @@ function handleSearch() {
       box.style.display = "none";
     }
   });
+
+  if (searchValue === "") {
+    showProducts();
+  }
 }
 
 function removeAccents(str) {
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
+
+function showProducts() {
+  productBoxes.forEach((box) => {
+    box.style.display = "block";
+  });
+}
+
+let container = document.querySelector(".container__input");
+let lefticondiv = document.querySelector(".lefticondiv");
+let closebtn = document.querySelector("#closeinput");
+
+lefticondiv.addEventListener("click", () => {
+  container.classList.toggle("active");
+});
+
+closebtn.addEventListener("click", () => {
+  document.querySelector("input").value = "";
+  showProducts();
+});
 
 const heartIcons = document.querySelectorAll(".heart-icon");
 
