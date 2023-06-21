@@ -1911,6 +1911,9 @@ header.sticky {
   color: var(--white-color);
   border: 2px solid var(--body-color-2);
 }
+#favorites-message h2 {
+  background-color: red;
+}
 .container__input {
   width: 50px;
   background: hsl(0, 0%, 20%);

@@ -300,6 +300,11 @@ heartIcons.forEach((icon) => {
   const savedState = localStorage.getItem(`heartState_${heartId}`);
   if (savedState === "filled") {
     icon.classList.add("filled");
+    const articleId = icon.parentElement.parentElement.dataset.articleId;
+    const article = document.querySelector(
+      `article[data-article-id="${articleId}"]`
+    );
+    article.classList.add("favorite");
   }
 });
 
@@ -307,8 +312,31 @@ function toggleHeart(event) {
   const icon = event.target;
   icon.classList.toggle("filled");
   const heartId = icon.dataset.heartId;
+  const articleId = icon.parentElement.parentElement.dataset.articleId;
   const currentState = icon.classList.contains("filled") ? "filled" : "empty";
   localStorage.setItem(`heartState_${heartId}`, currentState);
+  const article = document.querySelector(
+    `article[data-article-id="${articleId}"]`
+  );
+  if (currentState === "filled") {
+    article.classList.add("favorite");
+  } else {
+    article.classList.remove("favorite");
+  }
+}
+
+const favoritesButton = document.querySelector('[data-filter="favorites"]');
+favoritesButton.addEventListener("click", showFavorites);
+
+function showFavorites() {
+  const articles = document.querySelectorAll(".product-box");
+  articles.forEach((article) => {
+    if (article.classList.contains("favorite")) {
+      article.style.display = "block";
+    } else {
+      article.style.display = "none";
+    }
+  });
 }
 
 /*=============== =============== ===============*/
