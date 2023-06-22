@@ -2075,6 +2075,13 @@ header.sticky {
   text-transform: uppercase;
   color: var(--body-color-2);
 }
+.no-favorites-message {
+  display: none;
+  margin-top: 50px;
+  text-align: center;
+  color: var(--body-color-2);
+  font-size: var(--bigger-font-size);
+}
 .star {
   color: hsl(60, 100%, 50%);
 }

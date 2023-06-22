@@ -1,4 +1,193 @@
-/*=============== THE SCRIPT OF PRODUCTS PAGE ===============*/
+// Função para lidar com a funcionalidade de filtro
+const filterButtons = document.querySelectorAll(".filter-button");
+const productBoxes = document.querySelectorAll(".product-box");
+const noFavoritesMessage = document.querySelector(".no-favorites-message");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Remove a classe ativa de todos os botões
+    filterButtons.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+
+    // Adiciona a classe ativa ao botão clicado
+    button.classList.add("active");
+
+    const category = button.dataset.filter;
+
+    // Filtra os produtos com base na categoria selecionada
+    productBoxes.forEach((box) => {
+      const productCategory = box.dataset.category;
+
+      if (category === "all" || category === productCategory) {
+        box.style.display = "block";
+      } else {
+        box.style.display = "none";
+      }
+    });
+
+    // Oculta a mensagem "Nenhum favorito adicionado"
+    if (category !== "favorites") {
+      noFavoritesMessage.style.display = "none";
+    }
+  });
+});
+
+// Função para mostrar favoritos
+function showFavorites() {
+  const articles = document.querySelectorAll(".product-box");
+  let favoritesExist = false;
+
+  articles.forEach((article) => {
+    if (article.classList.contains("favorite")) {
+      article.style.display = "block";
+      favoritesExist = true;
+    } else {
+      article.style.display = "none";
+    }
+  });
+
+  // Mostra a mensagem "Nenhum favorito adicionado" se nenhum favorito existir
+  if (!favoritesExist) {
+    noFavoritesMessage.style.display = "block";
+  } else {
+    noFavoritesMessage.style.display = "none";
+  }
+}
+
+// Listener de evento para todos os botões de filtro (exceto favoritos)
+const nonFavoritesButtons = document.querySelectorAll(
+  '.filter-button:not([data-filter="favorites"])'
+);
+nonFavoritesButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Oculta a mensagem "Nenhum favorito adicionado"
+    noFavoritesMessage.style.display = "none";
+  });
+});
+
+// Função para mostrar avaliações
+let userTexts = document.getElementsByClassName("user-text");
+let userPics = document.getElementsByClassName("user-pic");
+
+function showReview(event) {
+  for (let userPic of userPics) {
+    userPic.classList.remove("active-pic");
+  }
+  for (let userText of userTexts) {
+    userText.classList.remove("active-text");
+  }
+  let i = Array.from(userPics).indexOf(event.target);
+  userPics[i].classList.add("active-pic");
+  userTexts[i].classList.add("active-text");
+}
+
+// Funcionalidade de pesquisa
+const searchInput = document.querySelector("#search-input");
+const productBoxess = document.querySelectorAll(".product-box");
+
+searchInput.addEventListener("input", handleSearch);
+
+function handleSearch() {
+  const searchValue = removeAccents(searchInput.value.toLowerCase());
+
+  productBoxess.forEach((box) => {
+    const productName = removeAccents(
+      box.querySelector(".product-title").innerText.toLowerCase()
+    );
+
+    if (productName.includes(searchValue)) {
+      box.style.display = "block";
+    } else {
+      box.style.display = "none";
+    }
+  });
+
+  if (searchValue === "") {
+    showProducts();
+  }
+}
+
+function removeAccents(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function showProducts() {
+  productBoxes.forEach((box) => {
+    box.style.display = "block";
+  });
+}
+
+let container = document.querySelector(".container__input");
+let lefticondiv = document.querySelector(".lefticondiv");
+let closebtn = document.querySelector("#closeinput");
+
+lefticondiv.addEventListener("click", () => {
+  container.classList.toggle("active");
+});
+
+closebtn.addEventListener("click", () => {
+  document.querySelector("input").value = "";
+  showProducts();
+});
+
+const heartIcons = document.querySelectorAll(".heart-icon");
+
+heartIcons.forEach((icon) => {
+  icon.addEventListener("click", toggleHeart);
+  const heartId = icon.dataset.heartId;
+  const savedState = localStorage.getItem(`heartState_${heartId}`);
+  if (savedState === "filled") {
+    icon.classList.add("filled");
+    const articleId = icon.parentElement.parentElement.dataset.articleId;
+    const article = document.querySelector(
+      `article[data-article-id="${articleId}"]`
+    );
+    article.classList.add("favorite");
+  }
+});
+
+function toggleHeart(event) {
+  const icon = event.target;
+  icon.classList.toggle("filled");
+  const heartId = icon.dataset.heartId;
+  const articleId = icon.parentElement.parentElement.dataset.articleId;
+  const currentState = icon.classList.contains("filled") ? "filled" : "empty";
+  localStorage.setItem(`heartState_${heartId}`, currentState);
+  const article = document.querySelector(
+    `article[data-article-id="${articleId}"]`
+  );
+  if (currentState === "filled") {
+    article.classList.add("favorite");
+  } else {
+    article.classList.remove("favorite");
+  }
+}
+
+const favoritesButton = document.querySelector('[data-filter="favorites"]');
+favoritesButton.addEventListener("click", toggleFavorites);
+
+function toggleFavorites() {
+  const articles = document.querySelectorAll(".product-box");
+  let favoritesExist = false;
+
+  articles.forEach((article) => {
+    if (article.classList.contains("favorite")) {
+      article.style.display = "block";
+      favoritesExist = true;
+    } else {
+      article.style.display = "none";
+    }
+  });
+
+  const noFavoritesMessage = document.querySelector(".no-favorites-message");
+
+  if (favoritesExist) {
+    noFavoritesMessage.style.display = "none";
+  } else {
+    noFavoritesMessage.style.display = "block";
+  }
+}
 
 /*=============== CART ===============*/
 
@@ -8,7 +197,7 @@ const closeCart = document.querySelector("#cart-close");
 const itemCountElement = document.querySelector(".item-count");
 const toCleanButton = document.querySelector(".to-clean");
 
-//=============== ABRIR E FECHAR O CART ================
+// ABRIR E FECHAR O CART
 cartIcon.addEventListener("click", () => {
   cart.classList.add("active-2");
 });
@@ -35,7 +224,7 @@ function update() {
   updateTotal();
 }
 
-// =============== REMOVER O ITEM DO CART ===============
+// REMOVER O ITEM DO CART
 function addEvents() {
   // Remove items from cart
   let cartRemove_btns = document.querySelectorAll(".cart-remove");
@@ -159,7 +348,7 @@ function handle_cleanCart() {
   updateItemCount(); // Atualiza o contador de itens
 }
 
-// =============== SOMAR E TIRAR O PREÇO ===============
+// SOMAR E TIRAR O PREÇO
 function updateTotal() {
   let cartBoxes = document.querySelectorAll(".cart-box");
   const totalElement = cart.querySelector(".total-price");
@@ -177,166 +366,18 @@ function updateTotal() {
 }
 
 function CartBoxComponent(title, price, imgSrc) {
-  return `
-  <div class="cart-box">
-    <img
-      src=${imgSrc}
-      alt=""
-      class="cart-img"
-    />
-    <div  class="detail-box">
-      <div class="cart-product-title">${title}</div>
-      <div class="cart-price">${price}</div>
-      <input type="number" value="1" class="cart-quantity" />
-    </div>
-    <!-- REMOVE CART -->
-    <i class="bx bxs-trash-alt cart-remove"></i>
-  </div>`;
+  return `<div class="cart-box">
+            <img class="cart-product-img" src="${imgSrc}">
+            <div class="cart-info">
+              <h4 class="cart-product-title">${title}</h4>
+              <p class="cart-price">${price}</p>
+              <input class="cart-quantity" type="number" value="1" min="1" max="10">
+            </div>
+            <i class="bx bxs-trash-alt cart-remove"></i>
+          </div>`;
 }
 
 function updateItemCount() {
-  itemCountElement.textContent = itemsAdded.length.toString();
+  const itemCount = itemsAdded.length;
+  itemCountElement.innerHTML = itemCount;
 }
-
-// Código JavaScript para lidar com a funcionalidade de filtro
-const filterButtons = document.querySelectorAll(".filter-button");
-const productBoxes = document.querySelectorAll(".product-box");
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    // Remove active class from all buttons
-    filterButtons.forEach((btn) => {
-      btn.classList.remove("active");
-    });
-
-    // Add active class to the clicked button
-    button.classList.add("active");
-
-    const category = button.dataset.filter;
-
-    // Filter the products based on the selected category
-    productBoxes.forEach((box) => {
-      const productCategory = box.dataset.category;
-
-      if (category === "all" || category === productCategory) {
-        box.style.display = "block";
-      } else {
-        box.style.display = "none";
-      }
-    });
-  });
-});
-
-/*=============== REVIEWS ===============*/
-let userTexts = document.getElementsByClassName("user-text");
-let userPics = document.getElementsByClassName("user-pic");
-
-function showReview(event) {
-  for (let userPic of userPics) {
-    userPic.classList.remove("active-pic");
-  }
-  for (let userText of userTexts) {
-    userText.classList.remove("active-text");
-  }
-  let i = Array.from(userPics).indexOf(event.target);
-  userPics[i].classList.add("active-pic");
-  userTexts[i].classList.add("active-text");
-}
-
-// Search functionality
-const searchInput = document.querySelector("#search-input");
-const productBoxess = document.querySelectorAll(".product-box");
-
-searchInput.addEventListener("input", handleSearch);
-
-function handleSearch() {
-  const searchValue = removeAccents(searchInput.value.toLowerCase());
-
-  productBoxess.forEach((box) => {
-    const productName = removeAccents(
-      box.querySelector(".product-title").innerText.toLowerCase()
-    );
-
-    if (productName.includes(searchValue)) {
-      box.style.display = "block";
-    } else {
-      box.style.display = "none";
-    }
-  });
-
-  if (searchValue === "") {
-    showProducts();
-  }
-}
-
-function removeAccents(str) {
-  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-}
-
-function showProducts() {
-  productBoxes.forEach((box) => {
-    box.style.display = "block";
-  });
-}
-
-let container = document.querySelector(".container__input");
-let lefticondiv = document.querySelector(".lefticondiv");
-let closebtn = document.querySelector("#closeinput");
-
-lefticondiv.addEventListener("click", () => {
-  container.classList.toggle("active");
-});
-
-closebtn.addEventListener("click", () => {
-  document.querySelector("input").value = "";
-  showProducts();
-});
-
-const heartIcons = document.querySelectorAll(".heart-icon");
-
-heartIcons.forEach((icon) => {
-  icon.addEventListener("click", toggleHeart);
-  const heartId = icon.dataset.heartId;
-  const savedState = localStorage.getItem(`heartState_${heartId}`);
-  if (savedState === "filled") {
-    icon.classList.add("filled");
-    const articleId = icon.parentElement.parentElement.dataset.articleId;
-    const article = document.querySelector(
-      `article[data-article-id="${articleId}"]`
-    );
-    article.classList.add("favorite");
-  }
-});
-
-function toggleHeart(event) {
-  const icon = event.target;
-  icon.classList.toggle("filled");
-  const heartId = icon.dataset.heartId;
-  const articleId = icon.parentElement.parentElement.dataset.articleId;
-  const currentState = icon.classList.contains("filled") ? "filled" : "empty";
-  localStorage.setItem(`heartState_${heartId}`, currentState);
-  const article = document.querySelector(
-    `article[data-article-id="${articleId}"]`
-  );
-  if (currentState === "filled") {
-    article.classList.add("favorite");
-  } else {
-    article.classList.remove("favorite");
-  }
-}
-
-const favoritesButton = document.querySelector('[data-filter="favorites"]');
-favoritesButton.addEventListener("click", showFavorites);
-
-function showFavorites() {
-  const articles = document.querySelectorAll(".product-box");
-  articles.forEach((article) => {
-    if (article.classList.contains("favorite")) {
-      article.style.display = "block";
-    } else {
-      article.style.display = "none";
-    }
-  });
-}
-
-/*=============== =============== ===============*/
