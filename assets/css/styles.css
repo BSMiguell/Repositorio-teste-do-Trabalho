@@ -232,10 +232,56 @@ section {
     font-family: "Roboto", sans-serif;
   }
 }
+
+/* Screen */
+.screen-1 {
+  width: 100%;
+  height: 560vh;
+  background-color: #7f7caf;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: slideAndHideRed;
+  animation-duration: 0.8s;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+  z-index: 1005;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+}
+.screen-2 {
+  width: 100%;
+  height: 560vh;
+  background-color: #eeeeff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: slideAndHideWhite;
+  animation-duration: 0.8s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  z-index: 1003;
+  transition: 0.2s ease;
+  overflow: hidden;
+}
+.screen-3 {
+  width: 100%;
+  height: 560vh;
+  background-color: #28587b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: slideAndHideBlack;
+  animation-duration: 0.8s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+  z-index: 1002;
+  transition: 0.2s ease;
+  overflow: hidden;
+}
 /*===============X===============X===============X===============X===============*/
 
 /*=============== HADER ===============*/
-
 header {
   position: fixed;
   right: 0;
@@ -345,7 +391,7 @@ a.active {
 header.sticky {
   padding: 10px 16%;
   background: var(--nav-color);
-  border-bottom: 2px solid hsl(225, 39%, 20%);
+  border-bottom: 3px solid var(--main-color);
   transition: 0.3s;
 }
 
@@ -371,7 +417,6 @@ header.sticky {
   #menu-icon {
     display: block;
   }
-
   .navbar {
     position: absolute;
     top: -600px;
@@ -379,19 +424,17 @@ header.sticky {
     left: 0;
     display: flex;
     flex-direction: column;
-    background: var(--body-color);
+    background: var(--nav-color);
     text-align: left;
     transition: all 0.4s ease;
   }
-
   .navbar a {
     display: block;
     padding: 1rem;
     /* margin: 1rem; */
   }
-
   .navbar.active {
-    top: 100%;
+    top: 103%;
   }
 }
 @media (max-width: 480px) {
@@ -3425,16 +3468,6 @@ footer .bottom-details .bottom_text {
 }
 
 /*=============== ANIMATION ===============*/
-@keyframes Zoom {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 @keyframes girar {
   0% {
     transform: rotate(0deg);
@@ -3526,48 +3559,13 @@ footer .bottom-details .bottom_text {
     transform: translateX(-100%);
   }
 }
-
-.screen-1 {
-  width: 100%;
-  height: 560vh;
-  background-color: #7f7caf;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation-name: slideAndHideRed;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-  z-index: 1000;
-  transition: 0.2s ease-in-out;
-  overflow: hidden;
-}
-.screen-2 {
-  width: 100%;
-  height: 560vh;
-  background-color: #eeeeff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation-name: slideAndHideWhite;
-  animation-duration: 0.8s;
-  animation-delay: 0.2s;
-  animation-fill-mode: forwards;
-  z-index: 999;
-  transition: 0.2s ease;
-  overflow: hidden;
-}
-.screen-3 {
-  width: 100%;
-  height: 560vh;
-  background-color: #28587b;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation-name: slideAndHideBlack;
-  animation-duration: 0.8s;
-  animation-delay: 0.4s;
-  animation-fill-mode: forwards;
-  z-index: 998;
-  transition: 0.2s ease;
-  overflow-x: hidden;
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
