@@ -257,32 +257,11 @@ nav {
 .logo img {
   width: 50px;
   height: 50px;
-  animation: slideRight 1s ease forwards;
-  opacity: 0;
 }
 .navbar {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.navbar li {
-  animation: slideTop 0.5s ease forwards;
-  opacity: 0;
-}
-.navbar li:nth-child(1) {
-  animation-delay: 0.3s;
-}
-.navbar li:nth-child(2) {
-  animation-delay: 0.6s;
-}
-.navbar li:nth-child(3) {
-  animation-delay: 0.9s;
-}
-.navbar li:nth-child(4) {
-  animation-delay: 1.2s;
-}
-.navbar li:nth-child(5) {
-  animation-delay: 1.5s;
 }
 .navbar a {
   color: var(--white-color);
@@ -325,9 +304,6 @@ a.active {
   border-radius: 0.5rem;
   transition: all 0.4s ease;
   cursor: pointer;
-  animation: slideTop 0.5s ease forwards;
-  opacity: 0;
-  animation-delay: 1.4s;
 }
 
 /* ===== LOGIN ICON ===== */
@@ -340,9 +316,6 @@ a.active {
   cursor: pointer;
   transition: all 0.4s ease;
   cursor: pointer;
-  animation: slideTop 0.5s ease forwards;
-  opacity: 0;
-  animation-delay: 1.6s;
 }
 .login-icon {
   display: flex;
@@ -576,9 +549,6 @@ header.sticky {
 .home-content .text-animate {
   position: relative;
   width: 33rem;
-  animation: slideTop 1s ease forwards;
-  animation-delay: 1s;
-  opacity: 0;
 }
 .home-content .text-animate h2 {
   font-size: var(--h1-font-size);
@@ -608,22 +578,13 @@ header.sticky {
   font-size: var(--h3-font-size);
   padding-bottom: 15px;
   color: hsl(156, 33%, 91%);
-  animation: slideBottom 1s ease forwards;
-  animation-delay: 0.7s;
-  opacity: 0;
 }
 .home h1 {
   color: var(--main-color);
   font-size: var(--bigger-font-size);
-  animation: slideRight 1s ease forwards;
-  animation-delay: 1s;
-  opacity: 0;
 }
 .home p {
   color: var(--second-color);
-  animation: slideLeft 1s ease forwards;
-  animation-delay: 1s;
-  opacity: 0;
 }
 .bnt__home {
   background-color: var(--main-color);
@@ -635,9 +596,6 @@ header.sticky {
   cursor: pointer;
   transition: background 0.3s;
   margin-top: 10px;
-  animation: slideTop 1s ease forwards;
-  animation-delay: 1.5s;
-  opacity: 0;
 }
 .home-sci {
   position: absolute;
@@ -660,19 +618,6 @@ header.sticky {
   z-index: 1;
   overflow: hidden;
   transition: 0.5;
-  animation: slideRight 1s ease forwards;
-  animation-delay: 1s;
-  opacity: 0;
-}
-.home-sci a:nth-child(2) {
-  animation: slideRight 1s ease forwards;
-  animation-delay: 1.5s;
-  opacity: 0;
-}
-.home-sci a:nth-child(3) {
-  animation: slideRight 1s ease forwards;
-  animation-delay: 1.8s;
-  opacity: 0;
 }
 .home-sci a:hover {
   color: var(--white-color);
@@ -739,9 +684,6 @@ header.sticky {
   font-size: var(--big-font-size);
   font-weight: var(--weight-700);
   margin-top: 20px;
-  animation: slideRight 1s ease forwards;
-  animation-delay: 1s;
-  opacity: 0;
 }
 .sub__home-text-h1 h1 span {
   display: inline-block;
@@ -750,15 +692,9 @@ header.sticky {
   color: var(--main-color);
   margin-top: 10px;
   margin-bottom: 10px;
-  animation: slideBottom 1s ease forwards;
-  animation-delay: 1s;
-  opacity: 0;
 }
 .sub__home .sub__home-text p {
   color: var(--body-color-2);
-  animation: slideLeft 1s ease forwards;
-  animation-delay: 1s;
-  opacity: 0;
 }
 .sub__home .sub__home-img-box {
   width: 600px;
@@ -766,9 +702,6 @@ header.sticky {
   justify-content: flex-end;
   padding-right: 50px;
   margin-top: 50px;
-  animation: Zoom 1s ease forwards;
-  animation-delay: 2s;
-  opacity: 0;
 }
 .box-bow img {
   position: relative;
@@ -3492,47 +3425,6 @@ footer .bottom-details .bottom_text {
 }
 
 /*=============== ANIMATION ===============*/
-@keyframes slideRight {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slideTop {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slideBottom {
-  0% {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slideLeft {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 @keyframes Zoom {
   0% {
     transform: scale(0);
@@ -3638,21 +3530,21 @@ footer .bottom-details .bottom_text {
 .screen-1 {
   width: 100%;
   height: 560vh;
-  background-color: #b63e96;
+  background-color: #7f7caf;
   position: absolute;
   top: 0;
   left: 0;
   animation-name: slideAndHideRed;
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
-  z-index: 30;
+  z-index: 1000;
   transition: 0.2s ease-in-out;
   overflow: hidden;
 }
 .screen-2 {
   width: 100%;
   height: 560vh;
-  background-color: #f5f5f5;
+  background-color: #eeeeff;
   position: absolute;
   top: 0;
   left: 0;
@@ -3660,14 +3552,14 @@ footer .bottom-details .bottom_text {
   animation-duration: 0.8s;
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
-  z-index: 20;
+  z-index: 999;
   transition: 0.2s ease;
   overflow: hidden;
 }
 .screen-3 {
   width: 100%;
   height: 560vh;
-  background-color: #1b1b1b;
+  background-color: #28587b;
   position: absolute;
   top: 0;
   left: 0;
@@ -3675,7 +3567,7 @@ footer .bottom-details .bottom_text {
   animation-duration: 0.8s;
   animation-delay: 0.4s;
   animation-fill-mode: forwards;
-  z-index: 10;
+  z-index: 998;
   transition: 0.2s ease;
-  overflow: hidden;
+  overflow-x: hidden;
 }
