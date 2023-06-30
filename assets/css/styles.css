@@ -824,7 +824,7 @@ header.sticky {
 }
 
 /* Responsive SUB-HOME */
-@media (max-width: 1300px) {
+@media (max-width: 1367px) {
   .sub__home-text-h1 h1 {
     font-size: var(--h1-font-size);
   }
@@ -3609,4 +3609,73 @@ footer .bottom-details .bottom_text {
   100% {
     transform: translateX(0%);
   }
+}
+@keyframes slideAndHideRed {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideAndHideWhite {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideAndHideBlack {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.screen-1 {
+  width: 100%;
+  height: 560vh;
+  background-color: #b63e96;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: slideAndHideRed;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  z-index: 30;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+}
+.screen-2 {
+  width: 100%;
+  height: 560vh;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: slideAndHideWhite;
+  animation-duration: 0.8s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  z-index: 20;
+  transition: 0.2s ease;
+  overflow: hidden;
+}
+.screen-3 {
+  width: 100%;
+  height: 560vh;
+  background-color: #1b1b1b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: slideAndHideBlack;
+  animation-duration: 0.8s;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+  z-index: 10;
+  transition: 0.2s ease;
+  overflow: hidden;
 }
