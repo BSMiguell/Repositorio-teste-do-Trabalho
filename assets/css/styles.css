@@ -1903,7 +1903,7 @@ header.sticky {
   transition: 0.3s ease;
 }
 .container__input.active {
-  width: 400px;
+  width: 350px;
 }
 .container__input.active .lefticondiv {
   width: 50px;
@@ -1968,7 +1968,7 @@ header.sticky {
 }
 .shop-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 .product-box {
@@ -2099,6 +2099,21 @@ header.sticky {
 }
 
 /* Responsive PRODUTOS */
+@media (max-width: 1366px) {
+  .shop-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 880px) {
+  .shop-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 610px) {
+  .shop-content {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width: 1080px) {
   .shop {
     margin-top: 2rem;

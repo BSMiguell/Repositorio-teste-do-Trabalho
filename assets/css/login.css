@@ -14,11 +14,11 @@ input[type="checkbox"] {
   display: none;
 }
 .container-login {
-  height: 100vh;
   background: linear-gradient(hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0.8)),
     url(../img/user-login/banner-login.png);
-  background-size: 100%;
+  background-size: cover;
   width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
