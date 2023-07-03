@@ -160,6 +160,7 @@ section {
   font-size: var(--normal-font-size);
   font-weight: var(--weight-700);
 }
+
 .wrapper {
   display: flex;
   align-items: center;
@@ -444,6 +445,13 @@ header.sticky {
   }
   section {
     padding: 2rem 0 2rem;
+  }
+  .section__titles {
+    display: flex;
+    flex-direction: column;
+  }
+  .section__titles .section__title-border {
+    margin: 5px 0;
   }
 }
 /*=============== CART ===============*/
@@ -800,7 +808,7 @@ header.sticky {
 }
 
 /* Responsive SUB-HOME */
-@media (max-width: 1367px) {
+@media (max-width: 1440px) {
   .sub__home-text-h1 h1 {
     font-size: var(--h1-font-size);
   }
@@ -808,7 +816,7 @@ header.sticky {
     max-width: 500px;
   }
 }
-@media (max-width: 1185px) {
+@media (max-width: 1280px) {
   .sub__home {
     display: flex;
     flex-direction: column-reverse;
