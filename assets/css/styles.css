@@ -236,10 +236,10 @@ section {
 
 /* Screen */
 .screen-1 {
+  position: fixed;
   width: 100%;
-  height: 560vh;
+  height: 100vh;
   background-color: #7f7caf;
-  position: absolute;
   top: 0;
   left: 0;
   animation-name: slideAndHideRed;
@@ -251,10 +251,10 @@ section {
   overflow: hidden;
 }
 .screen-2 {
+  position: fixed;
   width: 100%;
-  height: 560vh;
+  height: 100vh;
   background-color: #eeeeff;
-  position: absolute;
   top: 0;
   left: 0;
   animation-name: slideAndHideWhite;
@@ -266,10 +266,10 @@ section {
   overflow: hidden;
 }
 .screen-3 {
+  position: fixed;
   width: 100%;
-  height: 560vh;
+  height: 100vh;
   background-color: #28587b;
-  position: absolute;
   top: 0;
   left: 0;
   animation-name: slideAndHideBlack;
