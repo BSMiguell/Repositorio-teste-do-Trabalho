@@ -50,9 +50,9 @@
   /*========== Font and typography ==========*/
   /* 1rem = 16px ... */
   --biggest-font-size: 2rem;
-  --bigger-font-size: 1.5rem;
-  --big-font-size: 1.5rem;
-  --h1-font-size: 1.7rem;
+  --bigger-font-size: 1.7rem;
+  --big-font-size: 1.6rem;
+  --h1-font-size: 1.547rem;
   --h2-font-size: 1.5rem;
   --h3-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
@@ -636,6 +636,7 @@ header.sticky {
 }
 .home p {
   color: var(--second-color);
+  max-width: 500px;
 }
 .bnt__home {
   background-color: var(--main-color);
@@ -695,14 +696,17 @@ header.sticky {
     background-position: top 30% right 30%;
   }
 }
-@media (max-width: 477px) {
+@media (max-width: 537px) {
   .home {
     padding: 0 20px;
     background-position: 55%;
   }
-
-  .home h1 {
-    font-size: 2.5rem;
+  .home-content .text-animate h2 {
+    font-size: 1.3rem;
+  }
+  .home p {
+    color: var(--second-color);
+    max-width: 300px;
   }
 }
 
