@@ -123,6 +123,7 @@ section {
   text-align: center;
   margin-bottom: 3rem;
 }
+/* TITLES/SUBTITLES */
 .section__title,
 .section__title-border {
   font-size: var(--big-font-size);
@@ -187,7 +188,6 @@ section {
   border-left: 2px solid var(--main-color);
   animation: typing 5s steps(20) infinite;
 }
-
 .grid {
   display: grid;
   gap: 1.5rem;
