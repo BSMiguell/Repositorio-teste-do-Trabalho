@@ -59,6 +59,7 @@ function showFavorites() {
 const nonFavoritesButtons = document.querySelectorAll(
   '.filter-button:not([data-filter="favorites"])'
 );
+
 nonFavoritesButtons.forEach((button) => {
   button.addEventListener("click", () => {
     // Oculta a mensagem "Nenhum favorito adicionado"
@@ -113,8 +114,17 @@ function removeAccents(str) {
 }
 
 function showProducts() {
+  const activeButton = document.querySelector(".filter-button.active");
+  const activeCategory = activeButton ? activeButton.dataset.filter : "all";
+
   productBoxes.forEach((box) => {
-    box.style.display = "block";
+    const productCategory = box.dataset.category;
+
+    if (activeCategory === "all" || activeCategory === productCategory) {
+      box.style.display = "block";
+    } else {
+      box.style.display = "none";
+    }
   });
 }
 
