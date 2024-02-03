@@ -21,6 +21,17 @@ if (menu && navbar) {
   };
 }
 
+/*=============== BANNER CONTAINER ===============*/
+document.getElementById("close-btn").addEventListener("click", function () {
+  document.getElementById("banner-container").style.top = "-1000px";
+});
+
+// Aparece o banner após um breve atraso
+setTimeout(function () {
+  document.getElementById("banner-container").style.top = "0";
+}, 1000);
+/*=============== =============== ===============*/
+
 /*=============== THE SCRIPT OF DETALHES PAGE ===============*/
 
 /*=============== FILTER-DETALHES ===============*/

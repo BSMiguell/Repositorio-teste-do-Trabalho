@@ -62,7 +62,10 @@ const nonFavoritesButtons = document.querySelectorAll(
 
 nonFavoritesButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    // Oculta a mensagem "Nenhum favorito adicionado"
+    // Reativar o botão de pesquisa quando outros botões são clicados
+    searchInput.disabled = false;
+
+    // Ocultar a mensagem "Nenhum favorito adicionado"
     noFavoritesMessage.style.display = "none";
   });
 });
@@ -159,23 +162,46 @@ heartIcons.forEach((icon) => {
 
 function toggleHeart(event) {
   const icon = event.target;
-  icon.classList.toggle("filled");
   const heartId = icon.dataset.heartId;
   const articleId = icon.parentElement.parentElement.dataset.articleId;
-  const currentState = icon.classList.contains("filled") ? "filled" : "empty";
+  const currentState = icon.classList.toggle("filled") ? "filled" : "empty";
   localStorage.setItem(`heartState_${heartId}`, currentState);
   const article = document.querySelector(
     `article[data-article-id="${articleId}"]`
   );
+
   if (currentState === "filled") {
     article.classList.add("favorite");
   } else {
     article.classList.remove("favorite");
+
+    const activeButton = document.querySelector(".filter-button.active");
+    const activeCategory = activeButton ? activeButton.dataset.filter : "all";
+
+    if (activeCategory === "favorites") {
+      // Verificar se a lista de favoritos está vazia e exibir a mensagem apropriada
+      const favoritesExist = document.querySelector(".product-box.favorite");
+      const noFavoritesMessage = document.querySelector(
+        ".no-favorites-message"
+      );
+
+      if (!favoritesExist) {
+        noFavoritesMessage.style.display = "block";
+      }
+
+      // Esconder o item apenas se ele foi desfavoritado na categoria de favoritos
+      article.style.display = "none";
+    }
   }
 }
 
 const favoritesButton = document.querySelector('[data-filter="favorites"]');
-favoritesButton.addEventListener("click", toggleFavorites);
+favoritesButton.addEventListener("click", () => {
+  toggleFavorites();
+
+  // Desativar o botão de pesquisa ao clicar em favoritos
+  searchInput.disabled = true;
+});
 
 function toggleFavorites() {
   const articles = document.querySelectorAll(".product-box");
